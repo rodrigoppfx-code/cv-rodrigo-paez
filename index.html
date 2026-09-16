@@ -8,640 +8,364 @@
 </head>
 <body>
 <x-dc>
-<![CDATA[<helmet data-dc-atomics>
-<title>Rodrigo Páez Parra — Dirección Comercial · Business Development · Estrategia</title>
-<meta name="description" content="Rodrigo Páez Parra. Ingeniero Industrial y Magíster en Administración Internacional. Dirección comercial, business development, procesos y tecnología. Bogotá, Colombia.">
-<meta property="og:title" content="Rodrigo Páez Parra — Presencia profesional digital">
-<meta property="og:description" content="Estrategia para crecer. Procesos para ejecutar. Datos para decidir.">
-<meta property="og:type" content="profile">
+<helmet data-dc-atomics>
+<title>Rodrigo Páez Parra — Perfil Ejecutivo</title>
+<meta name="description" content="Rodrigo Páez Parra. Ingeniero Industrial, Magíster en Administración Internacional. Perfil ejecutivo.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
-<script src="rpp-3d.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-rpp-3d{display:block;position:relative}
-rpp-3d[mode="metrics"]{height:300px}
-rpp-3d[mode="field"]{position:fixed}
-:root{--bg:#faf6ee;--bg2:#f3ecdf;--surf:#fffdf8;--surf2:#f7f1e4;--bd:rgba(72,58,38,.14);--bd2:rgba(72,58,38,.3);--tx:#2b251d;--tx2:#6d6253;--tx3:#7d7263;--ac:#8a6226;--ac2:#6b5c44;--sh:0 14px 34px rgba(96,74,44,.1)}
-[data-theme="dark"]{--bg:#12100c;--bg2:#171410;--surf:#1d1913;--surf2:#231e17;--bd:rgba(226,206,168,.16);--bd2:rgba(226,206,168,.32);--tx:#f6efe1;--tx2:#b3a692;--tx3:#8a7f6d;--ac:#d0a35c;--ac2:#b3a692;--sh:0 18px 48px rgba(0,0,0,.5)}
-[data-theme="editorial"]{--bg:#efe8da;--bg2:#e7dfce;--surf:#f9f4e9;--surf2:#f2ebdc;--bd:rgba(58,46,30,.16);--bd2:rgba(58,46,30,.32);--tx:#2a2318;--tx2:#5f5545;--tx3:#8d8271;--ac:#8c6326;--ac2:#6b5c44;--sh:0 12px 30px rgba(72,56,32,.12)}
+:root{--bg:#FAF9F6;--bg2:#F5F3EE;--tx:#111314;--tx2:#4B5052;--tx3:#6B6F71;--bd:rgba(11,11,12,.13);--bd2:rgba(11,11,12,.3);--red:#B8230F}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font-family:Jost,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
-a{color:var(--ac);text-decoration:none}a:hover{color:var(--tx)}
-button{font-family:inherit;cursor:pointer}
-input,textarea{font-family:inherit}
-::selection{background:var(--ac);color:var(--bg)}
-@keyframes rppUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.rpp-rv{animation:rppUp .42s cubic-bezier(.22,.7,.3,1) both}
-.rpp-side{display:flex}
-.rpp-tabs{display:none}
-.rpp-main{margin-left:266px}
-.rpp-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,4vw,56px);align-items:center}
-.rpp-2col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,40px)}
-.rpp-4up{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,26px)}
-.rpp-3up{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:clamp(14px,2vw,22px)}
-.rpp-rail{display:flex;flex-direction:row;gap:0}
-.rpp-expgrid{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:clamp(20px,3vw,40px)}
-.rpp-metricbox{height:300px}
-@media (max-width:1020px){
- .rpp-side{display:none}
- .rpp-tabs{display:grid}
- .rpp-main{margin-left:0;padding-bottom:88px}
- .rpp-hero{grid-template-columns:minmax(0,1fr)}
- .rpp-2col{grid-template-columns:minmax(0,1fr)}
- .rpp-4up{grid-template-columns:repeat(2,minmax(0,1fr))}
- .rpp-rail{flex-direction:column}
- .rpp-expgrid{grid-template-columns:minmax(0,1fr)}
- rpp-3d[mode="metrics"]{height:210px}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty}
+a{color:var(--tx);text-decoration:none}a:hover{color:var(--red)}
+button{font-family:inherit;cursor:pointer}input,textarea{font-family:inherit}
+::selection{background:var(--red);color:#fff}
+@keyframes rUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.pan{animation:rUp .5s cubic-bezier(.2,.7,.26,1) both}
+.xul>li{position:relative;padding-left:22px}
+.xul>li:before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;background:var(--red);opacity:.75}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,3.4vw,54px)}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd)}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--bd)}
+.g5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--bd)}
+@media (max-width:1040px){.two{grid-template-columns:minmax(0,1fr)}.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:minmax(0,1fr)}}
+.navrow>button+button{box-shadow:inset 1px 0 0 var(--bd)}
+@media (max-width:1040px) and (min-width:761px){
+.navrow{mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
 }
-@media (max-width:560px){.rpp-4up{grid-template-columns:minmax(0,1fr)}}
-@media print{.rpp-side,.rpp-tabs,rpp-3d{display:none!important}.rpp-main{margin-left:0}}
+@media (max-width:760px){
+.xrow{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:10px!important;padding:20px 0!important}
+.xrow>span:last-child{width:100%;display:flex!important;align-items:center;justify-content:center!important;min-height:46px;box-sizing:border-box}
+.xbody{padding-left:0!important}
+.xul>li{padding-left:20px!important}
+main[data-stage]{padding-top:32px!important}
+.navtrig{display:flex!important}
+.navrow{display:none!important;position:absolute;left:0;right:0;top:100%;flex-direction:column!important;gap:0!important;height:auto!important;padding:6px 0!important;overflow:visible!important;background:var(--bg);border-bottom:1px solid var(--bd);box-shadow:0 12px 24px rgba(0,0,0,.08);mask-image:none}
+.navrow.open{display:flex!important}
+.navrow>button{width:100%!important;justify-content:flex-start!important;text-align:left;padding:0 20px!important;height:50px!important;margin-left:0!important;box-shadow:none!important;border-top:1px solid var(--bd)}
+.navrow>button:first-child{border-top:0}
+.navrow [data-ind]{left:0!important;right:auto!important;top:0;bottom:0;width:2px;height:auto!important;transform-origin:top}
+}
+@media (max-width:560px){.g4,.g5{grid-template-columns:minmax(0,1fr)}
+.two{gap:28px}
+section[data-hero]{align-items:flex-end;height:clamp(320px,52svh,480px)!important}
+}
+@media print{video,[data-top]{display:none!important}[data-panel]{display:block!important}}
 </style>
 </helmet>
 
-<div ref="{{ rootRef }}" data-theme="{{ theme }}" onClick="{{ onClick }}" style="position:relative;min-height:100vh;background:var(--bg)">
+<div ref="{{ rootRef }}" onClick="{{ onClick }}" style="position:relative;min-height:100vh;background:var(--bg)">
 
-<rpp-3d mode="field" tone="{{ tone }}" intensity="{{ intensity }}" accent="{{ accent }}" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5;z-index:0"></rpp-3d>
-<div aria-hidden="true" style="position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(120% 80% at 78% 6%,rgba(208,163,92,.18),transparent 62%),radial-gradient(90% 60% at 10% 100%,rgba(122,106,79,.1),transparent 65%)"></div>
+<nav data-top aria-label="Secciones" style="position:sticky;top:0;left:0;right:0;z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)">
+  <div style="max-width:1340px;margin:0 auto;position:relative;padding:0 clamp(18px,4vw,60px)">
+  <button data-navtoggle class="navtrig" style="display:none;width:100%;height:56px;border:0;background:transparent;align-items:center;justify-content:space-between;color:var(--tx);font:600 12px/1 Inter;letter-spacing:.06em;text-transform:uppercase"><span data-navcurrent>Bienvenida</span><span data-navicon style="font:400 15px/1 Inter;color:var(--tx3)">☰</span></button>
+  <div class="navrow" style="display:flex;gap:0;height:56px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity">
+    <button data-go="bienvenida" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">01</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Bienvenida</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
+    <button data-go="perfil" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">02</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Quién soy</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
+    <button data-go="valor" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">03</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Valor</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
+    <button data-go="habilidades" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">04</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Habilidades</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
+    <button data-go="experiencia" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">05</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Experiencia</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
+    <button data-go="formacion" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">06</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Formación</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
+    <button data-go="cursos" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">07</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Cursos</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
+    <button data-go="herramientas" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">08</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Herramientas</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
+  </div>
+  </div>
+</nav>
 
-<aside class="rpp-side" aria-label="Índice del sitio" style="position:fixed;left:0;top:0;bottom:0;width:266px;z-index:20;flex-direction:column;padding:34px 26px 24px;border-right:1px solid var(--bd);background:color-mix(in srgb,var(--bg) 88%,#000);backdrop-filter:blur(14px)">
-  <div style="font:700 11px/1.3 Jost;letter-spacing:.2em;color:var(--tx)">RODRIGO<br>PÁEZ PARRA</div>
-  <div style="margin-top:7px;font:400 10px/1.5 Jost;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Bogotá · Colombia</div>
-  <div style="height:1px;background:var(--bd);margin:22px 0 18px"></div>
-  <nav style="display:flex;flex-direction:column;gap:3px;overflow-y:auto;flex:1;margin:0 -8px;padding:0 8px">
-    <a data-nav href="#inicio" style="font:600 13px/1 Jost;color:var(--tx);padding:8px 10px;border-radius:4px">Inicio</a>
-    <div style="font:600 10px/1 Jost;letter-spacing:.18em;color:var(--tx3);padding:16px 10px 8px">HOJA DE VIDA</div>
-    <div style="display:flex;flex-direction:column;gap:1px;margin-left:10px;padding-left:12px;border-left:1px solid var(--bd)">
-      <a data-nav href="#hv-perfil" style="font:500 12.5px/1.35 Jost;color:var(--tx2);padding:6px 8px;border-radius:4px">Perfil Profesional</a>
-      <a data-nav href="#hv-competencias" style="font:500 12.5px/1.35 Jost;color:var(--tx2);padding:6px 8px;border-radius:4px">Competencias Clave</a>
-      <a data-nav href="#hv-gestion" style="font:500 12.5px/1.35 Jost;color:var(--tx2);padding:6px 8px;border-radius:4px">Habilidades de Gestión</a>
-      <a data-nav href="#hv-experiencia" style="font:500 12.5px/1.35 Jost;color:var(--tx2);padding:6px 8px;border-radius:4px">Experiencia Profesional</a>
-      <a data-nav href="#hv-formacion" style="font:500 12.5px/1.35 Jost;color:var(--tx2);padding:6px 8px;border-radius:4px">Formación Académica</a>
-      <a data-nav href="#hv-complementaria" style="font:500 12.5px/1.35 Jost;color:var(--tx2);padding:6px 8px;border-radius:4px">Formación Complementaria</a>
-      <a data-nav href="#hv-herramientas" style="font:500 12.5px/1.35 Jost;color:var(--tx2);padding:6px 8px;border-radius:4px">Herramientas e Idiomas</a>
-    </div>
-    <a data-nav href="#impacto" style="font:600 13px/1 Jost;color:var(--tx2);padding:8px 10px;margin-top:14px;border-radius:4px">Impacto Profesional</a>
-    <a data-nav href="#casos" style="font:600 13px/1 Jost;color:var(--tx2);padding:8px 10px;border-radius:4px">Casos Profesionales</a>
-    <a data-nav href="#credenciales" style="font:600 13px/1 Jost;color:var(--tx2);padding:8px 10px;border-radius:4px">Credenciales</a>
-    <a data-nav href="#contacto" style="font:600 13px/1 Jost;color:var(--tx2);padding:8px 10px;border-radius:4px">Contacto</a>
-  </nav>
-  <div style="display:flex;flex-direction:column;gap:8px;margin-top:18px">
-    <button data-print style="width:100%;padding:11px 12px;border:1px solid var(--bd2);border-radius:5px;background:transparent;color:var(--tx);font:600 11.5px/1 Jost;letter-spacing:.06em;white-space:nowrap" style-hover="border-color:var(--ac);color:var(--ac)">Descargar dossier PDF</button>
-    <div style="display:flex;gap:6px">
-      <button data-theme-set="crema" title="Crema y dorado" aria-label="Tema crema y dorado" style="flex:1;padding:7px 0;border:1px solid var(--bd);border-radius:4px;background:transparent;color:var(--tx3);font:600 10px/1 Jost;letter-spacing:.1em" style-hover="color:var(--tx);border-color:var(--bd2)">CREMA</button>
-      <button data-theme-set="dark" title="Nocturno dorado" aria-label="Tema nocturno dorado" style="flex:1;padding:7px 0;border:1px solid var(--bd);border-radius:4px;background:transparent;color:var(--tx3);font:600 10px/1 Jost;letter-spacing:.1em" style-hover="color:var(--tx);border-color:var(--bd2)">NOCHE</button>
-      <button data-theme-set="editorial" title="Editorial papel" aria-label="Tema editorial papel" style="flex:1;padding:7px 0;border:1px solid var(--bd);border-radius:4px;background:transparent;color:var(--tx3);font:600 10px/1 Jost;letter-spacing:.1em" style-hover="color:var(--tx);border-color:var(--bd2)">PAPEL</button>
+<section id="hero" data-hero data-screen-label="Inicio" style="position:relative;height:clamp(360px,56svh,640px);min-height:340px;display:flex;align-items:flex-end;padding:0 clamp(18px,4vw,60px) clamp(30px,4.5vh,50px);overflow:hidden">
+  <video src="brand/ambient-architecture.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.94);opacity:.32;pointer-events:none"></video>
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 30%,transparent),color-mix(in srgb,var(--bg) 20%,transparent) 55%,var(--bg) 96%)"></div>
+  <div style="position:relative;max-width:1340px;width:100%;margin:0 auto">
+    <h1 style="margin:0;font:700 clamp(34px,6vw,72px)/1.04 Inter;letter-spacing:-.025em;overflow-wrap:anywhere;color:var(--tx)">Rodrigo Páez Parra</h1>
+    <div style="margin-top:clamp(14px,2vw,20px);display:flex;flex-direction:column;gap:6px;max-width:600px;font:400 clamp(15px,1.25vw,17px)/1.5 Inter;color:var(--tx2)">
+      <span>Ingeniero Industrial</span>
+      <span>Magíster en Administración Internacional</span>
+      <span style="display:flex;flex-wrap:wrap;gap:8px;align-items:baseline">Máster en Marketing, Dirección Comercial e IA Generativa<span style="font:700 11px/1 Inter;letter-spacing:.14em;color:var(--red);text-transform:uppercase;white-space:nowrap">En curso</span></span>
     </div>
   </div>
-</aside>
+</section>
 
-<main class="rpp-main" style="position:relative;z-index:5;padding:clamp(28px,5vw,74px) clamp(18px,4vw,64px) 96px;max-width:1180px">
+<main data-stage style="position:relative;z-index:5;max-width:1340px;margin:0 auto;padding:clamp(40px,6vh,64px) clamp(18px,4vw,60px) clamp(70px,10vh,120px);scroll-margin-top:56px">
 
-  <section id="inicio" data-screen-label="Inicio" style="scroll-margin-top:24px;padding-bottom:clamp(40px,6vw,86px)">
-    <div class="rpp-hero">
-      <div>
-        <div style="font:500 10.5px/1 Jost;letter-spacing:.26em;color:var(--ac);text-transform:uppercase">Presencia profesional digital</div>
-        <h1 style="margin:18px 0 0;font:400 clamp(46px,6.4vw,86px)/1.1 'Cormorant Garamond',Georgia,serif;letter-spacing:-.018em;color:var(--tx)">Rodrigo Páez Parra</h1>
-        <p style="margin:20px 0 0;max-width:600px;font:500 clamp(13.5px,1.35vw,16px)/1.65 Jost;color:var(--tx2)">Dirección Comercial · Business Development · Estrategia · Procesos · Tecnología</p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:26px">
-          <a href="#hv-experiencia" data-nav style="padding:13px 20px;border:1px solid var(--ac);border-radius:5px;color:var(--ac);font:600 12px/1 Jost;letter-spacing:.06em;white-space:nowrap" style-hover="background:var(--ac);color:var(--bg)">Ver trayectoria</a>
-          <button data-print style="padding:13px 20px;border:1px solid var(--bd2);border-radius:5px;background:transparent;color:var(--tx);font:600 12px/1 Jost;letter-spacing:.06em;white-space:nowrap" style-hover="border-color:var(--tx)">Descargar dossier PDF</button>
-        </div>
-      </div>
-      <rpp-3d mode="signature" tone="{{ tone }}" intensity="{{ intensity }}" accent="{{ accent }}" aria-hidden="true" style="width:min(100%,420px);aspect-ratio:1;min-height:230px;margin-inline:auto"></rpp-3d>
-    </div>
-
-    <div class="rpp-2col" style="margin-top:clamp(36px,5vw,70px);align-items:start">
-      <figure style="margin:0">
-        <div style="position:relative;aspect-ratio:16/9;border:1px solid var(--bd);border-radius:8px;background:linear-gradient(160deg,var(--surf2),var(--surf));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:var(--sh);overflow:hidden">
-          <div aria-hidden="true" style="position:absolute;inset:0;background:radial-gradient(70% 70% at 50% 40%,rgba(208,163,92,.16),transparent 70%)"></div>
-          <button aria-label="Reproducir presentación profesional (próximamente)" style="position:relative;width:64px;height:64px;border-radius:50%;border:1px solid var(--bd2);background:color-mix(in srgb,var(--surf) 70%,transparent);color:var(--tx);font-size:17px;display:flex;align-items:center;justify-content:center;padding-left:4px" style-hover="border-color:var(--ac);color:var(--ac)">▶</button>
-          <figcaption style="position:relative;text-align:center">
-            <div style="font:500 13.5px/1.3 Jost;letter-spacing:.04em;color:var(--tx)">Presentación profesional</div>
-            <div style="margin-top:5px;font:500 10.5px/1 Jost;letter-spacing:.2em;color:var(--tx3);text-transform:uppercase">Próximamente</div>
-          </figcaption>
-        </div>
-      </figure>
-      <div>
-        <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--tx3);text-transform:uppercase">Reseña profesional</div>
-        <p style="margin:16px 0 0;max-width:760px;font:400 clamp(16px,1.6vw,19px)/1.72 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Ingeniero Industrial y Magíster en Administración Internacional, con trayectoria en dirección comercial, desarrollo de negocios y gestión de proyectos en entornos corporativos, empresariales y de consultoría. Experiencia liderando iniciativas de crecimiento, estructuración de negocios, optimización de procesos y transformación comercial mediante tecnología, automatización e IA, complementada con análisis financiero para la toma de decisiones.</p>
-      </div>
-    </div>
-
-    <div style="margin-top:clamp(40px,5vw,72px);padding:clamp(26px,3.4vw,44px) 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)">
-      <blockquote style="margin:0;max-width:800px;font:300 clamp(26px,3.6vw,48px)/1.26 'Cormorant Garamond',Georgia,serif;letter-spacing:-.012em;color:var(--tx)">Estrategia para crecer. Procesos para ejecutar. Datos para decidir.</blockquote>
-      <div style="margin-top:22px;max-width:820px;font:500 11.5px/1.9 Jost;letter-spacing:.08em;color:var(--tx3)">REVENUE GROWTH · BUSINESS DEVELOPMENT · ESTRATEGIA COMERCIAL · GESTIÓN DE PROYECTOS · OPTIMIZACIÓN DE PROCESOS · ANÁLISIS FINANCIERO · AUTOMATIZACIÓN E IA</div>
+  <section data-panel="bienvenida" data-screen-label="Bienvenida" style="display:block">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font:700 12px/1 Inter;letter-spacing:.2em;color:var(--red)">01</span><h2 style="margin:0;font:700 clamp(26px,3vw,38px)/1.12 Inter;letter-spacing:-.015em;color:var(--tx)">Bienvenida</h2></div>
+    <div style="margin-top:clamp(22px,3.2vw,36px);max-width:560px;position:relative;aspect-ratio:16/9;border:1px solid var(--bd);background:var(--bg2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+      <button aria-label="Reproducir video de bienvenida" style="width:56px;height:56px;border:1px solid var(--bd2);border-radius:50%;background:var(--bg);color:var(--tx);font-size:13px;padding-left:3px" style-hover="border-color:var(--red);color:var(--red)">▶</button>
+      <span style="font:600 11.5px/1 Inter;letter-spacing:.18em;color:var(--tx3);text-transform:uppercase">Video de bienvenida · 15 s</span>
     </div>
   </section>
 
-  <section id="impacto" data-screen-label="Impacto Profesional" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Impacto profesional</div>
-    <h2 style="margin:16px 0 0;max-width:720px;font:300 clamp(30px,3.8vw,50px)/1.16 'Cormorant Garamond',Georgia,serif;letter-spacing:-.014em;color:var(--tx)">Evidencia de resultados en Avovite, 2023 — 2025</h2>
-    <div class="rpp-expgrid" style="margin-top:clamp(30px,4vw,50px);align-items:center">
-      <div class="rpp-4up">
-        <div><div data-count="241" data-prefix="+" data-suffix=" %" style="font:300 clamp(38px,5vw,64px)/1 'Cormorant Garamond',Georgia,serif;color:var(--ac);letter-spacing:-.02em">+241 %</div><div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bd);font:500 12px/1.5 Jost;color:var(--tx2)">Crecimiento del capital comercializado entre 2023 y 2025</div></div>
-        <div><div data-count="5377" data-prefix="$" data-sep="true" style="font:300 clamp(38px,5vw,64px)/1 'Cormorant Garamond',Georgia,serif;color:var(--tx);letter-spacing:-.02em">$5.377</div><div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bd);font:500 12px/1.5 Jost;color:var(--tx2)">Millones COP de capital comercializado en 2025</div></div>
-        <div><div data-count="1000" data-sep="true" style="font:300 clamp(38px,5vw,64px)/1 'Cormorant Garamond',Georgia,serif;color:var(--tx);letter-spacing:-.02em">1.000</div><div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bd);font:500 12px/1.5 Jost;color:var(--tx2)">Clientes, frente a 241 en 2023</div></div>
-        <div><div data-count="2718" data-sep="true" style="font:300 clamp(38px,5vw,64px)/1 'Cormorant Garamond',Georgia,serif;color:var(--tx);letter-spacing:-.02em">2.718</div><div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bd);font:500 12px/1.5 Jost;color:var(--tx2)">VITEs comercializados, frente a 850 en 2023</div></div>
-      </div>
-      <rpp-3d mode="metrics" values="1,0.62,0.4,0.72" tone="{{ tone }}" intensity="{{ intensity }}" accent="{{ accent }}" aria-hidden="true" style="width:100%"></rpp-3d>
+  <section data-panel="perfil" data-screen-label="Quién soy" style="display:none">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font:700 12px/1 Inter;letter-spacing:.2em;color:var(--red)">02</span><h2 style="margin:0;font:700 clamp(26px,3vw,38px)/1.12 Inter;letter-spacing:-.015em;color:var(--tx)">Quién soy</h2></div>
+    <div class="two" style="margin-top:clamp(24px,3.4vw,40px)">
+      <p style="margin:0;font:400 clamp(17px,1.6vw,21px)/1.6 Inter;color:var(--tx)">Ingeniero Industrial y Magíster en Administración Internacional, con trayectoria en dirección comercial, desarrollo de negocios y gestión de proyectos en entornos corporativos, empresariales y de consultoría.</p>
+      <p style="margin:0;font:400 15.5px/1.75 Inter;color:var(--tx2)">Experiencia liderando iniciativas de crecimiento, estructuración de negocios, optimización de procesos y transformación comercial mediante tecnología, automatización e IA, complementada con análisis financiero para la toma de decisiones.</p>
     </div>
   </section>
 
-  <section id="valor" data-screen-label="Cómo genero valor" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Cómo genero valor</div>
-    <div style="margin-top:clamp(26px,3.5vw,44px);display:flex;flex-direction:column">
-      <div data-vblock style="display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding:clamp(22px,3vw,34px) 0;border-top:1px solid var(--bd);transition:transform .28s cubic-bezier(.22,.7,.3,1)" style-hover="transform:translateX(6px)">
-        <div class="rpp-2col" style="align-items:baseline">
-          <div style="display:flex;align-items:baseline;gap:18px"><span style="font:300 clamp(34px,4vw,52px)/1 'Cormorant Garamond',Georgia,serif;color:var(--tx3)">01</span><span style="font:600 clamp(15px,1.7vw,21px)/1.2 Jost;letter-spacing:.11em;color:var(--tx)">CRECIMIENTO</span></div>
-          <div style="font:500 13.5px/1.9 Jost;color:var(--tx2)">Revenue Growth · Business Development · Desarrollo Comercial</div>
-        </div>
-      </div>
-      <div data-vblock style="padding:clamp(22px,3vw,34px) 0;border-top:1px solid var(--bd);transition:transform .28s cubic-bezier(.22,.7,.3,1)" style-hover="transform:translateX(6px)">
-        <div class="rpp-2col" style="align-items:baseline">
-          <div style="display:flex;align-items:baseline;gap:18px"><span style="font:300 clamp(34px,4vw,52px)/1 'Cormorant Garamond',Georgia,serif;color:var(--tx3)">02</span><span style="font:600 clamp(15px,1.7vw,21px)/1.2 Jost;letter-spacing:.11em;color:var(--tx)">ESTRATEGIA</span></div>
-          <div style="font:500 13.5px/1.9 Jost;color:var(--tx2)">Estrategia Comercial · Estrategia de Mercadeo · Negociación B2B/B2C · Estructuración de Negocios</div>
-        </div>
-      </div>
-      <div data-vblock style="padding:clamp(22px,3vw,34px) 0;border-top:1px solid var(--bd);transition:transform .28s cubic-bezier(.22,.7,.3,1)" style-hover="transform:translateX(6px)">
-        <div class="rpp-2col" style="align-items:baseline">
-          <div style="display:flex;align-items:baseline;gap:18px"><span style="font:300 clamp(34px,4vw,52px)/1 'Cormorant Garamond',Georgia,serif;color:var(--tx3)">03</span><span style="font:600 clamp(15px,1.7vw,21px)/1.2 Jost;letter-spacing:.11em;color:var(--tx)">EJECUCIÓN</span></div>
-          <div style="font:500 13.5px/1.9 Jost;color:var(--tx2)">Gestión de Proyectos · SOPs · KPIs · OKRs · Optimización de Procesos · Análisis de Cuellos de Botella</div>
-        </div>
-      </div>
-      <div data-vblock style="padding:clamp(22px,3vw,34px) 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);transition:transform .28s cubic-bezier(.22,.7,.3,1)" style-hover="transform:translateX(6px)">
-        <div class="rpp-2col" style="align-items:baseline">
-          <div style="display:flex;align-items:baseline;gap:18px"><span style="font:300 clamp(34px,4vw,52px)/1 'Cormorant Garamond',Georgia,serif;color:var(--tx3)">04</span><span style="font:600 clamp(15px,1.7vw,21px)/1.2 Jost;letter-spacing:.11em;color:var(--tx)">TRANSFORMACIÓN</span></div>
-          <div style="font:500 13.5px/1.9 Jost;color:var(--tx2)">CRM · Automatización · Inteligencia Artificial Aplicada · Digitalización de procesos</div>
-        </div>
-      </div>
+  <section data-panel="valor" data-screen-label="Áreas de valor" style="display:none">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font:700 12px/1 Inter;letter-spacing:.2em;color:var(--red)">03</span><h2 style="margin:0;font:700 clamp(26px,3vw,38px)/1.12 Inter;letter-spacing:-.015em;color:var(--tx)">Áreas donde genero valor</h2></div>
+    <div class="g3" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd)">
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:700 18px/1.25 Inter;color:var(--tx)">Crecimiento</div><div style="margin-top:10px;font:400 14.5px/1.65 Inter;color:var(--tx2)">Ventas · Desarrollo de negocios · Negociación · Expansión comercial</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:700 18px/1.25 Inter;color:var(--tx)">Estrategia</div><div style="margin-top:10px;font:400 14.5px/1.65 Inter;color:var(--tx2)">Mercado · Propuesta de valor · Estructuración de negocios · Toma de decisiones</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:700 18px/1.25 Inter;color:var(--tx)">Operación</div><div style="margin-top:10px;font:400 14.5px/1.65 Inter;color:var(--tx2)">Procesos · SOPs · KPIs · OKRs · Estandarización · Productividad</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:700 18px/1.25 Inter;color:var(--tx)">Proyectos</div><div style="margin-top:10px;font:400 14.5px/1.65 Inter;color:var(--tx2)">Gestión de proyectos · Implementación · Coordinación · Mejora continua</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:700 18px/1.25 Inter;color:var(--tx)">Análisis</div><div style="margin-top:10px;font:400 14.5px/1.65 Inter;color:var(--tx2)">Finanzas · Evaluación de proyectos · Resultados · Indicadores</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:700 18px/1.25 Inter;color:var(--tx)">Tecnología</div><div style="margin-top:10px;font:400 14.5px/1.65 Inter;color:var(--tx2)">CRM · Automatización · IA · Datos · Workflows</div></div>
+    </div>
+
+    <div style="margin-top:clamp(30px,4.4vw,50px);display:flex;align-items:baseline;gap:14px"><span style="font:600 11.5px/1 Inter;letter-spacing:.18em;color:var(--tx3);text-transform:uppercase">Resultados</span><span style="font:400 12.5px/1 Inter;color:var(--tx3)">2020 – 2025</span></div>
+    <div style="margin-top:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--bd)">
+      <div style="background:var(--bg2);padding:clamp(22px,2.6vw,30px) clamp(20px,2.2vw,26px);display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 0 var(--red)"><span style="font:600 11px/1 Inter;letter-spacing:.1em;color:var(--red)">2023 – 2025</span><span style="font:700 clamp(30px,3vw,40px)/1 Inter;letter-spacing:-.02em;color:var(--tx)">+241 %</span><span style="font:400 14px/1.5 Inter;color:var(--tx2)">Crecimiento en facturación: de $1.579 MM a $5.377 MM</span></div>
+      <div style="background:var(--bg2);padding:clamp(22px,2.6vw,30px) clamp(20px,2.2vw,26px);display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 0 var(--red)"><span style="font:600 11px/1 Inter;letter-spacing:.1em;color:var(--red)">2023 – 2025</span><span style="font:700 clamp(30px,3vw,40px)/1 Inter;letter-spacing:-.02em;color:var(--tx)">1.000</span><span style="font:400 14px/1.5 Inter;color:var(--tx2)">Crecimiento en clientes: de 241 a más de 1.000</span></div>
+      <div style="background:var(--bg2);padding:clamp(22px,2.6vw,30px) clamp(20px,2.2vw,26px);display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 0 var(--red)"><span style="font:600 11px/1 Inter;letter-spacing:.1em;color:var(--red)">2021 – 2022</span><span style="font:700 clamp(30px,3vw,40px)/1 Inter;letter-spacing:-.02em;color:var(--tx)">$519 MM</span><span style="font:400 14px/1.5 Inter;color:var(--tx2)">Consecución de capital para la etapa inicial del negocio</span></div>
+      <div style="background:var(--bg2);padding:clamp(22px,2.6vw,30px) clamp(20px,2.2vw,26px);display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 0 var(--red)"><span style="font:600 11px/1 Inter;letter-spacing:.1em;color:var(--red)">2020 – 2021</span><span style="font:700 clamp(30px,3vw,40px)/1 Inter;letter-spacing:-.02em;color:var(--tx)">$160 MM + $33K</span><span style="font:400 14px/1.5 Inter;color:var(--tx2)">Prospección y negociación de capital para fondo regulado en Estados Unidos</span></div>
     </div>
   </section>
 
-  <section id="hv-perfil" data-screen-label="Perfil Profesional" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Hoja de vida · Perfil profesional</div>
-    <p style="margin:24px 0 0;max-width:820px;font:300 clamp(20px,2.3vw,30px)/1.56 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Dirijo la estrategia comercial de una operación que multiplicó por 3,4 su capital comercializado en dos años. Mi trabajo une tres cosas que rara vez viven juntas: la construcción de ingresos, el diseño del proceso que los sostiene y el análisis financiero que decide dónde invertir el siguiente esfuerzo.</p>
-    <p style="margin:22px 0 0;max-width:780px;font:400 14.5px/1.8 Jost;color:var(--tx2)">Formación en Ingeniería Industrial y Magíster en Administración Internacional, con trayectoria en entornos corporativos, empresariales y de consultoría independiente. La tecnología —CRM, automatización e IA aplicada— entra como herramienta de trazabilidad y control, no como fin.</p>
-  </section>
-
-  <section id="hv-competencias" data-screen-label="Competencias Clave" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Competencias clave</div>
-    <div class="rpp-3up" style="margin-top:clamp(26px,3.5vw,42px)">
-      <div style="padding:22px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 62%,transparent)">
-        <div style="font:600 12px/1.3 Jost;letter-spacing:.1em;color:var(--tx);text-transform:uppercase">Crecimiento &amp; Negocios</div>
-        <div style="height:1px;background:var(--bd);margin:14px 0"></div>
-        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font:500 13px/1.5 Jost;color:var(--tx2)">
-          <li>Revenue Growth</li><li>Business Development</li><li>Negociación y Cierre Consultivo B2B/B2C</li>
-        </ul>
-      </div>
-      <div style="padding:22px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 62%,transparent)">
-        <div style="font:600 12px/1.3 Jost;letter-spacing:.1em;color:var(--tx);text-transform:uppercase">Estrategia</div>
-        <div style="height:1px;background:var(--bd);margin:14px 0"></div>
-        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font:500 13px/1.5 Jost;color:var(--tx2)">
-          <li>Estrategia Comercial y de Mercadeo</li><li>Estructuración de Negocios</li>
-        </ul>
-      </div>
-      <div style="padding:22px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 62%,transparent)">
-        <div style="font:600 12px/1.3 Jost;letter-spacing:.1em;color:var(--tx);text-transform:uppercase">Procesos &amp; Proyectos</div>
-        <div style="height:1px;background:var(--bd);margin:14px 0"></div>
-        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font:500 13px/1.5 Jost;color:var(--tx2)">
-          <li>Gestión de Proyectos</li><li>Optimización y Estandarización de Procesos</li><li>SOPs · Análisis de Cuellos de Botella</li><li>KPIs · OKRs · Análisis de Gestión</li>
-        </ul>
-      </div>
-      <div style="padding:22px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 62%,transparent)">
-        <div style="font:600 12px/1.3 Jost;letter-spacing:.1em;color:var(--tx);text-transform:uppercase">Análisis &amp; Tecnología</div>
-        <div style="height:1px;background:var(--bd);margin:14px 0"></div>
-        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font:500 13px/1.5 Jost;color:var(--tx2)">
-          <li>Análisis Financiero</li><li>Evaluación de Proyectos</li><li>CRM · Automatización</li><li>IA Aplicada</li>
-        </ul>
-      </div>
+  <section data-panel="habilidades" data-screen-label="Habilidades" style="display:none">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font:700 12px/1 Inter;letter-spacing:.2em;color:var(--red)">04</span><h2 style="margin:0;font:700 clamp(26px,3vw,38px)/1.12 Inter;letter-spacing:-.015em;color:var(--tx)">Habilidades de gestión</h2></div>
+    <div class="g4" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd)">
+      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red)">Liderazgo de equipos</div>
+      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red)">Pensamiento analítico</div>
+      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red)">Resolución de problemas</div>
+      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red)">Toma de decisiones</div>
+      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red)">Comunicación y oratoria</div>
+      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red)">Orientación a resultados</div>
+      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red)">Negociación</div>
+      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red)">Gestión de proyectos</div>
     </div>
   </section>
 
-  <section id="hv-gestion" data-screen-label="Habilidades de Gestión" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Habilidades de gestión</div>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;max-width:860px">
-      <span style="padding:11px 17px;border:1px solid var(--bd);border-radius:100px;font:500 13px/1 Jost;color:var(--tx)">Liderazgo de Equipos</span>
-      <span style="padding:11px 17px;border:1px solid var(--bd);border-radius:100px;font:500 13px/1 Jost;color:var(--tx)">Pensamiento Analítico</span>
-      <span style="padding:11px 17px;border:1px solid var(--bd);border-radius:100px;font:500 13px/1 Jost;color:var(--tx)">Resolución de Problemas</span>
-      <span style="padding:11px 17px;border:1px solid var(--bd);border-radius:100px;font:500 13px/1 Jost;color:var(--tx)">Toma de Decisiones</span>
-      <span style="padding:11px 17px;border:1px solid var(--bd);border-radius:100px;font:500 13px/1 Jost;color:var(--tx)">Comunicación y Oratoria</span>
-      <span style="padding:11px 17px;border:1px solid var(--bd);border-radius:100px;font:500 13px/1 Jost;color:var(--tx)">Orientación a Resultados</span>
-      <span style="padding:11px 17px;border:1px solid var(--bd);border-radius:100px;font:500 13px/1 Jost;color:var(--tx)">Negociación</span>
-    </div>
-  </section>
+  <section data-panel="experiencia" data-screen-label="Experiencia" style="display:none">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font:700 12px/1 Inter;letter-spacing:.2em;color:var(--red)">05</span><h2 style="margin:0;font:700 clamp(26px,3vw,38px)/1.12 Inter;letter-spacing:-.015em;color:var(--tx)">Experiencia profesional</h2></div>
+    <div style="margin-top:clamp(24px,3.4vw,40px);border-top:1px solid var(--bd)">
 
-  <section id="hv-experiencia" data-screen-label="Experiencia Profesional" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Experiencia profesional</div>
-    <h2 style="margin:16px 0 0;font:300 clamp(28px,3.3vw,43px)/1.18 'Cormorant Garamond',Georgia,serif;letter-spacing:-.014em;color:var(--tx)">Diecisiete años, seis etapas</h2>
-
-    <div class="rpp-rail" data-rail style="margin-top:clamp(28px,4vw,46px);border-top:1px solid var(--bd2);padding-top:0">
-      <button data-exp="0" style="flex:1.6;text-align:left;background:transparent;border:0;border-top:2px solid var(--ac);padding:16px 14px 16px 0;color:var(--tx)"><span style="display:block;font:600 11px/1 Jost;letter-spacing:.1em;color:var(--ac)">2022 →</span><span style="display:block;margin-top:7px;font:600 13.5px/1.3 Jost">Avovite S.A.S.</span><span style="display:block;margin-top:4px;font:500 11.5px/1.3 Jost;color:var(--tx3)">Director Comercial</span></button>
-      <button data-exp="1" style="flex:1;text-align:left;background:transparent;border:0;border-top:2px solid transparent;padding:16px 14px 16px 0;color:var(--tx2)"><span style="display:block;font:600 11px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2017 – 2023</span><span style="display:block;margin-top:7px;font:600 13.5px/1.3 Jost">Consultoría independiente</span><span style="display:block;margin-top:4px;font:500 11.5px/1.3 Jost;color:var(--tx3)">5 frentes de negocio</span></button>
-      <button data-exp="2" style="flex:1;text-align:left;background:transparent;border:0;border-top:2px solid transparent;padding:16px 14px 16px 0;color:var(--tx2)"><span style="display:block;font:600 11px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2015 – 2017</span><span style="display:block;margin-top:7px;font:600 13.5px/1.3 Jost">AXA Asistencia</span><span style="display:block;margin-top:4px;font:500 11.5px/1.3 Jost;color:var(--tx3)">Especialista de Proyectos</span></button>
-      <button data-exp="3" style="flex:1;text-align:left;background:transparent;border:0;border-top:2px solid transparent;padding:16px 14px 16px 0;color:var(--tx2)"><span style="display:block;font:600 11px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2014 – 2015</span><span style="display:block;margin-top:7px;font:600 13.5px/1.3 Jost">Prevenmédica</span><span style="display:block;margin-top:4px;font:500 11.5px/1.3 Jost;color:var(--tx3)">Director de Información</span></button>
-      <button data-exp="4" style="flex:1;text-align:left;background:transparent;border:0;border-top:2px solid transparent;padding:16px 14px 16px 0;color:var(--tx2)"><span style="display:block;font:600 11px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2013 – 2014</span><span style="display:block;margin-top:7px;font:600 13.5px/1.3 Jost">SoulMedical</span><span style="display:block;margin-top:4px;font:500 11.5px/1.3 Jost;color:var(--tx3)">Coordinador Nacional</span></button>
-      <button data-exp="5" style="flex:1;text-align:left;background:transparent;border:0;border-top:2px solid transparent;padding:16px 14px 16px 0;color:var(--tx2)"><span style="display:block;font:600 11px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2009 – 2013</span><span style="display:block;margin-top:7px;font:600 13.5px/1.3 Jost">Grupo S.A.I / METLIFE</span><span style="display:block;margin-top:4px;font:500 11.5px/1.3 Jost;color:var(--tx3)">Operación y Soporte TI</span></button>
-    </div>
-
-    <div class="rpp-expgrid" style="margin-top:clamp(26px,3.5vw,42px);align-items:start">
-      <div>
-        <div data-panel="0" style="display:block">
-          <div style="font:500 11px/1 Jost;letter-spacing:.14em;color:var(--ac);text-transform:uppercase">Octubre de 2022 – Actualidad · Remoto</div>
-          <h3 style="margin:14px 0 0;font:300 clamp(26px,3vw,38px)/1.2 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Avovite S.A.S. — Director Comercial</h3>
-          <ul style="margin:20px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;max-width:760px;font:400 14.5px/1.72 Jost;color:var(--tx2)">
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Dirección de la estrategia comercial y de mercado, gestión del equipo comercial y de cartera, negociación con clientes y optimización de la propuesta de valor.</li>
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Crecimiento del capital comercializado de $1.579 millones en 2023 a $5.377 millones en 2025 (+241 %), pasando de 241 a 1.000 clientes y de 850 a 2.718 VITEs.</li>
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Estandarización de procesos mediante SOPs, KPIs y OKRs, e implementación de CRM, automatización e IA para fortalecer trazabilidad, control y experiencia del cliente.</li>
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Apoyo en evaluación financiera, análisis de resultados y revisión de liquidaciones del proyecto.</li>
-          </ul>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:22px">
-            <span style="padding:7px 13px;border:1px solid var(--bd);border-radius:100px;font:600 10.5px/1 Jost;letter-spacing:.08em;color:var(--tx3)">CRM</span>
-            <span style="padding:7px 13px;border:1px solid var(--bd);border-radius:100px;font:600 10.5px/1 Jost;letter-spacing:.08em;color:var(--tx3)">SOPs · KPIs · OKRs</span>
-            <span style="padding:7px 13px;border:1px solid var(--bd);border-radius:100px;font:600 10.5px/1 Jost;letter-spacing:.08em;color:var(--tx3)">MAKE · MANYCHAT</span>
-            <span style="padding:7px 13px;border:1px solid var(--bd);border-radius:100px;font:600 10.5px/1 Jost;letter-spacing:.08em;color:var(--tx3)">IA APLICADA</span>
-          </div>
-          <a href="#casos" data-nav style="display:inline-block;margin-top:22px;font:600 12px/1 Jost;letter-spacing:.06em;border-bottom:1px solid var(--bd2);padding-bottom:4px">Caso 01 — Crecimiento Comercial →</a>
-        </div>
-        <div data-panel="1" style="display:block;margin-top:34px">
-          <div style="font:500 11px/1 Jost;letter-spacing:.14em;color:var(--ac);text-transform:uppercase">Mayo de 2017 – Mayo de 2023 · Remoto</div>
-          <h3 style="margin:14px 0 0;font:300 clamp(26px,3vw,38px)/1.2 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Consultoría, Desarrollo de Negocios y Emprendimiento Independiente</h3>
-          <p style="margin:16px 0 0;max-width:760px;font:400 14.5px/1.72 Jost;color:var(--tx2)">Gestión comercial y consultoría en estructuración de negocios, procesos, mercados financieros y consecución de recursos.</p>
-          <div style="display:flex;flex-direction:column;gap:0;margin-top:22px;max-width:800px">
-            <div style="padding:16px 0;border-top:1px solid var(--bd)"><div style="font:600 12.5px/1.3 Jost;color:var(--tx)">Smart Contracts CA LLC · 2020–2021 / 2023</div><p style="margin:8px 0 0;font:400 13.5px/1.7 Jost;color:var(--tx2)">Prospección, negociación y vinculación comercial para contratos por $160 millones COP + USD 33.000 para inversión; posteriormente, consultoría y desarrollo de contenidos sobre mercados financieros, criptomonedas, blockchain y educación financiera.</p></div>
-            <div style="padding:16px 0;border-top:1px solid var(--bd)"><div style="font:600 12.5px/1.3 Jost;color:var(--tx)">Avovite S.A.S. · 2021–2022</div><p style="margin:8px 0 0;font:400 13.5px/1.7 Jost;color:var(--tx2)">Consecución de $519 millones en recursos durante la etapa inicial del proyecto y apoyo en estructuración de procesos y evaluación financiera del modelo.</p></div>
-            <div style="padding:16px 0;border-top:1px solid var(--bd)"><div style="font:600 12.5px/1.3 Jost;color:var(--tx)">LEMI Group S.A.S. · 2020–2021</div><p style="margin:8px 0 0;font:400 13.5px/1.7 Jost;color:var(--tx2)">Gestión de inversionistas y consecución de recursos para proyectos de comercialización de oro, con apoyo en estructuración y estandarización operativa, y análisis financiero.</p></div>
-            <div style="padding:16px 0;border-top:1px solid var(--bd)"><div style="font:600 12.5px/1.3 Jost;color:var(--tx)">RPP Capital Profits S.A.S. · 2021</div><p style="margin:8px 0 0;font:400 13.5px/1.7 Jost;color:var(--tx2)">Compraventa y arbitraje de criptoactivos entre Colombia y Estados Unidos.</p></div>
-            <div style="padding:16px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)"><div style="font:600 12.5px/1.3 Jost;color:var(--tx)">Emprendimientos propios · 2017–2020</div><p style="margin:8px 0 0;font:400 13.5px/1.7 Jost;color:var(--tx2)">Consultoría en mercados bursátiles, estructuración, estandarización y organización de procesos a nivel comercial y operativo. Ejecución de estrategia MAM con USD 133.032 en depósitos y USD 63.056 en beneficios (≈47,4 %), sin custodia directa de recursos de terceros; desarrollo de emprendimientos comerciales B2C mediante canales digitales.</p></div>
-          </div>
-        </div>
-        <div data-panel="2" style="display:block;margin-top:34px">
-          <div style="font:500 11px/1 Jost;letter-spacing:.14em;color:var(--ac);text-transform:uppercase">Agosto de 2015 – Marzo de 2017 · Bogotá</div>
-          <h3 style="margin:14px 0 0;font:300 clamp(26px,3vw,38px)/1.2 'Cormorant Garamond',Georgia,serif;color:var(--tx)">AXA Asistencia Colombia S.A. (IPS S.A.S.) — Especialista de Proyectos</h3>
-          <ul style="margin:20px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;max-width:760px;font:400 14.5px/1.72 Jost;color:var(--tx2)">
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Gestión de proyectos para Programas de Apoyo a Pacientes de laboratorios farmacéuticos, incluyendo estandarización y documentación de procesos y articulación de requerimientos entre Operaciones e IT.</li>
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Optimización de CRM, SOPs, KPIs e indicadores de gestión, junto con sistematización de información para fortalecer trazabilidad, reportes y toma de decisiones.</li>
+      <article data-exp style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
+          <span style="font:600 12px/1.4 Inter;letter-spacing:.08em;color:var(--red)">2022 → HOY</span>
+          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:700 clamp(17px,1.5vw,19px)/1.25 Inter">Avovite S.A.S.</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Director Comercial · Remoto</span></span>
+          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+        </button>
+        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+            <li>Dirección de la estrategia comercial y de mercado, gestión del equipo comercial y de cartera, negociación con clientes y optimización de la propuesta de valor.</li>
+            <li>Crecimiento del capital comercializado de $1.579 millones en 2023 a $5.377 millones en 2025 (+241 %), pasando de 241 a 1.000 clientes.</li>
+            <li>Estandarización de procesos mediante SOPs, KPIs y OKRs, e implementación de CRM, automatización e IA para fortalecer trazabilidad, control y experiencia del cliente.</li>
+            <li>Apoyo en evaluación financiera, análisis de resultados y revisión de liquidaciones del proyecto.</li>
           </ul>
         </div>
-        <div data-panel="3" style="display:block;margin-top:34px">
-          <div style="font:500 11px/1 Jost;letter-spacing:.14em;color:var(--ac);text-transform:uppercase">Mayo de 2014 – Agosto de 2015 · Bogotá</div>
-          <h3 style="margin:14px 0 0;font:300 clamp(26px,3vw,38px)/1.2 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Prevenmédica S.A.S. IPS — Director de Información y Gestión de Operación</h3>
-          <ul style="margin:20px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;max-width:760px;font:400 14.5px/1.72 Jost;color:var(--tx2)">
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Dirección operativa y administrativa de Programas de Apoyo a Pacientes para laboratorios farmacéuticos, incluyendo personal, productividad, costos e indicadores de gestión.</li>
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Estructuración de bases de datos, reportes gerenciales, KPIs, SOPs y procesos, junto con gestión nacional de inventarios y herramientas de medición de satisfacción del paciente.</li>
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Implementación de programa de farmacovigilancia.</li>
-          </ul>
-        </div>
-        <div data-panel="4" style="display:block;margin-top:34px">
-          <div style="font:500 11px/1 Jost;letter-spacing:.14em;color:var(--ac);text-transform:uppercase">Febrero de 2013 – Mayo de 2014 · Bogotá</div>
-          <h3 style="margin:14px 0 0;font:300 clamp(26px,3vw,38px)/1.2 'Cormorant Garamond',Georgia,serif;color:var(--tx)">SoulMedical Ltda. — Coordinador Nacional (Tuberculina) / Aux. Facturación</h3>
-          <ul style="margin:20px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;max-width:760px;font:400 14.5px/1.72 Jost;color:var(--tx2)">
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Coordinación logística nacional del programa de tuberculina: asignación de servicios, seguimiento de pacientes, inventarios, abastecimiento y ampliación de convenios.</li>
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Facturación de servicios y revisión de información mediante SIOS.</li>
-          </ul>
-        </div>
-        <div data-panel="5" style="display:block;margin-top:34px">
-          <div style="font:500 11px/1 Jost;letter-spacing:.14em;color:var(--ac);text-transform:uppercase">Marzo de 2009 – Enero de 2013 · Bogotá</div>
-          <h3 style="margin:14px 0 0;font:300 clamp(26px,3vw,38px)/1.2 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Grupo Empresarial S.A.I / METLIFE — Operación Logística, Mensajería y Soporte TI</h3>
-          <ul style="margin:20px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;max-width:760px;font:400 14.5px/1.72 Jost;color:var(--tx2)">
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Gestión documental, radicación de cuentas y organización de archivo clínico.</li>
-            <li style="padding-left:18px;border-left:1px solid var(--bd)">Soporte técnico y mantenimiento preventivo de equipos de cómputo.</li>
-          </ul>
-        </div>
-      </div>
-      <rpp-3d data-expobj mode="timeline" variant="0" tone="{{ tone }}" intensity="{{ intensity }}" accent="{{ accent }}" aria-hidden="true" style="width:100%;aspect-ratio:1;min-height:200px;max-height:260px;position:sticky;top:34px"></rpp-3d>
-    </div>
-  </section>
+      </article>
 
-  <section id="hv-formacion" data-screen-label="Formación Académica" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Formación académica</div>
-    <div style="margin-top:clamp(24px,3.4vw,40px);max-width:880px">
-      <div style="display:flex;flex-wrap:wrap;gap:10px 28px;align-items:baseline;padding:20px 0;border-top:1px solid var(--bd)"><div style="flex:1 1 380px;font:400 clamp(19px,2.1vw,26px)/1.35 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Máster en Marketing, Dirección Comercial e IA Generativa</div><div style="font:500 12.5px/1.4 Jost;color:var(--tx2)">EUDE Business School</div><div style="font:600 11.5px/1 Jost;letter-spacing:.1em;color:var(--ac)">EN CURSO</div></div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px 28px;align-items:baseline;padding:20px 0;border-top:1px solid var(--bd)"><div style="flex:1 1 380px;font:400 clamp(19px,2.1vw,26px)/1.35 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Magíster en Administración Internacional</div><div style="font:500 12.5px/1.4 Jost;color:var(--tx2)">Politécnico Grancolombiano</div><div style="font:600 11.5px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2026</div></div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px 28px;align-items:baseline;padding:20px 0;border-top:1px solid var(--bd)"><div style="flex:1 1 380px;font:400 clamp(19px,2.1vw,26px)/1.35 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Ingeniero Industrial</div><div style="font:500 12.5px/1.4 Jost;color:var(--tx2)">Politécnico Grancolombiano</div><div style="font:600 11.5px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2025</div></div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px 28px;align-items:baseline;padding:20px 0;border-top:1px solid var(--bd)"><div style="flex:1 1 380px;font:400 clamp(19px,2.1vw,26px)/1.35 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Tecnólogo en Logística</div><div style="font:500 12.5px/1.4 Jost;color:var(--tx2)">Politécnico Grancolombiano</div><div style="font:600 11.5px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2024</div></div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px 28px;align-items:baseline;padding:20px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)"><div style="flex:1 1 380px;font:400 clamp(19px,2.1vw,26px)/1.35 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Técnico Laboral por Competencias en Mantenimiento y Sistemas de Cómputo</div><div style="font:500 12.5px/1.4 Jost;color:var(--tx2)">Academia Nacional de Aprendizaje — ANDAP</div><div style="font:600 11.5px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2012</div></div>
-    </div>
-  </section>
-
-  <section id="hv-complementaria" data-screen-label="Formación Complementaria" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Formación complementaria</div>
-    <div class="rpp-3up" style="margin-top:clamp(24px,3.4vw,40px)">
-      <div style="padding:20px;border:1px solid var(--bd);border-radius:7px"><div style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--ac)">2026 · 6 H</div><div style="margin-top:12px;font:500 14px/1.45 Jost;color:var(--tx)">IA Generativa</div></div>
-      <div style="padding:20px;border:1px solid var(--bd);border-radius:7px"><div style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--ac)">2025 · 120 H</div><div style="margin-top:12px;font:500 14px/1.45 Jost;color:var(--tx)">BPM — Business Process Management</div></div>
-      <div style="padding:20px;border:1px solid var(--bd);border-radius:7px"><div style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--ac)">2025 · 8 H</div><div style="margin-top:12px;font:500 14px/1.45 Jost;color:var(--tx)">Power BI + IA</div></div>
-      <div style="padding:20px;border:1px solid var(--bd);border-radius:7px"><div style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2014</div><div style="margin-top:12px;font:500 14px/1.45 Jost;color:var(--tx)">Macros en Excel VBA</div></div>
-      <div style="padding:20px;border:1px solid var(--bd);border-radius:7px"><div style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2013 – 2014</div><div style="margin-top:12px;font:500 14px/1.45 Jost;color:var(--tx)">Ofimática, Excel Avanzado y Excel Financiero</div></div>
-    </div>
-  </section>
-
-  <section id="hv-herramientas" data-screen-label="Herramientas e Idiomas" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Herramientas e idiomas</div>
-    <div class="rpp-3up" style="margin-top:clamp(24px,3.4vw,40px)">
-      <div><div style="font:600 11.5px/1 Jost;letter-spacing:.12em;color:var(--tx);text-transform:uppercase">Datos y análisis</div><div style="height:1px;background:var(--bd);margin:14px 0"></div><div style="font:500 13px/1.85 Jost;color:var(--tx2)">Excel avanzado<br>Power BI básico<br>VBA básico</div></div>
-      <div><div style="font:600 11.5px/1 Jost;letter-spacing:.12em;color:var(--tx);text-transform:uppercase">Automatización</div><div style="height:1px;background:var(--bd);margin:14px 0"></div><div style="font:500 13px/1.85 Jost;color:var(--tx2)">Make<br>ManyChat<br>Automatización de workflows</div></div>
-      <div><div style="font:600 11.5px/1 Jost;letter-spacing:.12em;color:var(--tx);text-transform:uppercase">Inteligencia artificial</div><div style="height:1px;background:var(--bd);margin:14px 0"></div><div style="font:500 13px/1.85 Jost;color:var(--tx2)">OpenAI Codex<br>Claude Code<br>IA Generativa</div></div>
-      <div><div style="font:600 11.5px/1 Jost;letter-spacing:.12em;color:var(--tx);text-transform:uppercase">Procesos y productividad</div><div style="height:1px;background:var(--bd);margin:14px 0"></div><div style="font:500 13px/1.85 Jost;color:var(--tx2)">Microsoft Visio<br>Google Workspace<br>CRM</div></div>
-      <div><div style="font:600 11.5px/1 Jost;letter-spacing:.12em;color:var(--tx);text-transform:uppercase">Idiomas</div><div style="height:1px;background:var(--bd);margin:14px 0"></div><div style="font:500 13px/1.85 Jost;color:var(--tx2)">Español nativo<br>Inglés básico</div></div>
-    </div>
-  </section>
-
-  <section id="casos" data-screen-label="Casos Profesionales" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Casos profesionales</div>
-    <h2 style="margin:16px 0 0;max-width:740px;font:300 clamp(28px,3.3vw,43px)/1.18 'Cormorant Garamond',Georgia,serif;letter-spacing:-.014em;color:var(--tx)">Cinco intervenciones, contadas por su contexto y su resultado</h2>
-    <div style="display:flex;flex-direction:column;gap:0;margin-top:clamp(28px,4vw,46px)">
-      <article style="padding:clamp(24px,3vw,36px) 0;border-top:1px solid var(--bd)">
-        <div class="rpp-2col" style="align-items:start">
-          <div><div style="font:300 clamp(31px,3.7vw,49px)/1 'Cormorant Garamond',Georgia,serif;color:var(--ac)">01</div><h3 style="margin:14px 0 0;font:600 clamp(16px,1.8vw,21px)/1.3 Jost;color:var(--tx)">Crecimiento Comercial — Avovite</h3><div style="margin-top:10px;font:500 11.5px/1 Jost;letter-spacing:.1em;color:var(--tx3)">2023 – 2025</div></div>
-          <div style="display:flex;flex-direction:column;gap:16px">
-            <div><div style="font:600 10px/1 Jost;letter-spacing:.16em;color:var(--tx3);text-transform:uppercase">Enfoque</div><p style="margin:7px 0 0;font:400 14px/1.7 Jost;color:var(--tx2)">Estrategia comercial, equipo, procesos, KPIs, automatización y CRM.</p></div>
-            <div><div style="font:600 10px/1 Jost;letter-spacing:.16em;color:var(--tx3);text-transform:uppercase">Resultado</div><p style="margin:7px 0 0;font:400 14px/1.7 Jost;color:var(--tx)">Crecimiento del capital comercializado de $1.579 MM a $5.377 MM, un <strong style="color:var(--ac)">+241 %</strong>.</p></div>
+      <article data-exp style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
+          <span style="font:600 12px/1.4 Inter;letter-spacing:.08em;color:var(--tx3)">2017 – 2023</span>
+          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:700 clamp(17px,1.5vw,19px)/1.25 Inter">Consultoría y emprendimiento independiente</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Desarrollo de negocios · Cinco frentes · Remoto</span></span>
+          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+        </button>
+        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
+          <p style="margin:0 0 16px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">Gestión comercial y consultoría en estructuración de negocios, procesos, mercados financieros y consecución de recursos.</p>
+          <div style="display:flex;flex-direction:column;max-width:760px">
+            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">Smart Contracts CA LLC · 2020–2021 / 2023</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Prospección, negociación y vinculación comercial para contratos por $160 millones COP + USD 33.000 para inversión; posteriormente, consultoría y desarrollo de contenidos sobre mercados financieros, criptomonedas, blockchain y educación financiera.</p></div>
+            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">Avovite S.A.S. · 2021–2022</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Consecución de $519 millones en recursos durante la etapa inicial del proyecto y apoyo en estructuración de procesos y evaluación financiera del modelo.</p></div>
+            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">LEMI Group S.A.S. · 2020–2021</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Gestión de inversionistas y consecución de recursos para proyectos de comercialización de oro, con apoyo en estructuración y estandarización operativa, y análisis financiero.</p></div>
+            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">RPP Capital Profits S.A.S. · 2021</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Compraventa y arbitraje de criptoactivos entre Colombia y Estados Unidos.</p></div>
+            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">Emprendimientos propios · 2017–2020</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Consultoría en mercados bursátiles, estructuración, estandarización y organización de procesos a nivel comercial y operativo. Ejecución de estrategia MAM con USD 133.032 en depósitos y USD 63.056 en beneficios (≈47,4 %), sin custodia directa de recursos de terceros; desarrollo de emprendimientos comerciales B2C mediante canales digitales.</p></div>
           </div>
         </div>
       </article>
-      <article style="padding:clamp(24px,3vw,36px) 0;border-top:1px solid var(--bd)">
-        <div class="rpp-2col" style="align-items:start">
-          <div><div style="font:300 clamp(31px,3.7vw,49px)/1 'Cormorant Garamond',Georgia,serif;color:var(--ac)">02</div><h3 style="margin:14px 0 0;font:600 clamp(16px,1.8vw,21px)/1.3 Jost;color:var(--tx)">Optimización de Procesos</h3></div>
-          <div><div style="font:600 10px/1 Jost;letter-spacing:.16em;color:var(--tx3);text-transform:uppercase">Intervención</div><p style="margin:7px 0 0;font:400 14px/1.7 Jost;color:var(--tx2)">SOPs, KPIs y OKRs, trazabilidad, análisis de cuellos de botella, gestión documental y automatización.</p></div>
+
+      <article data-exp style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
+          <span style="font:600 12px/1.4 Inter;letter-spacing:.08em;color:var(--tx3)">2015 – 2017</span>
+          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:700 clamp(17px,1.5vw,19px)/1.25 Inter">AXA Asistencia Colombia S.A.</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Especialista de Proyectos · Bogotá</span></span>
+          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+        </button>
+        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+            <li>Gestión de proyectos para Programas de Apoyo a Pacientes de laboratorios farmacéuticos, incluyendo estandarización y documentación de procesos y articulación de requerimientos entre Operaciones e IT.</li>
+            <li>Optimización de CRM, SOPs, KPIs e indicadores de gestión, junto con sistematización de información para fortalecer trazabilidad, reportes y toma de decisiones.</li>
+          </ul>
         </div>
       </article>
-      <article style="padding:clamp(24px,3vw,36px) 0;border-top:1px solid var(--bd)">
-        <div class="rpp-2col" style="align-items:start">
-          <div><div style="font:300 clamp(31px,3.7vw,49px)/1 'Cormorant Garamond',Georgia,serif;color:var(--ac)">03</div><h3 style="margin:14px 0 0;font:600 clamp(16px,1.8vw,21px)/1.3 Jost;color:var(--tx)">Business Development</h3></div>
-          <div><div style="font:600 10px/1 Jost;letter-spacing:.16em;color:var(--tx3);text-transform:uppercase">Frentes</div><p style="margin:7px 0 0;font:400 14px/1.7 Jost;color:var(--tx2)">Avovite en etapa inicial, LEMI Group y Smart Contracts: consecución de recursos y estructuración de negocios.</p></div>
+
+      <article data-exp style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
+          <span style="font:600 12px/1.4 Inter;letter-spacing:.08em;color:var(--tx3)">2014 – 2015</span>
+          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:700 clamp(17px,1.5vw,19px)/1.25 Inter">Prevenmédica S.A.S. IPS</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Director de Información y Gestión de Operación · Bogotá</span></span>
+          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+        </button>
+        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+            <li>Dirección operativa y administrativa de Programas de Apoyo a Pacientes para laboratorios farmacéuticos, incluyendo personal, productividad, costos e indicadores de gestión.</li>
+            <li>Estructuración de bases de datos, reportes gerenciales, KPIs, SOPs y procesos, junto con gestión nacional de inventarios y herramientas de medición de satisfacción del paciente.</li>
+            <li>Implementación de programa de farmacovigilancia.</li>
+          </ul>
         </div>
       </article>
-      <article style="padding:clamp(24px,3vw,36px) 0;border-top:1px solid var(--bd)">
-        <div class="rpp-2col" style="align-items:start">
-          <div><div style="font:300 clamp(31px,3.7vw,49px)/1 'Cormorant Garamond',Georgia,serif;color:var(--ac)">04</div><h3 style="margin:14px 0 0;font:600 clamp(16px,1.8vw,21px)/1.3 Jost;color:var(--tx)">Automatización e IA</h3></div>
-          <div><div style="font:600 10px/1 Jost;letter-spacing:.16em;color:var(--tx3);text-transform:uppercase">Herramientas</div><p style="margin:7px 0 0;font:400 14px/1.7 Jost;color:var(--tx2)">ManyChat, Make, CRM, IA generativa, OpenAI Codex y Claude Code aplicados a flujos comerciales y de operación.</p></div>
+
+      <article data-exp style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
+          <span style="font:600 12px/1.4 Inter;letter-spacing:.08em;color:var(--tx3)">2013 – 2014</span>
+          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:700 clamp(17px,1.5vw,19px)/1.25 Inter">SoulMedical Ltda.</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Coordinador Nacional (Tuberculina) · Aux. Facturación · Bogotá</span></span>
+          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+        </button>
+        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+            <li>Coordinación logística nacional del programa de tuberculina: asignación de servicios, seguimiento de pacientes, inventarios, abastecimiento y ampliación de convenios.</li>
+            <li>Facturación de servicios y revisión de información mediante SIOS.</li>
+          </ul>
         </div>
       </article>
-      <article style="padding:clamp(24px,3vw,36px) 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)">
-        <div class="rpp-2col" style="align-items:start">
-          <div><div style="font:300 clamp(31px,3.7vw,49px)/1 'Cormorant Garamond',Georgia,serif;color:var(--ac)">05</div><h3 style="margin:14px 0 0;font:600 clamp(16px,1.8vw,21px)/1.3 Jost;color:var(--tx)">Mercados Financieros</h3></div>
-          <div><div style="font:600 10px/1 Jost;letter-spacing:.16em;color:var(--tx3);text-transform:uppercase">Alcance</div><p style="margin:7px 0 0;font:400 14px/1.7 Jost;color:var(--tx2)">Consultoría, arbitraje, estructuras MAM, criptomonedas y educación financiera.</p></div>
+
+      <article data-exp style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
+          <span style="font:600 12px/1.4 Inter;letter-spacing:.08em;color:var(--tx3)">2009 – 2013</span>
+          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:700 clamp(17px,1.5vw,19px)/1.25 Inter">Grupo Empresarial S.A.I / METLIFE</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Operación logística, mensajería y soporte TI · Bogotá</span></span>
+          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+        </button>
+        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+            <li>Gestión documental, radicación de cuentas y organización de archivo clínico.</li>
+            <li>Soporte técnico y mantenimiento preventivo de equipos de cómputo.</li>
+          </ul>
         </div>
       </article>
+
     </div>
   </section>
 
-  <section id="credenciales" data-screen-label="Credenciales" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Credenciales</div>
-    <p style="margin:18px 0 0;max-width:720px;font:400 14.5px/1.75 Jost;color:var(--tx2)">Cada título y certificado tiene su soporte archivado. Los documentos que contienen número de identificación, firma manuscrita o datos de terceros no se publican: se entregan a solicitud o en versión con datos ocultos.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:26px">
-      <button data-filter="all" style="padding:9px 15px;border:1px solid var(--ac);border-radius:100px;background:transparent;color:var(--ac);font:600 11px/1 Jost;letter-spacing:.08em;white-space:nowrap">TODAS</button>
-      <button data-filter="academica" style="padding:9px 15px;border:1px solid var(--bd);border-radius:100px;background:transparent;color:var(--tx2);font:600 11px/1 Jost;letter-spacing:.08em;white-space:nowrap">FORMACIÓN ACADÉMICA</button>
-      <button data-filter="complementaria" style="padding:9px 15px;border:1px solid var(--bd);border-radius:100px;background:transparent;color:var(--tx2);font:600 11px/1 Jost;letter-spacing:.08em;white-space:nowrap">COMPLEMENTARIA</button>
-      <button data-filter="experiencia" style="padding:9px 15px;border:1px solid var(--bd);border-radius:100px;background:transparent;color:var(--tx2);font:600 11px/1 Jost;letter-spacing:.08em;white-space:nowrap">EXPERIENCIA</button>
-      <button data-filter="reconocimiento" style="padding:9px 15px;border:1px solid var(--bd);border-radius:100px;background:transparent;color:var(--tx2);font:600 11px/1 Jost;letter-spacing:.08em;white-space:nowrap">RECONOCIMIENTOS</button>
-    </div>
-    <div class="rpp-3up" style="margin-top:26px">
-      <button data-cred="academica" data-title="Diploma y Acta de Grado — Ingeniero Industrial" data-inst="Politécnico Grancolombiano" data-year="2025" data-state="censura" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2025</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Diploma y Acta de Grado — Ingeniero Industrial</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Politécnico Grancolombiano</div></button>
-      <button data-cred="academica" data-title="Soporte de Ceremonia de Graduación — Magíster en Administración Internacional" data-inst="Politécnico Grancolombiano" data-year="2026" data-state="provisional" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2026</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac2);white-space:nowrap">PROVISIONAL</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Magíster en Administración Internacional</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Politécnico Grancolombiano</div></button>
-      <button data-cred="academica" data-title="Contrato académico y confirmación de programa — Máster EUDE" data-inst="EUDE Business School" data-year="2026" data-state="censura" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">EN CURSO</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Máster en Marketing, Dirección Comercial e IA Generativa</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">EUDE Business School</div></button>
-      <button data-cred="academica" data-title="Diploma y Acta de Grado — Tecnólogo en Logística" data-inst="Politécnico Grancolombiano" data-year="2024" data-state="censura" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2024</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Diploma y Acta de Grado — Tecnólogo en Logística</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Politécnico Grancolombiano</div></button>
-      <button data-cred="academica" data-title="Técnico Laboral en Mantenimiento y Sistemas de Cómputo" data-inst="ANDAP" data-year="2012" data-state="censura" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2012</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Técnico Laboral en Mantenimiento y Sistemas de Cómputo</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Academia Nacional de Aprendizaje — ANDAP</div></button>
-      <button data-cred="complementaria" data-title="Certificado — IA Generativa (6 h)" data-inst="Certificado de formación" data-year="2026" data-state="censura" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2026 · 6 H</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">IA Generativa</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Certificado de formación</div></button>
-      <button data-cred="complementaria" data-title="Diplomado — BPM, Business Process Management (120 h)" data-inst="Politécnico Grancolombiano" data-year="2025" data-state="censura" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2025 · 120 H</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">BPM — Business Process Management</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Diplomado · 120 horas</div></button>
-      <button data-cred="complementaria" data-title="Certificado — Power BI + IA (8 h)" data-inst="Certificado de participación" data-year="2025" data-state="censura" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2025 · 8 H</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Power BI + IA</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Certificado de participación</div></button>
-      <button data-cred="complementaria" data-title="Ofimática, Excel Avanzado, Excel Financiero y Macros VBA" data-inst="Eduinformática" data-year="2013–2014" data-state="censura" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2013 – 2014</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Ofimática, Excel Avanzado, Excel Financiero y Macros VBA</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Eduinformática</div></button>
-      <button data-cred="experiencia" data-title="Certificación laboral — Prevenmédica S.A.S. IPS" data-inst="Confirma cargo y fechas 2014–2015" data-year="2015" data-state="solicitud" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2014 – 2015</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Certificación laboral — Prevenmédica S.A.S. IPS</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Director de Información y Gestión de Operación</div></button>
-      <button data-cred="experiencia" data-title="Certificación laboral — SoulMedical Ltda." data-inst="Coordinación nacional programa tuberculina" data-year="2014" data-state="solicitud" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2013 – 2014</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Certificación laboral — SoulMedical Ltda.</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Coordinación nacional programa tuberculina</div></button>
-      <button data-cred="experiencia" data-title="Certificaciones — Grupo Empresarial S.A.I / METLIFE" data-inst="Operación logística, archivo y soporte TI" data-year="2013" data-state="solicitud" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2009 – 2013</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Certificaciones — Grupo Empresarial S.A.I / METLIFE</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Operación logística, archivo y soporte TI</div></button>
-      <button data-cred="experiencia" data-title="Liquidación y certificado de ingresos — AXA Asistencia Colombia" data-inst="Confirma cargo y fechas 2015–2017" data-year="2017" data-state="privado" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2015 – 2017</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--tx3);white-space:nowrap">PRIVADO</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Soportes laborales — AXA Asistencia Colombia</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Especialista de Proyectos · documentos con datos tributarios</div></button>
-      <button data-cred="reconocimiento" data-title="Carta de reconocimiento — Programa Contacto, Prevenmédica" data-inst="Reconocimiento interno" data-year="2015" data-state="solicitud" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2015</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--ac);white-space:nowrap">A SOLICITUD</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Carta de reconocimiento — Programa Contacto</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">Prevenmédica S.A.S. IPS</div></button>
-      <button data-cred="experiencia" data-title="Continuidad contractual — Avovite S.A.S." data-inst="10 contratos y otrosí, 2022–2026" data-year="2026" data-state="privado" style="text-align:left;padding:20px;border:1px solid var(--bd);border-radius:7px;background:color-mix(in srgb,var(--surf) 55%,transparent);color:var(--tx)" style-hover="border-color:var(--ac)"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:600 10.5px/1 Jost;letter-spacing:.14em;color:var(--tx3)">2022 – 2026</span><span style="font:600 10px/1 Jost;letter-spacing:.1em;color:var(--tx3);white-space:nowrap">PRIVADO</span></div><div style="margin-top:14px;font:500 14px/1.45 Jost">Continuidad contractual — Avovite S.A.S.</div><div style="margin-top:7px;font:500 12px/1.4 Jost;color:var(--tx2)">10 contratos y otrosí · no publicables</div></button>
+  <section data-panel="formacion" data-screen-label="Formación" style="display:none">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font:700 12px/1 Inter;letter-spacing:.2em;color:var(--red)">06</span><h2 style="margin:0;font:700 clamp(26px,3vw,38px)/1.12 Inter;letter-spacing:-.015em;color:var(--tx)">Formación académica</h2></div>
+    <div class="g3" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd)">
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--red)">EN CURSO</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">Máster en Marketing, Dirección Comercial e IA Generativa</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">EUDE Business School</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2026</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">Magíster en Administración Internacional</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Politécnico Grancolombiano</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2025</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">Ingeniero Industrial</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Politécnico Grancolombiano</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2024</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">Tecnólogo en Logística</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Politécnico Grancolombiano</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2012</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">Técnico Laboral en Mantenimiento y Sistemas de Cómputo</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Academia Nacional de Aprendizaje — ANDAP</div></div>
     </div>
   </section>
 
-  <section id="contacto" data-screen-label="Contacto" style="scroll-margin-top:24px;padding:clamp(34px,5vw,72px) 0 0;border-top:1px solid var(--bd)">
-    <div style="font:600 10.5px/1 Jost;letter-spacing:.22em;color:var(--ac);text-transform:uppercase">Contacto</div>
-    <div class="rpp-2col" style="margin-top:clamp(24px,3.4vw,42px);align-items:start">
-      <div>
-        <h2 style="margin:0;max-width:440px;font:300 clamp(28px,3.3vw,43px)/1.2 'Cormorant Garamond',Georgia,serif;letter-spacing:-.014em;color:var(--tx)">Conversemos sobre crecimiento, procesos o proyectos.</h2>
-        <div style="margin-top:28px;display:flex;flex-direction:column;gap:0;max-width:420px">
-          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--bd)"><span style="font:600 10.5px/1.6 Jost;letter-spacing:.12em;color:var(--tx3)">UBICACIÓN</span><span style="font:500 13.5px/1.4 Jost;color:var(--tx);text-align:right">Bogotá, Colombia</span></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--bd)"><span style="font:600 10.5px/1.6 Jost;letter-spacing:.12em;color:var(--tx3)">CORREO</span><a href="mailto:rodrigopp.fx@gmail.com" style="font:500 13.5px/1.4 Jost;text-align:right">rodrigopp.fx@gmail.com</a></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)"><span style="font:600 10.5px/1.6 Jost;letter-spacing:.12em;color:var(--tx3)">TELÉFONO</span><a href="tel:+573108508860" style="font:500 13.5px/1.4 Jost;text-align:right">+57 310 850 8860</a></div>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">
-          <a href="mailto:rodrigopp.fx@gmail.com" style="padding:13px 19px;border:1px solid var(--ac);border-radius:5px;color:var(--ac);font:600 12px/1 Jost;letter-spacing:.06em;white-space:nowrap" style-hover="background:var(--ac);color:var(--bg)">Enviar correo</a>
-          <a href="https://wa.me/573108508860" target="_blank" rel="noopener" style="padding:13px 19px;border:1px solid var(--bd2);border-radius:5px;color:var(--tx);font:600 12px/1 Jost;letter-spacing:.06em;white-space:nowrap" style-hover="border-color:var(--tx)">WhatsApp</a>
-          <button data-print style="padding:13px 19px;border:1px solid var(--bd2);border-radius:5px;background:transparent;color:var(--tx);font:600 12px/1 Jost;letter-spacing:.06em;white-space:nowrap" style-hover="border-color:var(--tx)">Descargar CV</button>
-        </div>
-      </div>
-      <form data-contact style="display:flex;flex-direction:column;gap:14px;padding:clamp(22px,3vw,32px);border:1px solid var(--bd);border-radius:8px;background:color-mix(in srgb,var(--surf) 58%,transparent)">
-        <label style="display:flex;flex-direction:column;gap:7px"><span style="font:600 10px/1 Jost;letter-spacing:.14em;color:var(--tx3)">NOMBRE</span><input type="text" name="nombre" style="padding:12px 13px;border:1px solid var(--bd);border-radius:5px;background:transparent;color:var(--tx);font:500 13.5px/1.3 Jost"></label>
-        <label style="display:flex;flex-direction:column;gap:7px"><span style="font:600 10px/1 Jost;letter-spacing:.14em;color:var(--tx3)">EMPRESA</span><input type="text" name="empresa" style="padding:12px 13px;border:1px solid var(--bd);border-radius:5px;background:transparent;color:var(--tx);font:500 13.5px/1.3 Jost"></label>
-        <label style="display:flex;flex-direction:column;gap:7px"><span style="font:600 10px/1 Jost;letter-spacing:.14em;color:var(--tx3)">CORREO</span><input type="email" name="correo" style="padding:12px 13px;border:1px solid var(--bd);border-radius:5px;background:transparent;color:var(--tx);font:500 13.5px/1.3 Jost"></label>
-        <label style="display:flex;flex-direction:column;gap:7px"><span style="font:600 10px/1 Jost;letter-spacing:.14em;color:var(--tx3)">MENSAJE</span><textarea name="mensaje" rows="4" style="padding:12px 13px;border:1px solid var(--bd);border-radius:5px;background:transparent;color:var(--tx);font:500 13.5px/1.5 Jost;resize:vertical"></textarea></label>
-        <button type="submit" style="margin-top:4px;padding:13px 18px;border:1px solid var(--ac);border-radius:5px;background:transparent;color:var(--ac);font:600 12px/1 Jost;letter-spacing:.06em" style-hover="background:var(--ac);color:var(--bg)">Enviar mensaje</button>
-        <div data-formnote style="font:500 11.5px/1.6 Jost;color:var(--tx3)">El formulario está listo para conectarse a un servicio de envío.</div>
-      </form>
+  <section data-panel="cursos" data-screen-label="Cursos y seminarios" style="display:none">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font:700 12px/1 Inter;letter-spacing:.2em;color:var(--red)">07</span><h2 style="margin:0;font:700 clamp(26px,3vw,38px)/1.12 Inter;letter-spacing:-.015em;color:var(--tx)">Cursos, diplomados y seminarios</h2></div>
+    <div class="g3" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd)">
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2026 · 6 H</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">IA Generativa</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2025 · 120 H</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">BPM — Business Process Management</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Diplomado</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2025 · 8 H</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">Power BI + IA</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2014</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">Macros en Excel VBA</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2013 – 2014</div><div style="margin-top:12px;font:700 18px/1.3 Inter;color:var(--tx)">Ofimática, Excel Avanzado y Excel Financiero</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Eduinformática</div></div>
     </div>
-    <div style="margin-top:clamp(44px,6vw,80px);padding:24px 0;border-top:1px solid var(--bd);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font:500 11px/1.6 Jost;letter-spacing:.06em;color:var(--tx3)"><span>RODRIGO PÁEZ PARRA · BOGOTÁ, COLOMBIA</span><span>Última actualización: septiembre de 2026</span></div>
+  </section>
+
+  <section data-panel="herramientas" data-screen-label="Herramientas e idiomas" style="display:none">
+    <div style="display:flex;align-items:baseline;gap:14px"><span style="font:700 12px/1 Inter;letter-spacing:.2em;color:var(--red)">08</span><h2 style="margin:0;font:700 clamp(26px,3vw,38px)/1.12 Inter;letter-spacing:-.015em;color:var(--tx)">Herramientas e idiomas</h2></div>
+    <div class="g5" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd)">
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Datos y análisis</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">Excel avanzado<br>Power BI básico<br>VBA básico</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Automatización</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">Make<br>ManyChat<br>Workflows</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Inteligencia artificial</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">OpenAI Codex<br>Claude Code<br>IA Generativa</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Procesos</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">Microsoft Visio<br>Google Workspace<br>CRM</div></div>
+      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Idiomas</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">Español nativo<br>Inglés básico</div></div>
+    </div>
   </section>
 
 </main>
 
-<nav class="rpp-tabs" aria-label="Navegación principal" style="position:fixed;left:0;right:0;bottom:0;z-index:30;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--bd);background:color-mix(in srgb,var(--bg) 92%,#000);backdrop-filter:blur(16px);padding:8px 4px calc(8px + env(safe-area-inset-bottom))">
-  <a data-nav href="#inicio" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:48px;padding:4px 2px;border-radius:6px;color:var(--tx)"><span aria-hidden="true" style="width:16px;height:16px;border:1.5px solid currentColor;border-radius:3px"></span><span style="font:600 10px/1 Jost;letter-spacing:.04em">Inicio</span></a>
-  <a data-nav href="#hv-perfil" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:48px;padding:4px 2px;border-radius:6px;color:var(--tx3)"><span aria-hidden="true" style="width:16px;height:16px;border:1.5px solid currentColor;border-radius:3px"></span><span style="font:600 10px/1 Jost;letter-spacing:.04em">Hoja de Vida</span></a>
-  <a data-nav href="#casos" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:48px;padding:4px 2px;border-radius:6px;color:var(--tx3)"><span aria-hidden="true" style="width:16px;height:16px;border:1.5px solid currentColor;border-radius:3px"></span><span style="font:600 10px/1 Jost;letter-spacing:.04em">Casos</span></a>
-  <a data-nav href="#credenciales" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:48px;padding:4px 2px;border-radius:6px;color:var(--tx3)"><span aria-hidden="true" style="width:16px;height:16px;border:1.5px solid currentColor;border-radius:3px"></span><span style="font:600 10px/1 Jost;letter-spacing:.04em">Credenciales</span></a>
-  <a data-nav href="#contacto" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:48px;padding:4px 2px;border-radius:6px;color:var(--tx3)"><span aria-hidden="true" style="width:16px;height:16px;border:1.5px solid currentColor;border-radius:3px"></span><span style="font:600 10px/1 Jost;letter-spacing:.04em">Contacto</span></a>
-</nav>
-
-<div data-modal role="dialog" aria-modal="true" aria-label="Detalle de credencial" style="position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(43,37,29,.5);backdrop-filter:blur(6px)">
-  <div style="width:100%;max-width:520px;padding:clamp(24px,3.4vw,38px);border:1px solid var(--bd2);border-radius:10px;background:var(--surf);box-shadow:var(--sh)">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
-      <div data-modal-year style="font:600 10.5px/1 Jost;letter-spacing:.16em;color:var(--ac)">2025</div>
-      <button data-modal-close aria-label="Cerrar" style="border:0;background:transparent;color:var(--tx2);font:400 20px/1 Jost;padding:0 2px" style-hover="color:var(--tx)">×</button>
+<footer data-screen-label="Contacto" style="position:relative;z-index:5;border-top:1px solid var(--bd);background:var(--bg2)">
+  <div style="max-width:1340px;margin:0 auto;padding:clamp(36px,5vh,56px) clamp(18px,4vw,60px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font:600 11.5px/1 Inter;letter-spacing:.18em;color:var(--red);text-transform:uppercase">Contacto</span>
+      <span style="font:700 clamp(20px,2.2vw,26px)/1.2 Inter;letter-spacing:-.015em;color:var(--tx)">Rodrigo Páez Parra</span>
+      <a href="mailto:rodrigopp.fx@gmail.com" style="font:400 15px/1.5 Inter;color:var(--tx2)">rodrigopp.fx@gmail.com</a>
     </div>
-    <h3 data-modal-title style="margin:16px 0 0;font:300 clamp(22px,2.6vw,30px)/1.25 'Cormorant Garamond',Georgia,serif;color:var(--tx)">Credencial</h3>
-    <div data-modal-inst style="margin-top:10px;font:500 13px/1.5 Jost;color:var(--tx2)">Institución</div>
-    <div style="height:1px;background:var(--bd);margin:22px 0"></div>
-    <p data-modal-note style="margin:0;font:400 13.5px/1.7 Jost;color:var(--tx2)">Documento archivado.</p>
-    <a href="mailto:rodrigopp.fx@gmail.com?subject=Solicitud%20de%20credencial" style="display:inline-block;margin-top:24px;padding:12px 18px;border:1px solid var(--ac);border-radius:5px;color:var(--ac);font:600 12px/1 Jost;letter-spacing:.06em" style-hover="background:var(--ac);color:var(--bg)">Solicitar el soporte</a>
+    <div style="display:flex;flex-wrap:wrap;gap:10px">
+      <a href="https://wa.me/573108508860" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:1px solid var(--tx);background:var(--tx);color:var(--bg);font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap" style-hover="background:var(--red);border-color:var(--red);color:#fff">WhatsApp</a>
+      <button data-print style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:1px solid var(--bd2);background:transparent;color:var(--tx2);font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap" style-hover="border-color:var(--red);color:var(--red)">Descargar CV</button>
+    </div>
   </div>
+</footer>
 </div>
-
-</div>]]>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;crema&quot;,&quot;dark&quot;,&quot;editorial&quot;],&quot;default&quot;:&quot;crema&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Apariencia&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;options&quot;:[&quot;#8a6226&quot;,&quot;#a06f2a&quot;,&quot;#6b5c44&quot;,&quot;#7a5a2f&quot;],&quot;default&quot;:&quot;#8a6226&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Apariencia&quot;},&quot;intensity&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;off&quot;,&quot;sutil&quot;,&quot;equilibrada&quot;,&quot;expresiva&quot;],&quot;default&quot;:&quot;equilibrada&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Movimiento 3D&quot;}}">
+<script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   renderVals() {
-    return {
-      theme: this.props.theme || 'crema',
-      tone: (this.props.theme || 'crema') === 'dark' ? 'dark' : 'light',
-      accent: this.props.accent || '#8a6226',
-      intensity: this.props.intensity || 'equilibrada',
-      rootRef: (el) => { if (el) this.root = el; },
-      onClick: (e) => this.handle(e)
-    };
+    return { rootRef: (el) => { if (el) this.root = el; }, onClick: (e) => this.handle(e) };
   }
-
-  componentDidMount() {
-    this.exp = 0;
-    setTimeout(() => this.setup(), 60);
-  }
-
-  componentDidUpdate() { this.applyTheme(); }
-
-  q(sel) { return this.root ? [...this.root.querySelectorAll(sel)] : []; }
+  componentDidMount() { setTimeout(() => this.setup(), 60); }
+  q(s) { return this.root ? [...this.root.querySelectorAll(s)] : []; }
 
   setup() {
     if (!this.root) return;
-    this.applyTheme();
-    this.selectExp(0);
-    this.setFilter('all');
-    this.observeSections();
-    this.observeCounters();
-    this.revealOnScroll();
-    this.q('[data-contact]').forEach((f) => f.addEventListener('submit', (ev) => {
-      ev.preventDefault();
-      const n = f.querySelector('[data-formnote]');
-      if (n) { n.textContent = 'Gracias. El formulario aún no está conectado a un servicio de envío; escríbeme a rodrigopp.fx@gmail.com mientras tanto.'; n.style.color = 'var(--ac)'; }
-    }));
-    document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') this.closeModal(); });
+    this.active = 'bienvenida';
+    this.paint();
+    this.q('video').forEach((v) => {
+      v.muted = true; v.defaultMuted = true; v.playsInline = true; v.loop = true;
+      const p = v.play(); if (p && p.catch) p.catch(() => {});
+    });
+    this.q('[data-exp-t]').forEach((b) => {
+      const m = b.querySelector('[data-more]');
+      b.addEventListener('mouseenter', () => { if (m && b.getAttribute('aria-expanded') !== 'true') { m.style.borderColor = 'var(--red)'; m.style.color = 'var(--red)'; } });
+      b.addEventListener('mouseleave', () => { if (m && b.getAttribute('aria-expanded') !== 'true') { m.style.borderColor = 'var(--bd2)'; m.style.color = 'var(--tx2)'; } });
+    });
   }
 
-  applyTheme() {
-    const t = this.props.theme || 'crema';
-    this.q('[data-theme-set]').forEach((b) => {
-      const on = b.getAttribute('data-theme-set') === t;
-      b.style.color = on ? 'var(--ac)' : 'var(--tx3)';
-      b.style.borderColor = on ? 'var(--ac)' : 'var(--bd)';
+  paint() {
+    const a = this.active;
+    this.q('[data-panel]').forEach((p) => {
+      const on = p.getAttribute('data-panel') === a;
+      p.style.display = on ? 'block' : 'none';
+      p.classList.remove('pan'); if (on) { void p.offsetWidth; p.classList.add('pan'); }
     });
+    let label = '';
+    this.q('[data-topitem]').forEach((t) => {
+      const on = t.getAttribute('data-go') === a;
+      const lbl = t.querySelector('[data-lbl]'), num = t.querySelector('[data-num]'), ind = t.querySelector('[data-ind]');
+      if (lbl) { lbl.style.color = on ? 'var(--tx)' : 'var(--tx3)'; if (on) label = lbl.textContent; }
+      if (num) num.style.color = on ? 'var(--red)' : 'var(--bd2)';
+      if (ind) ind.style.transform = on ? 'scale(1)' : 'scaleX(0)';
+    });
+    const cur = this.root.querySelector('[data-navcurrent]');
+    if (cur) cur.textContent = label;
+  }
+
+  closeNav() {
+    const row = this.root.querySelector('.navrow');
+    if (row) row.classList.remove('open');
+  }
+
+  go(id) {
+    this.active = id;
+    this.paint();
+    this.closeNav();
+    const st = this.root.querySelector('[data-stage]');
+    const y = st.getBoundingClientRect().top + window.pageYOffset - 56;
+    window.scrollTo({ top: y, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   }
 
   handle(e) {
-    const nav = e.target.closest('[data-nav]');
-    if (nav) {
-      const id = (nav.getAttribute('href') || '').slice(1);
-      const el = id && document.getElementById(id);
-      if (el) {
-        e.preventDefault();
-        const y = el.getBoundingClientRect().top + window.pageYOffset - 20;
-        window.scrollTo({ top: y, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    const g = e.target.closest('[data-go]');
+    if (g) { this.go(g.getAttribute('data-go')); return; }
+    if (e.target.closest('[data-navtoggle]')) {
+      const row = this.root.querySelector('.navrow');
+      if (row) row.classList.toggle('open');
+      return;
+    }
+    if (!e.target.closest('[data-top]')) this.closeNav();
+    const t = e.target.closest('[data-exp-t]');
+    if (t) {
+      const body = t.parentElement.querySelector('[data-exp-b]');
+      const m = t.querySelector('[data-more]');
+      const open = body.style.display !== 'none';
+      body.style.display = open ? 'none' : 'block';
+      t.setAttribute('aria-expanded', open ? 'false' : 'true');
+      if (m) {
+        m.textContent = open ? 'Ver más +' : 'Ver menos −';
+        m.style.background = open ? 'transparent' : 'var(--tx)';
+        m.style.color = open ? 'var(--tx2)' : 'var(--bg)';
+        m.style.borderColor = open ? 'var(--bd2)' : 'var(--tx)';
       }
       return;
     }
-    const exp = e.target.closest('[data-exp]');
-    if (exp) { this.selectExp(parseInt(exp.getAttribute('data-exp'), 10)); return; }
-    const flt = e.target.closest('[data-filter]');
-    if (flt) { this.setFilter(flt.getAttribute('data-filter')); return; }
-    const cred = e.target.closest('[data-cred]');
-    if (cred) { this.openModal(cred); return; }
-    const th = e.target.closest('[data-theme-set]');
-    if (th) { this.props.theme = th.getAttribute('data-theme-set'); this.root.setAttribute('data-theme', this.props.theme); const tn = this.props.theme === 'dark' ? 'dark' : 'light'; this.q('rpp-3d').forEach((o) => o.setAttribute('tone', tn)); this.applyTheme(); return; }
-    if (e.target.closest('[data-print]')) { window.print(); return; }
-    if (e.target.closest('[data-modal-close]') || e.target.hasAttribute('data-modal')) { this.closeModal(); }
-  }
-
-  selectExp(i) {
-    this.exp = i;
-    this.q('[data-exp]').forEach((b) => {
-      const on = parseInt(b.getAttribute('data-exp'), 10) === i;
-      b.style.borderTopColor = on ? 'var(--ac)' : 'transparent';
-      b.style.color = on ? 'var(--tx)' : 'var(--tx2)';
-      const y = b.querySelector('span');
-      if (y) y.style.color = on ? 'var(--ac)' : 'var(--tx3)';
-    });
-    this.q('[data-panel]').forEach((p) => {
-      const on = parseInt(p.getAttribute('data-panel'), 10) === i;
-      p.style.display = on ? 'block' : 'none';
-      p.style.marginTop = '0';
-      if (on) { p.classList.remove('rpp-rv'); void p.offsetWidth; p.classList.add('rpp-rv'); }
-    });
-    this.q('[data-expobj]').forEach((o) => o.setAttribute('variant', String(i)));
-  }
-
-  setFilter(cat) {
-    this.q('[data-filter]').forEach((b) => {
-      const on = b.getAttribute('data-filter') === cat;
-      b.style.borderColor = on ? 'var(--ac)' : 'var(--bd)';
-      b.style.color = on ? 'var(--ac)' : 'var(--tx2)';
-    });
-    this.q('[data-cred]').forEach((c) => {
-      c.style.display = (cat === 'all' || c.getAttribute('data-cred') === cat) ? 'block' : 'none';
-    });
-  }
-
-  openModal(btn) {
-    const m = this.root.querySelector('[data-modal]');
-    if (!m) return;
-    const state = btn.getAttribute('data-state');
-    const notes = {
-      censura: 'El documento original incluye número de identificación y firma manuscrita, por lo que no se publica. Se entrega una versión con datos ocultos a solicitud.',
-      solicitud: 'Certificación laboral disponible a solicitud, en versión con datos personales protegidos.',
-      provisional: 'Soporte provisional de ceremonia de graduación. Se sustituirá por acta y diploma cuando la institución los emita.',
-      privado: 'Documento privado: contiene datos tributarios, bancarios o de terceros. No se publica en ningún caso.'
-    };
-    m.querySelector('[data-modal-title]').textContent = btn.getAttribute('data-title') || '';
-    m.querySelector('[data-modal-inst]').textContent = btn.getAttribute('data-inst') || '';
-    m.querySelector('[data-modal-year]').textContent = btn.getAttribute('data-year') || '';
-    m.querySelector('[data-modal-note]').textContent = notes[state] || notes.solicitud;
-    m.style.display = 'flex';
-  }
-
-  closeModal() {
-    const m = this.root && this.root.querySelector('[data-modal]');
-    if (m) m.style.display = 'none';
-  }
-
-  observeSections() {
-    const secs = this.q('section[id]');
-    const links = this.q('[data-nav]');
-    const io = new IntersectionObserver((es) => {
-      es.forEach((en) => {
-        if (!en.isIntersecting) return;
-        const id = en.target.id;
-        links.forEach((a) => {
-          const on = a.getAttribute('href') === '#' + id;
-          if (a.closest('.rpp-tabs')) { a.style.color = on ? 'var(--tx)' : 'var(--tx3)'; return; }
-          a.style.color = on ? 'var(--tx)' : (a.style.fontWeight === '600' ? 'var(--tx2)' : 'var(--tx2)');
-          a.style.background = on ? 'color-mix(in srgb,var(--surf) 70%,transparent)' : 'transparent';
-          if (on) a.style.color = 'var(--ac)';
-        });
-      });
-    }, { rootMargin: '-15% 0px -70% 0px' });
-    secs.forEach((s) => io.observe(s));
-  }
-
-  observeCounters() {
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const fmt = (n, sep) => sep ? n.toLocaleString('es-CO') : String(n);
-    const io = new IntersectionObserver((es) => {
-      es.forEach((en) => {
-        if (!en.isIntersecting) return;
-        const el = en.target;
-        io.unobserve(el);
-        const target = parseInt(el.getAttribute('data-count'), 10);
-        const pre = el.getAttribute('data-prefix') || '';
-        const suf = el.getAttribute('data-suffix') || '';
-        const sep = el.getAttribute('data-sep') === 'true';
-        if (reduce) { el.textContent = pre + fmt(target, sep) + suf; return; }
-        const t0 = performance.now(), dur = 900;
-        const step = (t) => {
-          const p = Math.min(1, (t - t0) / dur);
-          const e = 1 - Math.pow(1 - p, 3);
-          el.textContent = pre + fmt(Math.round(target * e), sep) + suf;
-          if (p < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-      });
-    }, { threshold: 0.4 });
-    this.q('[data-count]').forEach((el) => io.observe(el));
-  }
-
-  revealOnScroll() {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const io = new IntersectionObserver((es) => {
-      es.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('rpp-rv'); io.unobserve(en.target); } });
-    }, { threshold: 0.12 });
-    this.q('section > div, section > p, section > h2, [data-vblock], article').forEach((el) => io.observe(el));
+    if (e.target.closest('[data-print]')) window.print();
   }
 }
 </script>
