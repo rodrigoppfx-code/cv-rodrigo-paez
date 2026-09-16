@@ -10,9 +10,3 @@ document.addEventListener('click', (event) => {
   link.click();
   link.remove();
 }, true);
-
-window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-print]').forEach((button) => {
-    if (/dossier/i.test(button.textContent)) button.textContent = 'Descargar hoja de vida';
-  });
-});
