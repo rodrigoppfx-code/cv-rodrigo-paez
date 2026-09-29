@@ -27,7 +27,11 @@ button{font-family:inherit;cursor:pointer}input,textarea{font-family:inherit}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd)}
 .g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--bd)}
 .g5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--bd)}
-@media (max-width:1040px){.two{grid-template-columns:minmax(0,1fr)}.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:minmax(0,1fr)}}
+[data-panel="formacion"] .g3>:nth-child(5):last-child,[data-panel="cursos"] .g3>:nth-child(5):last-child{grid-column:span 2}
+.heroidentity{display:flex;align-items:center;gap:24px}
+.heroidentity h1{flex:1;min-width:0}
+.herophoto{flex:0 0 96px;width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 22%}
+@media (max-width:1040px){.two{grid-template-columns:minmax(0,1fr)}.g3,.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.g3>:last-child:nth-child(odd){grid-column:1/-1}}
 .navrow>button+button{box-shadow:inset 1px 0 0 var(--bd)}
 @media (max-width:1040px) and (min-width:761px){
 .navrow{mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
@@ -45,9 +49,13 @@ main[data-stage]{padding-top:32px!important}
 .navrow>button:first-child{border-top:0}
 .navrow [data-ind]{left:0!important;right:auto!important;top:0;bottom:0;width:2px;height:auto!important;transform-origin:top}
 }
-@media (max-width:560px){.g4,.g5{grid-template-columns:minmax(0,1fr)}
+@media (max-width:560px){.g3,.g4,.g5{grid-template-columns:minmax(0,1fr)}
+[data-panel="formacion"] .g3>:nth-child(5):last-child,[data-panel="cursos"] .g3>:nth-child(5):last-child{grid-column:auto}
+.heroidentity{gap:16px}
+.herophoto{flex-basis:72px;width:72px;height:72px}
 .two{gap:28px}
 section[data-hero]{align-items:flex-end;height:clamp(320px,52svh,480px)!important}
+.heroveil{background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 35%,transparent),color-mix(in srgb,var(--bg) 78%,transparent) 55%)!important}
 }
 @media print{video,[data-top]{display:none!important}[data-panel]{display:block!important}}
 </style>
@@ -72,10 +80,14 @@ section[data-hero]{align-items:flex-end;height:clamp(320px,52svh,480px)!importan
 </nav>
 
 <section id="hero" data-hero data-screen-label="Inicio" style="position:relative;height:clamp(360px,56svh,640px);min-height:340px;display:flex;align-items:flex-end;padding:0 clamp(18px,4vw,60px) clamp(30px,4.5vh,50px);overflow:hidden">
-  <video src="brand/ambient-architecture.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.94);opacity:.32;pointer-events:none"></video>
-  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 30%,transparent),color-mix(in srgb,var(--bg) 20%,transparent) 55%,var(--bg) 96%)"></div>
+  <video src="brand/office-window.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(.92) brightness(1.08);opacity:0;transition:opacity 1.8s ease;pointer-events:none"></video>
+  <div aria-hidden="true" class="heroveil" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,color-mix(in srgb,var(--bg) 88%,transparent) 0%,color-mix(in srgb,var(--bg) 70%,transparent) 38%,transparent 72%)"></div>
+  <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:22%;pointer-events:none;background:linear-gradient(180deg,transparent,var(--bg))"></div>
   <div style="position:relative;max-width:1340px;width:100%;margin:0 auto">
+    <div class="heroidentity">
+      <img class="herophoto" src="brand/foto-rodrigo.png" alt="" aria-hidden="true" width="96" height="96">
     <h1 style="margin:0;font:400 clamp(36px,6.4vw,80px)/1.02 'Instrument Serif',Georgia,serif;letter-spacing:-.04em;overflow-wrap:anywhere;color:var(--tx)">Rodrigo Páez Parra</h1>
+    </div>
     <span style="display:block;width:44px;height:1px;background:var(--red);margin-top:clamp(20px,2.6vw,28px)"></span>
     <div style="margin-top:16px;display:flex;flex-direction:column;gap:6px;max-width:600px;font:400 clamp(15px,1.25vw,17px)/1.5 Inter;color:var(--tx2)">
       <span>Ingeniero Industrial</span>
@@ -304,7 +316,9 @@ class Component extends DCLogic {
     this.paint();
     this.q('video').forEach((v) => {
       v.muted = true; v.defaultMuted = true; v.playsInline = true; v.loop = true;
-      const p = v.play(); if (p && p.catch) p.catch(() => {});
+      const show = () => { v.style.opacity = '.62'; };
+      if (v.readyState >= 3) show(); else v.addEventListener('playing', show, { once: true });
+      const p = v.play(); if (p && p.catch) p.catch(() => show());
     });
     this.q('[data-exp-t]').forEach((b) => {
       const m = b.querySelector('[data-more]');
