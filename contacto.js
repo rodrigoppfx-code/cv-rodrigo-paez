@@ -2,6 +2,7 @@
   'use strict';
   const form = document.getElementById('contact-form');
   const result = document.getElementById('result');
+  const successDialog = document.getElementById('success-dialog');
   const button = form.querySelector('button[type="submit"]');
   let sending = false;
 
@@ -41,8 +42,8 @@
       const data = await response.json();
       if (response.ok && data.success === true) {
         result.textContent = 'Tu mensaje fue enviado. Gracias por contactarme.';
-        window.alert('Mensaje enviado correctamente. Gracias por contactarme.');
         form.reset();
+        if (!successDialog.open) successDialog.showModal();
       } else {
         result.textContent = response.status === 429
           ? 'Hay demasiados intentos. Espera un momento o utiliza WhatsApp.'
