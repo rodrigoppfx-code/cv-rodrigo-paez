@@ -18,11 +18,6 @@
       result.textContent = 'Completa todos los campos antes de enviar.';
       return;
     }
-    const captcha = String(fields.get('h-captcha-response') || '');
-    if (!captcha) {
-      result.textContent = 'Completa la verificación de seguridad antes de enviar.';
-      return;
-    }
     sending = true;
     button.disabled = true;
     button.textContent = 'Enviando…';
@@ -37,7 +32,6 @@
           access_key: fields.get('access_key'),
           from_name: fields.get('from_name'),
           name, email, subject, message,
-          'h-captcha-response': captcha,
           botcheck: false
         }),
         signal: controller.signal,
@@ -47,17 +41,17 @@
       const data = await response.json();
       if (response.ok && data.success === true) {
         result.textContent = 'Tu mensaje fue enviado. Gracias por contactarme.';
+        window.alert('Mensaje enviado correctamente. Gracias por contactarme.');
         form.reset();
       } else {
         result.textContent = response.status === 429
           ? 'Hay demasiados intentos. Espera un momento o utiliza WhatsApp.'
-          : 'El servicio no confirmó el envío. Revisa los campos y la verificación de seguridad e inténtalo de nuevo, o utiliza WhatsApp.';
+          : 'El servicio no confirmó el envío. Revisa los campos e inténtalo de nuevo, o utiliza WhatsApp.';
       }
     } catch {
       result.textContent = 'No pudimos confirmar el envío. Conservamos tu mensaje; revisa tu conexión antes de intentar de nuevo, o utiliza WhatsApp.';
     } finally {
       clearTimeout(timeout);
-      if (window.hcaptcha) window.hcaptcha.reset();
       sending = false;
       button.disabled = false;
       button.textContent = 'Enviar mensaje';
