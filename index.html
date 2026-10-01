@@ -59,6 +59,21 @@ section[data-hero]{align-items:flex-end;height:clamp(320px,52svh,480px)!importan
 .heroveil{background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 35%,transparent),color-mix(in srgb,var(--bg) 78%,transparent) 55%)!important}
 }
 @media (max-width:760px){.competency-row{grid-template-columns:minmax(0,1fr)!important}}
+
+/* Ajustes visuales autorizados: texto intacto. */
+[data-panel="perfil"] .two{display:flex;flex-direction:column;gap:22px}
+[data-panel="perfil"] .two p{font-size:clamp(16px,1.35vw,18px)!important;line-height:1.7!important;hyphens:none!important}
+.competency-block{display:grid;gap:14px;border:0!important;background:transparent!important;padding:0!important}
+.competency-row{margin:0!important;padding:22px 24px!important;border:0!important;background:var(--bg2);box-shadow:inset 0 2px 0 var(--red);transition:background .25s,box-shadow .25s}
+[data-panel="habilidades"] .g4>:nth-child(n+9){grid-column:span 2}
+[data-panel="habilidades"] .g4>div,[data-panel="valor"] .g3>div,[data-panel="valor"] .two>div{transition:background .25s,box-shadow .25s!important}
+@media (hover:hover){
+.competency-row:hover,[data-panel="habilidades"] .g4>div:hover,[data-panel="valor"] .g3>div:hover,[data-panel="valor"] .two>div:hover{background:color-mix(in srgb,var(--red) 5%,var(--bg))!important;box-shadow:inset 0 3px 0 var(--red),0 10px 28px -22px rgba(11,11,12,.28)!important}
+}
+@media (max-width:1040px){[data-panel="habilidades"] .g4>:nth-child(n+9){grid-column:auto}}
+@media (max-width:760px){.competency-row{padding:20px 18px!important}}
+@media (prefers-reduced-motion:reduce){.competency-row,[data-panel="habilidades"] .g4>div,[data-panel="valor"] .g3>div,[data-panel="valor"] .two>div{transition:none!important}}
+
 @media print{video,[data-top]{display:none!important}[data-panel]{display:block!important}}
 </style>
 </helmet>
