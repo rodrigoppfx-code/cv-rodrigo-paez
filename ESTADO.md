@@ -32,7 +32,7 @@ Usar siempre los enlaces de Vercel en el CV, en LinkedIn y al compartir.
 - [ ] LinkedIn Destacado: enlace a Proyectos + corregir imagen del enlace al perfil (manual).
 
 ## Reglas de contenido
-Actualización puntual solicitada por Rodrigo: la introducción de Proyectos queda «Herramientas que he diseñado y construido usando Claude Design, Codex y ChatGPT, con ayuda del feedback del equipo». Este cambio sustituye la mención al rol de Director Comercial únicamente en esa frase; el resto del sitio permanece igual. Verificación de publicación en curso.
+Actualización puntual solicitada por Rodrigo: la introducción de Proyectos queda «Herramientas que he diseñado y construido usando Claude Design, Codex y ChatGPT, con ayuda del feedback del equipo». Este cambio sustituye la mención al rol de Director Comercial únicamente en esa frase; el resto del sitio permanece igual. Publicación verificada el 1 de octubre de 2026 en Vercel, commit c4236d6, con comprobación de escritorio y móvil sin desbordamiento horizontal.
 
 - Avovite se menciona solo como "en mi rol de Director Comercial", sin promocionar la empresa.
 - Sin demos en vivo, sin enlaces a las apps y sin descargables.
