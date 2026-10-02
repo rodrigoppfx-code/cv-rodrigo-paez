@@ -1,6 +1,6 @@
 # LÉEME PRIMERO — Hoja de vida web de Rodrigo Páez Parra
 
-**Autor y dueño:** Rodrigo Páez Parra (rodrigopp.fx@gmail.com · linkedin.com/in/rodrigopaezparra).
+**Autor y dueño:** Rodrigo Páez Parra (linkedin.com/in/rodrigopaezparra).
 Sitio diseñado y construido por él con apoyo de IA (Claude Design, Codex, Claude Code).
 
 ## Antes de cualquier cambio
@@ -9,7 +9,7 @@ Sitio diseñado y construido por él con apoyo de IA (Claude Design, Codex, Clau
 3. Haz los cambios en `main`; Vercel publica solo. Revisa en computador y celular.
 4. Al terminar, actualiza `ESTADO.md` (fecha, qué cambió, pendientes).
 
-Este archivo Resume el estado de la hoja de vida web y de todos los proyectos de Rodrigo Páez Parra.
+Este archivo resume el estado de la hoja de vida web y de todos los proyectos de Rodrigo Páez Parra.
 Estado detallado y pendientes: ver `ESTADO.md`.
 
 ## Este repositorio
