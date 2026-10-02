@@ -12,7 +12,7 @@ Usar siempre los enlaces de Vercel en el CV, en LinkedIn y al compartir.
 
 ## Cómo se actualiza
 1. Todo cambio se hace en este repositorio (rama `main`).
-2. Vercel (proyecto `rodrigo-paez`) publica solo en 1–2 minutos.
+2. Vercel (proyecto `rodrigo-paez-parra`) publica solo en 1–2 minutos.
 3. GitHub Pages también se actualiza solo (respaldo).
 4. `vercel.json` (`cleanUrls`) permite usar `/proyectos` sin `.html`.
 5. Enlaces directos a un proyecto: `/#propuestas`, `/#simulador`, `/#campus`, `/#analizador`, `/#agenda`.
