@@ -25,8 +25,9 @@ Usar siempre los enlaces de Vercel en el CV, en LinkedIn y al compartir.
 - [x] Maquetas SVG antiguas archivadas en `brand/proyectos/_archivo/`.
 - [x] GitHub Pages redirige automáticamente al dominio de Vercel.
 
+- [x] Vercel conectado a este repositorio (proyecto `rodrigo-paez-parra`, despliegue automático desde `main`).
+
 ## Pendiente
-- [ ] Conectar Vercel con este repositorio (proyecto `rodrigo-paez-parra`).
 - [ ] CV en Word: agregar línea "Proyectos" con el enlace de Vercel (manual).
 - [ ] LinkedIn Destacado: enlace a Proyectos + corregir imagen del enlace al perfil (manual).
 
