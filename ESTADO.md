@@ -45,6 +45,3 @@ Contexto general y reglas: `LEEME-PRIMERO.md`.
 
 ## Otros pendientes
 - [ ] Respaldo del Simulador en GitHub: el código está solo en Vercel; subirlo desde el equipo de Rodrigo a un repo privado `simulador-avovite`.
-
-## 2 oct 2026
-- [x] Proyecto 06 «Hoja de vida web ejecutiva» agregado a la pestaña Proyectos (`/#web`), con 2 capturas en `brand/proyectos/capturas/06-web-ejecutiva/`. Numeración pasa a «/ 06»; Agenda → Web → Propuestas.

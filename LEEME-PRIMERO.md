@@ -16,7 +16,7 @@ Estado detallado y pendientes: ver `ESTADO.md`.
 Hoja de vida web de Rodrigo Páez Parra (Director Comercial, Ingeniero Industrial, Magíster en Administración Internacional).
 - Publicado en **Vercel**, proyecto `rodrigo-paez-parra` → https://rodrigo-paez-parra.vercel.app
   - Proyectos: https://rodrigo-paez-parra.vercel.app/proyectos (o `/#proyectos`)
-  - Proyecto puntual: `/#propuestas`, `/#simulador`, `/#campus`, `/#analizador`, `/#agenda`, `/#web`
+  - Proyecto puntual: `/#propuestas`, `/#simulador`, `/#campus`, `/#analizador`, `/#agenda`
 - **GitHub Pages** (enlace antiguo) sigue activo y redirige solo a Vercel.
 - Cada push a `main` publica automáticamente en Vercel (1–2 min). No hay build.
 
@@ -25,7 +25,7 @@ Hoja de vida web de Rodrigo Páez Parra (Director Comercial, Ingeniero Industria
 - `proyectos.html`: solo redirige a `index.html#proyectos` y tiene la vista previa (Open Graph) para LinkedIn.
 - `contacto.html` + `contacto.js`: formulario de contacto (Web3Forms).
 - `brand/`: foto, video del encabezado, `og-perfil.png` y `og-proyectos.png` (1200×627, vista previa en LinkedIn).
-- `brand/proyectos/capturas/`: 13 capturas reales de los 6 proyectos, con datos sensibles difuminados.
+- `brand/proyectos/capturas/`: 11 capturas reales de los proyectos, con datos sensibles difuminados.
 - `brand/proyectos/_archivo/`: maquetas SVG antiguas (respaldo, no se usan).
 - `vercel.json`: `cleanUrls` para usar rutas sin `.html`.
 
