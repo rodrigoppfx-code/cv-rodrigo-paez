@@ -39,3 +39,7 @@ Usar siempre los enlaces de Vercel en el CV, en LinkedIn y al compartir.
 
 ## Archivos de referencia
 Instructivos entregados: Web (con imágenes), Word y LinkedIn.
+Contexto general de todos los proyectos: `CLAUDE.md`.
+
+## Otros pendientes
+- [ ] Respaldo del Simulador en GitHub: el código está solo en Vercel; subirlo desde el equipo de Rodrigo a un repo privado `simulador-avovite`.
