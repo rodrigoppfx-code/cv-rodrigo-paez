@@ -1,191 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
+<script>if(location.hostname.endsWith("github.io")){location.replace("https://rodrigo-paez-parra.vercel.app/"+location.hash);}</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet data-dc-atomics>
 <title>Rodrigo Páez Parra — Perfil Ejecutivo</title>
+<meta property="og:title" content="Rodrigo Páez Parra · Perfil Ejecutivo">
+<meta property="og:description" content="Rodrigo Páez Parra. Ingeniero Industrial, Magíster en Administración Internacional. Perfil ejecutivo.">
+<meta property="og:image" content="https://rodrigo-paez-parra.vercel.app/brand/og-perfil.png">
+<meta property="og:url" content="https://rodrigo-paez-parra.vercel.app/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Rodrigo Páez Parra. Ingeniero Industrial, Magíster en Administración Internacional. Perfil ejecutivo.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FAF9F6;--bg2:#F5F3EE;--tx:#111314;--tx2:#4B5052;--tx3:#6B6F71;--bd:rgba(11,11,12,.13);--bd2:rgba(11,11,12,.3);--red:#B8230F}
+:root{--bg:#FAF9F6;--bg2:#F3F1EB;--tx:#111314;--tx2:#4B5052;--tx3:#6B6F71;--bd:rgba(11,11,12,.12);--bd2:rgba(11,11,12,.3);--red:#B8230F}
 *{box-sizing:border-box}
+html{scroll-padding-top:72px}
 body{margin:0;background:var(--bg);color:var(--tx);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;text-wrap:pretty;font-feature-settings:"cv11","ss01","ss03"}
 a{color:var(--tx);text-decoration:none}a:hover{color:var(--red)}
-button{font-family:inherit;cursor:pointer}input,textarea{font-family:inherit}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
 ::selection{background:var(--red);color:#fff}
-@keyframes rUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+dialog::backdrop{background:rgba(17,19,20,.72)}
+@keyframes rUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .pan{animation:rUp .8s cubic-bezier(.16,1,.3,1) both}
 .xul>li{position:relative;padding-left:22px}
-.xul>li:before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;background:var(--red);opacity:.75}
-.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(22px,3.4vw,54px)}
-.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd)}
-.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--bd)}
-.g5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--bd)}
-[data-panel="formacion"] .g3>:nth-child(5):last-child,[data-panel="cursos"] .g3>:nth-child(5):last-child{grid-column:span 2}
-.heroidentity{display:flex;align-items:center;gap:24px}
-.heroidentity h1{flex:1;min-width:0}
-.herophoto{flex:0 0 160px;width:160px;height:160px;border-radius:50%;object-fit:cover;object-position:50% 22%}
-@media (max-width:1040px){.two{grid-template-columns:minmax(0,1fr)}.g3,.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.g3>:last-child:nth-child(odd){grid-column:1/-1}}
-.navrow>button+button{box-shadow:inset 1px 0 0 var(--bd)}
-@media (max-width:1040px) and (min-width:761px){
-.navrow{mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
-}
+.xul>li:before{content:"";position:absolute;left:0;top:.7em;width:10px;height:1px;background:var(--red)}
+.navrow::-webkit-scrollbar{display:none}
+@media (max-width:1180px){.navbrand{display:none!important}}
+@media (max-width:1040px){.two,.pj{grid-template-columns:minmax(0,1fr)!important}.g3,.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))!important}.navrow{mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent)}}
 @media (max-width:760px){
-.xrow{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:10px!important;padding:20px 0!important}
-.xrow>span:last-child{width:100%;display:flex!important;align-items:center;justify-content:center!important;min-height:46px;box-sizing:border-box}
+.xrow{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:10px!important;padding:22px 0!important}
+.xrow>span:last-child{align-self:stretch;justify-content:center!important;min-height:46px}
 .xbody{padding-left:0!important}
-.xul>li{padding-left:20px!important}
-main[data-stage]{padding-top:32px!important}
+.vrow{grid-template-columns:minmax(0,1fr)!important;gap:8px!important}
+main[data-stage]{padding-top:36px!important}
 .navtrig{display:flex!important}
-.navrow{display:none!important;position:absolute;left:0;right:0;top:100%;flex-direction:column!important;gap:0!important;height:auto!important;padding:6px 0!important;overflow:visible!important;background:var(--bg);border-bottom:1px solid var(--bd);box-shadow:0 12px 24px rgba(0,0,0,.08);mask-image:none}
+.navwrap{display:block!important}
+.navrow{display:none!important;position:absolute;left:0;right:0;top:100%;flex-direction:column!important;height:auto!important;padding:6px 0!important;overflow:visible!important;background:var(--bg);border-bottom:1px solid var(--bd);box-shadow:0 18px 30px -12px rgba(0,0,0,.14);mask-image:none!important}
 .navrow.open{display:flex!important}
-.navrow>button{width:100%!important;justify-content:flex-start!important;text-align:left;padding:0 20px!important;height:50px!important;margin-left:0!important;box-shadow:none!important;border-top:1px solid var(--bd)}
-.navrow>button:first-child{border-top:0}
-.navrow [data-ind]{left:0!important;right:auto!important;top:0;bottom:0;width:2px;height:auto!important;transform-origin:top}
+.navrow>button{width:100%!important;justify-content:flex-start!important;padding:0 20px!important;height:52px!important;border-top:1px solid var(--bd)!important}
+.navrow>button:first-child{border-top:0!important}
+.navrow [data-ind]{left:0!important;right:auto!important;top:0;bottom:0;width:2px!important;height:auto!important}
+.gal{grid-template-columns:minmax(0,1fr)!important}
 }
-@media (max-width:560px){.g3,.g4,.g5{grid-template-columns:minmax(0,1fr)}
-[data-panel="formacion"] .g3>:nth-child(5):last-child,[data-panel="cursos"] .g3>:nth-child(5):last-child{grid-column:auto}
-.heroidentity{gap:16px}
-.herophoto{flex-basis:112px;width:112px;height:112px}
-.two{gap:28px}
-section[data-hero]{align-items:flex-end;height:clamp(320px,52svh,480px)!important}
-.heroveil{background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 35%,transparent),color-mix(in srgb,var(--bg) 78%,transparent) 55%)!important}
+@media (max-width:560px){.g3,.g4,.g5{grid-template-columns:minmax(0,1fr)!important}
+.heroidentity{gap:16px!important;align-items:flex-end!important}
+.herophoto{width:96px!important;height:96px!important;flex-basis:96px!important}
+section[data-hero]{height:clamp(340px,56svh,480px)!important}
+.heroveil{background:linear-gradient(180deg,color-mix(in srgb,var(--bg) 40%,transparent),color-mix(in srgb,var(--bg) 85%,transparent) 55%)!important}
+.cbtn{flex:1 1 calc(50% - 5px);justify-content:center}
 }
-@media (max-width:760px){.competency-row{grid-template-columns:minmax(0,1fr)!important}}
-
-/* Ajustes visuales autorizados: texto intacto. */
-[data-panel="perfil"] .two{display:flex;flex-direction:column;gap:22px}
-[data-panel="perfil"] .two p{font-size:clamp(16px,1.35vw,18px)!important;line-height:1.7!important;hyphens:none!important}
-.competency-block{display:grid;gap:14px;border:0!important;background:transparent!important;padding:0!important}
-.competency-row{margin:0!important;padding:22px 24px!important;border:0!important;background:var(--bg2);box-shadow:inset 0 2px 0 var(--red);transition:background .25s,box-shadow .25s}
-[data-panel="habilidades"] .g4>:nth-child(n+9){grid-column:span 2}
-[data-panel="habilidades"] .g4>div,[data-panel="valor"] .g3>div,[data-panel="valor"] .two>div{transition:background .25s,box-shadow .25s!important}
-@media (hover:hover){
-.competency-row:hover,[data-panel="habilidades"] .g4>div:hover,[data-panel="valor"] .g3>div:hover,[data-panel="valor"] .two>div:hover{background:var(--bg)!important;box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)!important}
-}
-@media (max-width:1040px){[data-panel="habilidades"] .g4>:nth-child(n+9){grid-column:auto}}
-@media (max-width:760px){.competency-row{padding:20px 18px!important}}
-@media (prefers-reduced-motion:reduce){.competency-row,[data-panel="habilidades"] .g4>div,[data-panel="valor"] .g3>div,[data-panel="valor"] .two>div{transition:none!important}}
-
-@media print{video,[data-top]{display:none!important}[data-panel]{display:block!important}}
+details[open] summary>span{transform:rotate(45deg)}summary::-webkit-details-marker{display:none}
+.pjlist>button:first-child{border-top:0!important}
+.pjthumbs::-webkit-scrollbar{height:4px}
+@media (max-width:1040px){.pjwrap{grid-template-columns:minmax(0,1fr)!important}.pjlist{position:static!important;flex-direction:row!important;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--bd)}.pjlist::-webkit-scrollbar{display:none}.pjlist>button{flex:0 0 auto;width:auto!important;border-top:0!important;white-space:nowrap}.pjlist [data-pjind]{left:0!important;right:0;top:auto!important;width:auto!important;height:2px;transform-origin:left}}
+@media (max-width:760px){.g3p{grid-template-columns:minmax(0,1fr)!important}}
+@media (prefers-reduced-motion:reduce){.pan{animation:none}}
+@media print{video,[data-top],[data-lightbox]{display:none!important}[data-panel]{display:block!important}}
 </style>
-</helmet>
+<style>
+.hv0:hover{background:rgba(11,11,12,.035) !important}
+.hv1:hover{background:var(--bg2) !important}
+.hv2:hover{opacity:1 !important}
+.hv3:hover{color:var(--red) !important}
+.hv4:hover{box-shadow:0 14px 28px -14px rgba(17,19,20,.35) !important;transform:translateY(-1px) !important;border-color:var(--bd2) !important}
+.hv5:hover{background:var(--red) !important;border-color:var(--red) !important}
+</style>
+</head>
+<body>
+<div id="app" style="position:relative;min-height:100vh;background:var(--bg)">
 
-<div ref="{{ rootRef }}" onClick="{{ onClick }}" style="position:relative;min-height:100vh;background:var(--bg)">
-
-<nav data-top aria-label="Secciones" style="position:sticky;top:0;left:0;right:0;z-index:40;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)">
-  <div style="max-width:1340px;margin:0 auto;position:relative;padding:0 clamp(18px,4vw,60px)">
-  <button data-navtoggle class="navtrig" style="display:none;width:100%;height:56px;border:0;background:transparent;align-items:center;justify-content:space-between;color:var(--tx);font:600 12px/1 Inter;letter-spacing:.06em;text-transform:uppercase"><span data-navcurrent>Quién soy</span><span data-navicon style="font:400 15px/1 Inter;color:var(--tx3)">☰</span></button>
-  <div class="navrow" style="display:flex;gap:0;height:56px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity">
-    <!-- Bienvenida temporalmente oculta hasta disponer del video. -->
-    <button data-go="perfil" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">01</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Quién soy</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
-    <button data-go="valor" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">02</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Valor</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
-    <button data-go="habilidades" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">03</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Habilidades</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
-    <button data-go="experiencia" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">04</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Experiencia</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
-    <button data-go="formacion" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">05</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Formación</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
-    <button data-go="cursos" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">06</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Cursos</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
-    <button data-go="herramientas" data-topitem style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 16px;height:100%;min-height:44px;white-space:nowrap;scroll-snap-align:start;transition:background .18s" style-hover="background:rgba(11,11,12,.04)"><span data-num style="font:600 9.5px/1 Inter;letter-spacing:.06em;color:var(--bd2);transition:color .18s">07</span><span data-lbl style="font:600 11.5px/1 Inter;letter-spacing:.07em;text-transform:uppercase;color:var(--tx3);transition:color .18s">Herramientas</span><span data-ind style="position:absolute;left:16px;right:16px;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .22s cubic-bezier(.2,.7,.26,1)"></span></button>
-  </div>
+<nav data-top="" aria-label="Secciones" style="position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--bd)">
+  <div class="navwrap" style="max-width:1340px;margin:0 auto;position:relative;padding:0 clamp(18px,4vw,60px);display:flex;align-items:center;gap:32px">
+    <button data-navtoggle="" class="navtrig" style="display:none;width:100%;height:58px;border:0;background:transparent;align-items:center;justify-content:space-between;color:var(--tx);font:600 12px/1 Inter;letter-spacing:.08em;text-transform:uppercase"><span data-navcurrent="">Quién soy</span><span style="font:400 15px/1 Inter;color:var(--tx3)">☰</span></button>
+    <a class="navbrand" href="#perfil" data-go="perfil" style="flex:0 0 auto;font:400 21px/1 'Instrument Serif',Georgia,serif;letter-spacing:-.01em;color:var(--tx);white-space:nowrap">Rodrigo Páez Parra</a>
+    <div class="navrow" style="flex:1;min-width:0;display:flex;justify-content:flex-end;height:58px;overflow-x:auto;scrollbar-width:none">
+      <button data-go="perfil" data-topitem="" style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 13px;height:100%;white-space:nowrap;transition:background .18s" class="hv0"><span data-num="" style="font:500 10px/1 Inter;letter-spacing:.04em;color:var(--bd2);font-variant-numeric:tabular-nums">01</span><span data-lbl="" style="font:600 11px/1 Inter;letter-spacing:.09em;text-transform:uppercase;color:var(--tx3)">Quién soy</span><span data-ind="" style="position:absolute;left:13px;right:13px;bottom:-1px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.26,1)"></span></button>
+      <button data-go="valor" data-topitem="" style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 13px;height:100%;white-space:nowrap;transition:background .18s" class="hv0"><span data-num="" style="font:500 10px/1 Inter;letter-spacing:.04em;color:var(--bd2);font-variant-numeric:tabular-nums">02</span><span data-lbl="" style="font:600 11px/1 Inter;letter-spacing:.09em;text-transform:uppercase;color:var(--tx3)">Valor</span><span data-ind="" style="position:absolute;left:13px;right:13px;bottom:-1px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.26,1)"></span></button>
+      <button data-go="habilidades" data-topitem="" style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 13px;height:100%;white-space:nowrap;transition:background .18s" class="hv0"><span data-num="" style="font:500 10px/1 Inter;letter-spacing:.04em;color:var(--bd2);font-variant-numeric:tabular-nums">03</span><span data-lbl="" style="font:600 11px/1 Inter;letter-spacing:.09em;text-transform:uppercase;color:var(--tx3)">Habilidades</span><span data-ind="" style="position:absolute;left:13px;right:13px;bottom:-1px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.26,1)"></span></button>
+      <button data-go="experiencia" data-topitem="" style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 13px;height:100%;white-space:nowrap;transition:background .18s" class="hv0"><span data-num="" style="font:500 10px/1 Inter;letter-spacing:.04em;color:var(--bd2);font-variant-numeric:tabular-nums">04</span><span data-lbl="" style="font:600 11px/1 Inter;letter-spacing:.09em;text-transform:uppercase;color:var(--tx3)">Experiencia</span><span data-ind="" style="position:absolute;left:13px;right:13px;bottom:-1px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.26,1)"></span></button>
+      <button data-go="formacion" data-topitem="" style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 13px;height:100%;white-space:nowrap;transition:background .18s" class="hv0"><span data-num="" style="font:500 10px/1 Inter;letter-spacing:.04em;color:var(--bd2);font-variant-numeric:tabular-nums">05</span><span data-lbl="" style="font:600 11px/1 Inter;letter-spacing:.09em;text-transform:uppercase;color:var(--tx3)">Formación</span><span data-ind="" style="position:absolute;left:13px;right:13px;bottom:-1px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.26,1)"></span></button>
+      <button data-go="cursos" data-topitem="" style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 13px;height:100%;white-space:nowrap;transition:background .18s" class="hv0"><span data-num="" style="font:500 10px/1 Inter;letter-spacing:.04em;color:var(--bd2);font-variant-numeric:tabular-nums">06</span><span data-lbl="" style="font:600 11px/1 Inter;letter-spacing:.09em;text-transform:uppercase;color:var(--tx3)">Cursos</span><span data-ind="" style="position:absolute;left:13px;right:13px;bottom:-1px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.26,1)"></span></button>
+      <button data-go="herramientas" data-topitem="" style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 13px;height:100%;white-space:nowrap;transition:background .18s" class="hv0"><span data-num="" style="font:500 10px/1 Inter;letter-spacing:.04em;color:var(--bd2);font-variant-numeric:tabular-nums">07</span><span data-lbl="" style="font:600 11px/1 Inter;letter-spacing:.09em;text-transform:uppercase;color:var(--tx3)">Herramientas</span><span data-ind="" style="position:absolute;left:13px;right:13px;bottom:-1px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.26,1)"></span></button>
+      <button data-go="proyectos" data-topitem="" style="position:relative;border:0;background:transparent;display:flex;align-items:center;gap:7px;padding:0 13px;height:100%;white-space:nowrap;transition:background .18s" class="hv0"><span data-num="" style="font:500 10px/1 Inter;letter-spacing:.04em;color:var(--bd2);font-variant-numeric:tabular-nums">08</span><span data-lbl="" style="font:600 11px/1 Inter;letter-spacing:.09em;text-transform:uppercase;color:var(--tx3)">Proyectos con IA</span><span data-ind="" style="position:absolute;left:13px;right:13px;bottom:-1px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.2,.7,.26,1)"></span></button>
+    </div>
   </div>
 </nav>
 
-<section id="hero" data-hero data-screen-label="Inicio" style="position:relative;height:clamp(360px,56svh,640px);min-height:340px;display:flex;align-items:flex-end;padding:0 clamp(18px,4vw,60px) clamp(30px,4.5vh,50px);overflow:hidden">
-  <video src="brand/office-window.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(.92) brightness(1.08);opacity:0;transition:opacity 1.8s ease;pointer-events:none"></video>
-  <div aria-hidden="true" class="heroveil" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,color-mix(in srgb,var(--bg) 88%,transparent) 0%,color-mix(in srgb,var(--bg) 70%,transparent) 38%,transparent 72%)"></div>
-  <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:22%;pointer-events:none;background:linear-gradient(180deg,transparent,var(--bg))"></div>
+<section id="hero" data-hero="" data-screen-label="Inicio" style="position:relative;height:clamp(380px,58svh,660px);min-height:360px;display:flex;align-items:flex-end;padding:0 clamp(18px,4vw,60px) clamp(34px,5vh,56px);overflow:hidden">
+  <video src="brand/office-window.mp4" autoplay="" muted="" loop="" playsinline="" preload="auto" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(.9) brightness(1.1);opacity:0;transition:opacity 1.8s ease;pointer-events:none"></video>
+  <div aria-hidden="true" class="heroveil" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,color-mix(in srgb,var(--bg) 92%,transparent) 0%,color-mix(in srgb,var(--bg) 72%,transparent) 42%,transparent 78%)"></div>
+  <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:28%;pointer-events:none;background:linear-gradient(180deg,transparent,var(--bg))"></div>
   <div style="position:relative;max-width:1340px;width:100%;margin:0 auto">
-    <div class="heroidentity">
-      <img class="herophoto" src="brand/foto-rodrigo.png?v=997e5d00" alt="" aria-hidden="true" width="160" height="160">
-    <h1 style="margin:0;font:400 clamp(36px,6.4vw,80px)/1.02 'Instrument Serif',Georgia,serif;letter-spacing:-.04em;overflow-wrap:anywhere;color:var(--tx)">Rodrigo Páez Parra</h1>
+    <div class="heroidentity" style="display:flex;align-items:center;gap:28px">
+      <img class="herophoto" src="brand/foto-rodrigo.png" alt="" aria-hidden="true" width="148" height="148" style="flex:0 0 148px;width:148px;height:148px;border-radius:50%;object-fit:cover;object-position:50% 22%;box-shadow:0 0 0 1px var(--bd2),0 0 0 7px var(--bg),0 30px 50px -28px rgba(11,11,12,.45)">
+      <h1 data-heroname="" style="flex:1;min-width:0;margin:0;font:400 clamp(40px,6.8vw,88px)/1 'Instrument Serif',Georgia,serif;letter-spacing:-.035em;color:var(--tx)">Rodrigo Páez Parra</h1>
     </div>
-    <span style="display:block;width:44px;height:1px;background:var(--red);margin-top:clamp(20px,2.6vw,28px)"></span>
-    <div style="margin-top:16px;display:flex;flex-direction:column;gap:6px;max-width:600px;font:400 clamp(15px,1.25vw,17px)/1.5 Inter;color:var(--tx2)">
-      <span style="display:flex;flex-wrap:wrap;gap:8px;align-items:baseline">Máster en Marketing, Dirección Comercial e IA Generativa<span style="font:700 11px/1 Inter;letter-spacing:.14em;color:var(--red);text-transform:uppercase;white-space:nowrap">En curso</span></span>
-      <span>Magíster en Administración Internacional</span>
-      <span>Ingeniero Industrial</span>
+    <div style="margin-top:clamp(22px,2.8vw,32px);display:flex;flex-direction:column;max-width:560px;border-top:1px solid var(--red);font:400 clamp(14.5px,1.2vw,16px)/1.45 Inter;color:var(--tx2)">
+      <span style="display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--bd)">Máster en Marketing, Dirección Comercial e IA Generativa<span style="font:700 10px/1 Inter;letter-spacing:.16em;color:var(--red);text-transform:uppercase;white-space:nowrap">En curso</span></span>
+      <span style="padding:11px 0;border-bottom:1px solid var(--bd)">Magíster en Administración Internacional</span>
+      <span style="padding:11px 0">Ingeniero Industrial</span>
     </div>
   </div>
 </section>
 
-<main data-stage style="position:relative;z-index:5;max-width:1340px;margin:0 auto;padding:clamp(40px,6vh,64px) clamp(18px,4vw,60px) clamp(70px,10vh,120px);scroll-margin-top:56px">
-
-  <!-- Bienvenida temporalmente oculta; conservar para reactivarla con el video.
-  <section data-panel="bienvenida" data-screen-label="Bienvenida" style="display:block">
-    <div style="display:flex;flex-direction:column;gap:18px"><div style="display:flex;align-items:center;gap:16px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">01 <span style="color:var(--bd2)">/ 08</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 style="margin:0;font:600 clamp(28px,3.3vw,44px)/1.08 Inter;letter-spacing:-.03em;color:var(--tx)">Bienvenida</h2></div>
-    <div style="margin-top:clamp(22px,3.2vw,36px);max-width:560px;position:relative;aspect-ratio:16/9;border:1px solid var(--bd);background:var(--bg2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
-      <button aria-label="Reproducir video de bienvenida" style="width:56px;height:56px;border:1px solid var(--bd2);border-radius:50%;background:var(--bg);color:var(--tx);font-size:13px;padding-left:3px" style-hover="border-color:var(--red);color:var(--red)">▶</button>
-      <span style="font:600 11.5px/1 Inter;letter-spacing:.18em;color:var(--tx3);text-transform:uppercase">Video de bienvenida · 15 s</span>
-    </div>
-  </section>
-  -->
+<main data-stage="" style="position:relative;z-index:5;max-width:1340px;margin:0 auto;padding:clamp(44px,6vh,72px) clamp(18px,4vw,60px) clamp(80px,11vh,130px)">
 
   <section data-panel="perfil" data-screen-label="Quién soy" style="display:block">
-    <div style="display:flex;flex-direction:column;gap:18px"><div style="display:flex;align-items:center;gap:16px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">01 <span style="color:var(--bd2)">/ 07</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 style="margin:0;font:600 clamp(28px,3.3vw,44px)/1.08 Inter;letter-spacing:-.03em;color:var(--tx)">Quién soy</h2></div>
-    <div class="two" style="margin-top:clamp(24px,3.4vw,40px)">
-      <p style="margin:0;font:400 clamp(17px,1.6vw,21px)/1.6 Inter;color:var(--tx);text-align:left;hyphens:auto;text-wrap:wrap" lang="es">Ingeniero Industrial y Magíster en Administración Internacional, con experiencia en estrategia comercial, mercadeo estratégico, desarrollo de negocios, negociación consultiva B2B/B2C y gestión de proyectos.</p>
-      <p style="margin:0;font:400 clamp(17px,1.6vw,21px)/1.6 Inter;color:var(--tx);text-align:left;hyphens:auto;text-wrap:wrap" lang="es">He liderado iniciativas de crecimiento, estructuración de negocios y optimización de procesos operativos y de cartera, incorporando análisis de cuellos de botella, tecnología, automatización e IA, además de análisis financiero para evaluar proyectos y apoyar decisiones.</p>
-      <p style="margin:0;font:400 clamp(17px,1.6vw,21px)/1.6 Inter;color:var(--tx);text-align:left;hyphens:auto;text-wrap:wrap" lang="es">Mi trayectoria incluye logística, operaciones, gestión de información, emprendimiento y liderazgo de equipos, con definición de KPIs y OKRs. Mi enfoque conecta la estrategia con la ejecución.</p>
+    <div style="display:flex;flex-direction:column;gap:20px"><div style="display:flex;align-items:center;gap:16px"><span data-secnum="" style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">01 <span style="color:var(--bd2)">/ 08</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 data-h2="" style="margin:0;font:500 clamp(30px,3.4vw,46px)/1.08 Inter;letter-spacing:-.035em;color:var(--tx)">Quién soy</h2></div>
+    <div style="margin-top:clamp(26px,3.6vw,44px);display:flex;flex-direction:column;gap:24px;max-width:860px">
+      <p style="margin:0;font:400 clamp(17px,1.5vw,20px)/1.7 Inter;color:var(--tx)" lang="es">Ingeniero Industrial y Magíster en Administración Internacional, con experiencia en estrategia comercial, mercadeo estratégico, desarrollo de negocios, negociación consultiva B2B/B2C y gestión de proyectos.</p>
+      <p style="margin:0;font:400 clamp(16px,1.35vw,18px)/1.75 Inter;color:var(--tx2)" lang="es">He liderado iniciativas de crecimiento, estructuración de negocios y optimización de procesos operativos y de cartera, incorporando análisis de cuellos de botella, tecnología, automatización e IA, además de análisis financiero para evaluar proyectos y apoyar decisiones.</p>
+      <p style="margin:0;font:400 clamp(16px,1.35vw,18px)/1.75 Inter;color:var(--tx2)" lang="es">Mi trayectoria incluye logística, operaciones, gestión de información, emprendimiento y liderazgo de equipos, con definición de KPIs y OKRs. Mi enfoque conecta la estrategia con la ejecución.</p>
     </div>
   </section>
 
   <section data-panel="valor" data-screen-label="Áreas de valor" style="display:none">
-    <div style="display:flex;flex-direction:column;gap:18px"><div style="display:flex;align-items:center;gap:16px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">02 <span style="color:var(--bd2)">/ 07</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 style="margin:0;font:600 clamp(28px,3.3vw,44px)/1.08 Inter;letter-spacing:-.03em;color:var(--tx)">Áreas donde genero valor</h2></div>
-    <div class="competency-block" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd);background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px)">
-      <div class="competency-row" style="display:grid;grid-template-columns:minmax(160px,.35fr) minmax(0,1fr);gap:10px 24px;"><div style="font:600 18px/1.25 Inter;color:var(--tx)">Crecimiento</div><div style="font:400 14.5px/1.65 Inter;color:var(--tx2)">Crecimiento de ingresos (Revenue Growth) · Desarrollo de negocios (Business Development) · Negociación y cierre consultivo B2B/B2C</div></div>
-      <div class="competency-row" style="display:grid;grid-template-columns:minmax(160px,.35fr) minmax(0,1fr);gap:10px 24px;margin-top:18px;padding-top:18px;border-top:1px solid var(--bd);"><div style="font:600 18px/1.25 Inter;color:var(--tx)">Estrategia</div><div style="font:400 14.5px/1.65 Inter;color:var(--tx2)">Estrategia comercial y de mercadeo · Propuesta de valor · Estructuración de negocios · Toma de decisiones</div></div>
-      <div class="competency-row" style="display:grid;grid-template-columns:minmax(160px,.35fr) minmax(0,1fr);gap:10px 24px;margin-top:18px;padding-top:18px;border-top:1px solid var(--bd);"><div style="font:600 18px/1.25 Inter;color:var(--tx)">Procesos y operación</div><div style="font:400 14.5px/1.65 Inter;color:var(--tx2)">Implementación y gestión de procesos comerciales, operativos y de cartera · Optimización y estandarización de procesos · SOPs · Análisis de cuellos de botella</div></div>
-      <div class="competency-row" style="display:grid;grid-template-columns:minmax(160px,.35fr) minmax(0,1fr);gap:10px 24px;margin-top:18px;padding-top:18px;border-top:1px solid var(--bd);"><div style="font:600 18px/1.25 Inter;color:var(--tx)">Proyectos</div><div style="font:400 14.5px/1.65 Inter;color:var(--tx2)">Gestión de proyectos · Coordinación · Implementación · Mejora continua</div></div>
-      <div class="competency-row" style="display:grid;grid-template-columns:minmax(160px,.35fr) minmax(0,1fr);gap:10px 24px;margin-top:18px;padding-top:18px;border-top:1px solid var(--bd);"><div style="font:600 18px/1.25 Inter;color:var(--tx)">Análisis</div><div style="font:400 14.5px/1.65 Inter;color:var(--tx2)">Análisis financiero · Evaluación de proyectos · KPIs · OKRs · Análisis de gestión · Resultados · Indicadores</div></div>
-      <div class="competency-row" style="display:grid;grid-template-columns:minmax(160px,.35fr) minmax(0,1fr);gap:10px 24px;margin-top:18px;padding-top:18px;border-top:1px solid var(--bd);"><div style="font:600 18px/1.25 Inter;color:var(--tx)">Tecnología</div><div style="font:400 14.5px/1.65 Inter;color:var(--tx2)">CRM, automatización e IA aplicadas · Datos · Workflows</div></div>
+    <div style="display:flex;flex-direction:column;gap:20px"><div style="display:flex;align-items:center;gap:16px"><span data-secnum="" style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">02 <span style="color:var(--bd2)">/ 08</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 data-h2="" style="margin:0;font:500 clamp(30px,3.4vw,46px)/1.08 Inter;letter-spacing:-.035em;color:var(--tx)">Áreas donde genero valor</h2></div>
+    <div style="margin-top:clamp(26px,3.6vw,44px);border-bottom:1px solid var(--bd)">
+      <div class="vrow" style="display:grid;grid-template-columns:48px minmax(160px,.32fr) minmax(0,1fr);gap:12px 24px;padding:22px 0;border-top:1px solid var(--bd);align-items:baseline"><span style="font:500 11px/1 Inter;color:var(--red);font-variant-numeric:tabular-nums">01</span><div style="font:600 18px/1.25 Inter;color:var(--tx)">Crecimiento</div><div style="font:400 15px/1.65 Inter;color:var(--tx2)">Crecimiento de ingresos (Revenue Growth) · Desarrollo de negocios (Business Development) · Negociación y cierre consultivo B2B/B2C</div></div>
+      <div class="vrow" style="display:grid;grid-template-columns:48px minmax(160px,.32fr) minmax(0,1fr);gap:12px 24px;padding:22px 0;border-top:1px solid var(--bd);align-items:baseline"><span style="font:500 11px/1 Inter;color:var(--red);font-variant-numeric:tabular-nums">02</span><div style="font:600 18px/1.25 Inter;color:var(--tx)">Estrategia</div><div style="font:400 15px/1.65 Inter;color:var(--tx2)">Estrategia comercial y de mercadeo · Propuesta de valor · Estructuración de negocios · Toma de decisiones</div></div>
+      <div class="vrow" style="display:grid;grid-template-columns:48px minmax(160px,.32fr) minmax(0,1fr);gap:12px 24px;padding:22px 0;border-top:1px solid var(--bd);align-items:baseline"><span style="font:500 11px/1 Inter;color:var(--red);font-variant-numeric:tabular-nums">03</span><div style="font:600 18px/1.25 Inter;color:var(--tx)">Procesos y operación</div><div style="font:400 15px/1.65 Inter;color:var(--tx2)">Implementación y gestión de procesos comerciales, operativos y de cartera · Optimización y estandarización de procesos · SOPs · Análisis de cuellos de botella</div></div>
+      <div class="vrow" style="display:grid;grid-template-columns:48px minmax(160px,.32fr) minmax(0,1fr);gap:12px 24px;padding:22px 0;border-top:1px solid var(--bd);align-items:baseline"><span style="font:500 11px/1 Inter;color:var(--red);font-variant-numeric:tabular-nums">04</span><div style="font:600 18px/1.25 Inter;color:var(--tx)">Proyectos</div><div style="font:400 15px/1.65 Inter;color:var(--tx2)">Gestión de proyectos · Coordinación · Implementación · Mejora continua</div></div>
+      <div class="vrow" style="display:grid;grid-template-columns:48px minmax(160px,.32fr) minmax(0,1fr);gap:12px 24px;padding:22px 0;border-top:1px solid var(--bd);align-items:baseline"><span style="font:500 11px/1 Inter;color:var(--red);font-variant-numeric:tabular-nums">05</span><div style="font:600 18px/1.25 Inter;color:var(--tx)">Análisis</div><div style="font:400 15px/1.65 Inter;color:var(--tx2)">Análisis financiero · Evaluación de proyectos · KPIs · OKRs · Análisis de gestión · Resultados · Indicadores</div></div>
+      <div class="vrow" style="display:grid;grid-template-columns:48px minmax(160px,.32fr) minmax(0,1fr);gap:12px 24px;padding:22px 0;border-top:1px solid var(--bd);align-items:baseline"><span style="font:500 11px/1 Inter;color:var(--red);font-variant-numeric:tabular-nums">06</span><div style="font:600 18px/1.25 Inter;color:var(--tx)">Tecnología</div><div style="font:400 15px/1.65 Inter;color:var(--tx2)">CRM, automatización e IA aplicadas · Datos · Workflows</div></div>
     </div>
 
-    <div style="margin-top:clamp(30px,4.4vw,50px);display:flex;align-items:baseline;flex-wrap:wrap;gap:14px"><span style="font:600 clamp(28px,3.3vw,44px)/1.08 Inter;letter-spacing:-.03em;color:var(--tx)">Resultados</span><span style="font:400 clamp(16px,1.6vw,20px)/1.3 Inter;color:var(--tx3)">2020 – 2025</span></div>
-    <div class="g3" style="margin-top:14px">
-      <div style="background:var(--bg2);padding:clamp(22px,2.6vw,30px) clamp(20px,2.2vw,26px);display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><span style="font:600 11px/1 Inter;letter-spacing:.1em;color:var(--red)">2023 – 2025</span><span style="font:300 clamp(20px,2.2vw,29px)/1 Inter;letter-spacing:-.04em;color:var(--tx);font-variant-numeric:tabular-nums">+240 %</span><span style="font:400 14px/1.5 Inter;color:var(--tx2)">Crecimiento del capital comercializado: de $1.580 MM a $5.373 MM.</span></div>
-      <div style="background:var(--bg2);padding:clamp(22px,2.6vw,30px) clamp(20px,2.2vw,26px);display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><span style="font:600 11px/1 Inter;letter-spacing:.1em;color:var(--red)">2023 – 2025</span><span style="font:300 clamp(20px,2.2vw,29px)/1 Inter;letter-spacing:-.04em;color:var(--tx);font-variant-numeric:tabular-nums">994</span><span style="font:400 14px/1.5 Inter;color:var(--tx2)">Crecimiento en clientes: de 241 a 994</span></div>
-      <div style="background:var(--bg2);padding:clamp(22px,2.6vw,30px) clamp(20px,2.2vw,26px);display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><span style="font:600 11px/1 Inter;letter-spacing:.1em;color:var(--red)">2023 – 2025</span><span style="font:300 clamp(20px,2.2vw,29px)/1 Inter;letter-spacing:-.04em;color:var(--tx);font-variant-numeric:tabular-nums">2.712</span><span style="font:400 14px/1.5 Inter;color:var(--tx2)">Unidades comercializadas: de 850 a 2.712</span></div>
+    <div style="margin-top:clamp(44px,5.4vw,72px);display:flex;align-items:baseline;flex-wrap:wrap;gap:14px"><span data-h2="" style="font:500 clamp(30px,3.4vw,46px)/1.08 Inter;letter-spacing:-.035em;color:var(--tx)">Resultados</span><span style="font:400 clamp(16px,1.5vw,19px)/1.3 Inter;color:var(--tx3)">2020 – 2025</span></div>
+    <div class="g3" style="margin-top:22px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd)">
+      <div style="background:var(--bg);padding:clamp(24px,2.8vw,34px) clamp(20px,2.4vw,28px);display:flex;flex-direction:column;gap:14px;transition:background .3s" class="hv1"><span style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2023 – 2025</span><span data-fig="" style="font:300 clamp(30px,3.2vw,44px)/1 Inter;letter-spacing:-.045em;color:var(--tx);font-variant-numeric:tabular-nums">+240 %</span><span style="font:400 14.5px/1.55 Inter;color:var(--tx2)">Crecimiento del capital comercializado: de $1.580 MM a $5.373 MM.</span></div>
+      <div style="background:var(--bg);padding:clamp(24px,2.8vw,34px) clamp(20px,2.4vw,28px);display:flex;flex-direction:column;gap:14px;transition:background .3s" class="hv1"><span style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2023 – 2025</span><span data-fig="" style="font:300 clamp(30px,3.2vw,44px)/1 Inter;letter-spacing:-.045em;color:var(--tx);font-variant-numeric:tabular-nums">994</span><span style="font:400 14.5px/1.55 Inter;color:var(--tx2)">Crecimiento en clientes: de 241 a 994</span></div>
+      <div style="background:var(--bg);padding:clamp(24px,2.8vw,34px) clamp(20px,2.4vw,28px);display:flex;flex-direction:column;gap:14px;transition:background .3s" class="hv1"><span style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2023 – 2025</span><span data-fig="" style="font:300 clamp(30px,3.2vw,44px)/1 Inter;letter-spacing:-.045em;color:var(--tx);font-variant-numeric:tabular-nums">2.712</span><span style="font:400 14.5px/1.55 Inter;color:var(--tx2)">Unidades comercializadas: de 850 a 2.712</span></div>
     </div>
-    <div class="two" style="margin-top:14px;gap:1px;background:var(--bd)">
-      <div style="background:var(--bg2);padding:clamp(22px,2.6vw,30px) clamp(20px,2.2vw,26px);display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><span style="font:600 11px/1 Inter;letter-spacing:.1em;color:var(--red)">2021 – 2022</span><span style="font:300 clamp(20px,2.2vw,29px)/1 Inter;letter-spacing:-.04em;color:var(--tx);font-variant-numeric:tabular-nums">$519 MM</span><span style="font:400 14px/1.5 Inter;color:var(--tx2)">Consecución de recursos para la etapa inicial del proyecto</span></div>
-      <div style="background:var(--bg2);padding:clamp(22px,2.6vw,30px) clamp(20px,2.2vw,26px);display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><span style="font:600 11px/1 Inter;letter-spacing:.1em;color:var(--red)">2020 – 2021</span><span style="font:300 clamp(20px,2.2vw,29px)/1 Inter;letter-spacing:-.04em;color:var(--tx);font-variant-numeric:tabular-nums">$160 MM COP + USD 33.000</span><span style="font:400 14px/1.5 Inter;color:var(--tx2)">Prospección y negociación de capital para fondo regulado en Estados Unidos</span></div>
+    <div class="two" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-top:0">
+      <div style="background:var(--bg);padding:clamp(24px,2.8vw,34px) clamp(20px,2.4vw,28px);display:flex;flex-direction:column;gap:14px;transition:background .3s" class="hv1"><span style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2021 – 2022</span><span data-fig="" style="font:300 clamp(30px,3.2vw,44px)/1 Inter;letter-spacing:-.045em;color:var(--tx);font-variant-numeric:tabular-nums">$519 MM</span><span style="font:400 14.5px/1.55 Inter;color:var(--tx2)">Consecución de recursos para la etapa inicial del proyecto</span></div>
+      <div style="background:var(--bg);padding:clamp(24px,2.8vw,34px) clamp(20px,2.4vw,28px);display:flex;flex-direction:column;gap:14px;transition:background .3s" class="hv1"><span style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2020 – 2021</span><span data-fig="" style="font:300 clamp(30px,3.2vw,44px)/1 Inter;letter-spacing:-.045em;color:var(--tx);font-variant-numeric:tabular-nums">$160 MM COP + USD 33.000</span><span style="font:400 14.5px/1.55 Inter;color:var(--tx2)">Prospección y negociación de capital para fondo regulado en Estados Unidos</span></div>
     </div>
   </section>
 
   <section data-panel="habilidades" data-screen-label="Habilidades" style="display:none">
-    <div style="display:flex;flex-direction:column;gap:18px"><div style="display:flex;align-items:center;gap:16px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">03 <span style="color:var(--bd2)">/ 07</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 style="margin:0;font:600 clamp(28px,3.3vw,44px)/1.08 Inter;letter-spacing:-.03em;color:var(--tx)">Habilidades de gestión</h2></div>
-    <div class="g4" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd)">
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Liderazgo de Equipos</div>
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Pensamiento Analítico</div>
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Resolución de Problemas</div>
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Toma de Decisiones</div>
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Comunicación y Oratoria</div>
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Orientación a Resultados</div>
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Negociación</div>
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Razonamiento Lógico</div>
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Análisis Crítico</div>
-      <div style="background:var(--bg2);padding:20px 18px;font:400 15px/1.45 Inter;color:var(--tx);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)">Creatividad</div>
+    <div style="display:flex;flex-direction:column;gap:20px"><div style="display:flex;align-items:center;gap:16px"><span data-secnum="" style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">03 <span style="color:var(--bd2)">/ 08</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 data-h2="" style="margin:0;font:500 clamp(30px,3.4vw,46px)/1.08 Inter;letter-spacing:-.035em;color:var(--tx)">Habilidades de gestión</h2></div>
+    <div class="g4" style="margin-top:clamp(26px,3.6vw,44px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd)">
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">01</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Liderazgo de Equipos</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">02</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Pensamiento Analítico</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">03</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Resolución de Problemas</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">04</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Toma de Decisiones</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">05</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Comunicación y Oratoria</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">06</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Orientación a Resultados</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">07</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Negociación</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">08</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Razonamiento Lógico</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">09</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Análisis Crítico</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">10</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Creatividad</span></div>
     </div>
   </section>
 
   <section data-panel="experiencia" data-screen-label="Experiencia" style="display:none">
-    <div style="display:flex;flex-direction:column;gap:18px"><div style="display:flex;align-items:center;gap:16px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">04 <span style="color:var(--bd2)">/ 07</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 style="margin:0;font:600 clamp(28px,3.3vw,44px)/1.08 Inter;letter-spacing:-.03em;color:var(--tx)">Experiencia profesional</h2></div>
-    <div style="margin-top:clamp(24px,3.4vw,40px);border-top:1px solid var(--bd)">
+    <div style="display:flex;flex-direction:column;gap:20px"><div style="display:flex;align-items:center;gap:16px"><span data-secnum="" style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">04 <span style="color:var(--bd2)">/ 08</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 data-h2="" style="margin:0;font:500 clamp(30px,3.4vw,46px)/1.08 Inter;letter-spacing:-.035em;color:var(--tx)">Experiencia profesional</h2></div>
+    <div style="margin-top:clamp(26px,3.6vw,44px);border-top:1px solid var(--tx)">
 
-      <article data-exp style="border-bottom:1px solid var(--bd)">
-        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
-          <span style="font:500 12px/1.4 Inter;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:var(--red)">Octubre de 2022 – Actualidad</span>
-          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:600 clamp(17px,1.5vw,20px)/1.25 Inter;letter-spacing:-.01em">Avovite S.A.S.</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Director Comercial · Remoto</span></span>
-          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+      <article data-exp="" style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t="" class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:14px 28px;align-items:center;background:transparent;border:0;padding:26px 0;text-align:left;color:var(--tx)">
+          <span style="font:500 12px/1.5 Inter;letter-spacing:.04em;font-variant-numeric:tabular-nums;color:var(--red)">Octubre de 2022 – Actualidad</span>
+          <span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 clamp(18px,1.6vw,21px)/1.25 Inter;letter-spacing:-.015em">Avovite S.A.S.</span><span style="font:400 14.5px/1.45 Inter;color:var(--tx2)">Director Comercial · Remoto</span></span>
+          <span data-more="" style="display:inline-flex;align-items:center;padding:10px 16px;border:1px solid var(--bd2);font:600 10.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
         </button>
-        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
-          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+        <div data-exp-b="" class="xbody" style="display:none;padding:0 0 30px 228px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
             <li>Dirección de la estrategia comercial y de mercado, liderazgo del equipo comercial, negociación con clientes, desarrollo de oportunidades de negocio y optimización de la propuesta de valor.</li>
             <li>Estructuración, implementación y gestión del proceso de cartera, incluyendo definición de procesos, asignación de responsable y seguimiento de la gestión.</li>
             <li>Crecimiento del capital comercializado de $1.580 millones en 2023 a $5.373 millones en 2025 (+240%), pasando de 241 a 994 clientes y de 850 a 2.712 unidades comercializadas.</li>
@@ -195,46 +179,46 @@ section[data-hero]{align-items:flex-end;height:clamp(320px,52svh,480px)!importan
         </div>
       </article>
 
-      <article data-exp style="border-bottom:1px solid var(--bd)">
-        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
-          <span style="font:500 12px/1.4 Inter;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:var(--tx3)">Mayo de 2017 – Mayo de 2023</span>
-          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:600 clamp(17px,1.5vw,20px)/1.25 Inter;letter-spacing:-.01em">Consultoría, Desarrollo de Negocios y Emprendimiento Independiente (Remoto)</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Prestación de servicios independientes y emprendimientos propios</span></span>
-          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+      <article data-exp="" style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t="" class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:14px 28px;align-items:center;background:transparent;border:0;padding:26px 0;text-align:left;color:var(--tx)">
+          <span style="font:500 12px/1.5 Inter;letter-spacing:.04em;font-variant-numeric:tabular-nums;color:var(--tx3)">Mayo de 2017 – Mayo de 2023</span>
+          <span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 clamp(18px,1.6vw,21px)/1.25 Inter;letter-spacing:-.015em">Consultoría, Desarrollo de Negocios y Emprendimiento Independiente (Remoto)</span><span style="font:400 14.5px/1.45 Inter;color:var(--tx2)">Prestación de servicios independientes y emprendimientos propios</span></span>
+          <span data-more="" style="display:inline-flex;align-items:center;padding:10px 16px;border:1px solid var(--bd2);font:600 10.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
         </button>
-        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
-          <p style="margin:0 0 16px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">Gestión comercial y consultoría en estructuración de negocios, procesos, mercados financieros y consecución de recursos.</p>
+        <div data-exp-b="" class="xbody" style="display:none;padding:0 0 30px 228px">
+          <p style="margin:0 0 18px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">Gestión comercial y consultoría en estructuración de negocios, procesos, mercados financieros y consecución de recursos.</p>
           <div style="display:flex;flex-direction:column;max-width:760px">
-            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">Smart Contracts CA LLC · 2020–2021 / 2023</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Prospección, negociación y vinculación comercial para contratos por $160 millones COP + USD 33.000 para inversión en un fondo regulado en Estados Unidos; posteriormente, consultoría y desarrollo de contenidos sobre mercados financieros, criptomonedas, blockchain y educación financiera.</p></div>
-            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">Avovite S.A.S. · 2021–2022</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Consecución de $519 millones en recursos durante la etapa inicial del proyecto y apoyo en estructuración de procesos y evaluación financiera del modelo.</p></div>
-            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">LEMI Group S.A.S. · 2020–2021</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Gestión de inversionistas y consecución de recursos para proyectos de comercialización de oro, con apoyo en estructuración y estandarización operativa, y análisis financiero.</p></div>
-            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">RPP Capital Profits S.A.S. · 2021</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Compraventa y arbitraje de criptoactivos entre Colombia y Estados Unidos.</p></div>
-            <div style="padding:13px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">Emprendimientos propios · 2017–2020</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Consultoría en mercados bursátiles, estructuración, estandarización y organización de procesos a nivel comercial y operativo; ejecución de estrategia MAM con USD 133.032 en depósitos y USD 63.056 en beneficios (≈47,4%), sin custodia directa de recursos de terceros; desarrollo de emprendimientos comerciales B2C mediante canales digitales.</p></div>
+            <div style="padding:16px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">Smart Contracts CA LLC · 2020–2021 / 2023</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Prospección, negociación y vinculación comercial para contratos por $160 millones COP + USD 33.000 para inversión en un fondo regulado en Estados Unidos; posteriormente, consultoría y desarrollo de contenidos sobre mercados financieros, criptomonedas, blockchain y educación financiera.</p></div>
+            <div style="padding:16px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">Avovite S.A.S. · 2021–2022</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Consecución de $519 millones en recursos durante la etapa inicial del proyecto y apoyo en estructuración de procesos y evaluación financiera del modelo.</p></div>
+            <div style="padding:16px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">LEMI Group S.A.S. · 2020–2021</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Gestión de inversionistas y consecución de recursos para proyectos de comercialización de oro, con apoyo en estructuración y estandarización operativa, y análisis financiero.</p></div>
+            <div style="padding:16px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">RPP Capital Profits S.A.S. · 2021</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Compraventa y arbitraje de criptoactivos entre Colombia y Estados Unidos.</p></div>
+            <div style="padding:16px 0;border-top:1px solid var(--bd)"><div style="font:600 15px/1.4 Inter;color:var(--tx)">Emprendimientos propios · 2017–2020</div><p style="margin:6px 0 0;font:400 14.5px/1.65 Inter;color:var(--tx2)">Consultoría en mercados bursátiles, estructuración, estandarización y organización de procesos a nivel comercial y operativo; ejecución de estrategia MAM con USD 133.032 en depósitos y USD 63.056 en beneficios (≈47,4%), sin custodia directa de recursos de terceros; desarrollo de emprendimientos comerciales B2C mediante canales digitales.</p></div>
           </div>
         </div>
       </article>
 
-      <article data-exp style="border-bottom:1px solid var(--bd)">
-        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
-          <span style="font:500 12px/1.4 Inter;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:var(--tx3)">Agosto de 2015 – Marzo de 2017</span>
-          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:600 clamp(17px,1.5vw,20px)/1.25 Inter;letter-spacing:-.01em">AXA Asistencia Colombia S.A. (IPS S.A.S.)</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Especialista de Proyectos · Bogotá, Colombia</span></span>
-          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+      <article data-exp="" style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t="" class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:14px 28px;align-items:center;background:transparent;border:0;padding:26px 0;text-align:left;color:var(--tx)">
+          <span style="font:500 12px/1.5 Inter;letter-spacing:.04em;font-variant-numeric:tabular-nums;color:var(--tx3)">Agosto de 2015 – Marzo de 2017</span>
+          <span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 clamp(18px,1.6vw,21px)/1.25 Inter;letter-spacing:-.015em">AXA Asistencia Colombia S.A. (IPS S.A.S.)</span><span style="font:400 14.5px/1.45 Inter;color:var(--tx2)">Especialista de Proyectos · Bogotá, Colombia</span></span>
+          <span data-more="" style="display:inline-flex;align-items:center;padding:10px 16px;border:1px solid var(--bd2);font:600 10.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
         </button>
-        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
-          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+        <div data-exp-b="" class="xbody" style="display:none;padding:0 0 30px 228px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
             <li>Gestión de proyectos para Programas de Apoyo a Pacientes de laboratorios farmacéuticos, incluyendo estandarización y documentación de procesos y articulación de requerimientos entre Operaciones e IT.</li>
             <li>Optimización de CRM, SOPs, KPIs e indicadores de gestión, junto con sistematización de información para fortalecer trazabilidad, reportes y toma de decisiones.</li>
           </ul>
         </div>
       </article>
 
-      <article data-exp style="border-bottom:1px solid var(--bd)">
-        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
-          <span style="font:500 12px/1.4 Inter;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:var(--tx3)">Mayo de 2014 – Agosto de 2015</span>
-          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:600 clamp(17px,1.5vw,20px)/1.25 Inter;letter-spacing:-.01em">Prevenmédica S.A.S. IPS</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Director de Información y Gestión de Operación · Bogotá, Colombia</span></span>
-          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+      <article data-exp="" style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t="" class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:14px 28px;align-items:center;background:transparent;border:0;padding:26px 0;text-align:left;color:var(--tx)">
+          <span style="font:500 12px/1.5 Inter;letter-spacing:.04em;font-variant-numeric:tabular-nums;color:var(--tx3)">Mayo de 2014 – Agosto de 2015</span>
+          <span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 clamp(18px,1.6vw,21px)/1.25 Inter;letter-spacing:-.015em">Prevenmédica S.A.S. IPS</span><span style="font:400 14.5px/1.45 Inter;color:var(--tx2)">Director de Información y Gestión de Operación · Bogotá, Colombia</span></span>
+          <span data-more="" style="display:inline-flex;align-items:center;padding:10px 16px;border:1px solid var(--bd2);font:600 10.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
         </button>
-        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
-          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+        <div data-exp-b="" class="xbody" style="display:none;padding:0 0 30px 228px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
             <li>Dirección operativa y administrativa de Programas de Apoyo a Pacientes para laboratorios farmacéuticos, incluyendo personal, productividad, costos e indicadores de gestión.</li>
             <li>Estructuración de bases de datos, reportes gerenciales, KPIs, SOPs y procesos, junto con gestión nacional de inventarios y herramientas de medición de satisfacción del paciente.</li>
             <li>Implementación del programa de farmacovigilancia.</li>
@@ -242,28 +226,28 @@ section[data-hero]{align-items:flex-end;height:clamp(320px,52svh,480px)!importan
         </div>
       </article>
 
-      <article data-exp style="border-bottom:1px solid var(--bd)">
-        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
-          <span style="font:500 12px/1.4 Inter;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:var(--tx3)">Febrero de 2013 – Mayo de 2014</span>
-          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:600 clamp(17px,1.5vw,20px)/1.25 Inter;letter-spacing:-.01em">SoulMedical LTDA</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Coordinador Nacional (Tuberculina) / Aux. Facturación · Bogotá, Colombia</span></span>
-          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+      <article data-exp="" style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t="" class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:14px 28px;align-items:center;background:transparent;border:0;padding:26px 0;text-align:left;color:var(--tx)">
+          <span style="font:500 12px/1.5 Inter;letter-spacing:.04em;font-variant-numeric:tabular-nums;color:var(--tx3)">Febrero de 2013 – Mayo de 2014</span>
+          <span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 clamp(18px,1.6vw,21px)/1.25 Inter;letter-spacing:-.015em">SoulMedical LTDA</span><span style="font:400 14.5px/1.45 Inter;color:var(--tx2)">Coordinador Nacional (Tuberculina) / Aux. Facturación · Bogotá, Colombia</span></span>
+          <span data-more="" style="display:inline-flex;align-items:center;padding:10px 16px;border:1px solid var(--bd2);font:600 10.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
         </button>
-        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
-          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+        <div data-exp-b="" class="xbody" style="display:none;padding:0 0 30px 228px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
             <li>Coordinación logística nacional del programa de tuberculina: asignación de servicios, seguimiento de pacientes, inventarios, abastecimiento y ampliación de convenios.</li>
             <li>Facturación de servicios y revisión de información mediante SIOS.</li>
           </ul>
         </div>
       </article>
 
-      <article data-exp style="border-bottom:1px solid var(--bd)">
-        <button data-exp-t class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:14px 22px;align-items:center;background:transparent;border:0;padding:20px 0;text-align:left;color:var(--tx)">
-          <span style="font:500 12px/1.4 Inter;letter-spacing:.08em;font-variant-numeric:tabular-nums;color:var(--tx3)">Marzo de 2009 – Enero de 2013</span>
-          <span style="display:flex;flex-direction:column;gap:4px"><span style="font:600 clamp(17px,1.5vw,20px)/1.25 Inter;letter-spacing:-.01em">Grupo Empresarial S.A.I / METLIFE</span><span style="font:600 14px/1.45 Inter;color:var(--tx2)">Operación Logística, Mensajería y Soporte TI · Bogotá, Colombia</span></span>
-          <span data-more style="padding:9px 14px;border:1px solid var(--bd2);font:600 11px/1 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
+      <article data-exp="" style="border-bottom:1px solid var(--bd)">
+        <button data-exp-t="" class="xrow" aria-expanded="false" style="width:100%;display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:14px 28px;align-items:center;background:transparent;border:0;padding:26px 0;text-align:left;color:var(--tx)">
+          <span style="font:500 12px/1.5 Inter;letter-spacing:.04em;font-variant-numeric:tabular-nums;color:var(--tx3)">Marzo de 2009 – Enero de 2013</span>
+          <span style="display:flex;flex-direction:column;gap:5px"><span style="font:600 clamp(18px,1.6vw,21px)/1.25 Inter;letter-spacing:-.015em">Grupo Empresarial S.A.I / METLIFE</span><span style="font:400 14.5px/1.45 Inter;color:var(--tx2)">Operación Logística, Mensajería y Soporte TI · Bogotá, Colombia</span></span>
+          <span data-more="" style="display:inline-flex;align-items:center;padding:10px 16px;border:1px solid var(--bd2);font:600 10.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2);white-space:nowrap;transition:all .2s">Ver más +</span>
         </button>
-        <div data-exp-b class="xbody" style="display:none;padding:0 0 26px;padding-left:132px">
-          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
+        <div data-exp-b="" class="xbody" style="display:none;padding:0 0 30px 228px">
+          <ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;max-width:760px;font:400 15.5px/1.7 Inter;color:var(--tx2)">
             <li>Gestión documental, radicación de cuentas y organización de archivo clínico.</li>
             <li>Soporte técnico y mantenimiento preventivo de equipos de cómputo.</li>
           </ul>
@@ -274,82 +258,259 @@ section[data-hero]{align-items:flex-end;height:clamp(320px,52svh,480px)!importan
   </section>
 
   <section data-panel="formacion" data-screen-label="Formación" style="display:none">
-    <div style="display:flex;flex-direction:column;gap:18px"><div style="display:flex;align-items:center;gap:16px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">05 <span style="color:var(--bd2)">/ 07</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 style="margin:0;font:600 clamp(28px,3.3vw,44px)/1.08 Inter;letter-spacing:-.03em;color:var(--tx)">Formación académica</h2></div>
-    <div class="g3" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd)">
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--red)">EN CURSO</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Máster en Marketing, Dirección Comercial e IA Generativa</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">EUDE Business School</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2026</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Magíster en Administración Internacional</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Politécnico Grancolombiano</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2025</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Ingeniero Industrial</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Politécnico Grancolombiano</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2024</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Tecnólogo en Logística</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Politécnico Grancolombiano</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2012</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Técnico Laboral por Competencias en Mantenimiento y Sistemas de Cómputo</div><div style="margin-top:8px;font:400 14px/1.55 Inter;color:var(--tx2)">Academia Nacional de Aprendizaje — ANDAP</div></div>
+    <div style="display:flex;flex-direction:column;gap:20px"><div style="display:flex;align-items:center;gap:16px"><span data-secnum="" style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">05 <span style="color:var(--bd2)">/ 08</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 data-h2="" style="margin:0;font:500 clamp(30px,3.4vw,46px)/1.08 Inter;letter-spacing:-.035em;color:var(--tx)">Formación académica</h2></div>
+    <div style="margin-top:clamp(26px,3.6vw,44px);border-top:1px solid var(--tx)">
+      <div class="vrow" style="display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,.6fr);gap:8px 28px;padding:24px 0;border-bottom:1px solid var(--bd);align-items:baseline"><span style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--red)">EN CURSO</span><span style="font:600 clamp(17px,1.5vw,20px)/1.3 Inter;letter-spacing:-.015em;color:var(--tx)">Máster en Marketing, Dirección Comercial e IA Generativa</span><span style="font:400 14.5px/1.5 Inter;color:var(--tx2)">EUDE Business School</span></div>
+      <div class="vrow" style="display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,.6fr);gap:8px 28px;padding:24px 0;border-bottom:1px solid var(--bd);align-items:baseline"><span style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2026</span><span style="font:600 clamp(17px,1.5vw,20px)/1.3 Inter;letter-spacing:-.015em;color:var(--tx)">Magíster en Administración Internacional</span><span style="font:400 14.5px/1.5 Inter;color:var(--tx2)">Politécnico Grancolombiano</span></div>
+      <div class="vrow" style="display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,.6fr);gap:8px 28px;padding:24px 0;border-bottom:1px solid var(--bd);align-items:baseline"><span style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2025</span><span style="font:600 clamp(17px,1.5vw,20px)/1.3 Inter;letter-spacing:-.015em;color:var(--tx)">Ingeniero Industrial</span><span style="font:400 14.5px/1.5 Inter;color:var(--tx2)">Politécnico Grancolombiano</span></div>
+      <div class="vrow" style="display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,.6fr);gap:8px 28px;padding:24px 0;border-bottom:1px solid var(--bd);align-items:baseline"><span style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2024</span><span style="font:600 clamp(17px,1.5vw,20px)/1.3 Inter;letter-spacing:-.015em;color:var(--tx)">Tecnólogo en Logística</span><span style="font:400 14.5px/1.5 Inter;color:var(--tx2)">Politécnico Grancolombiano</span></div>
+      <div class="vrow" style="display:grid;grid-template-columns:120px minmax(0,1fr) minmax(0,.6fr);gap:8px 28px;padding:24px 0;border-bottom:1px solid var(--bd);align-items:baseline"><span style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2012</span><span style="font:600 clamp(17px,1.5vw,20px)/1.3 Inter;letter-spacing:-.015em;color:var(--tx)">Técnico Laboral por Competencias en Mantenimiento y Sistemas de Cómputo</span><span style="font:400 14.5px/1.5 Inter;color:var(--tx2)">Academia Nacional de Aprendizaje — ANDAP</span></div>
     </div>
   </section>
 
   <section data-panel="cursos" data-screen-label="Cursos y seminarios" style="display:none">
-    <div style="display:flex;flex-direction:column;gap:18px"><div style="display:flex;align-items:center;gap:16px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">06 <span style="color:var(--bd2)">/ 07</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 style="margin:0;font:600 clamp(28px,3.3vw,44px)/1.08 Inter;letter-spacing:-.03em;color:var(--tx)">Cursos, diplomados y seminarios</h2></div>
-    <div class="g3" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd)">
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2026 · 6 H</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">IA Generativa</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2025 · 120 H</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">BPM (Business Process Management)</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2025 · 8 H</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Power BI + IA</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2014</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Macros en Excel VBA</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1 Inter;letter-spacing:.12em;color:var(--tx3)">2013 – 2014</div><div style="margin-top:12px;font:600 18px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Ofimática, Excel Avanzado y Excel Financiero</div></div>
+    <div style="display:flex;flex-direction:column;gap:20px"><div style="display:flex;align-items:center;gap:16px"><span data-secnum="" style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">06 <span style="color:var(--bd2)">/ 08</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 data-h2="" style="margin:0;font:500 clamp(30px,3.4vw,46px)/1.08 Inter;letter-spacing:-.035em;color:var(--tx)">Cursos, diplomados y seminarios</h2></div>
+    <div class="g3" style="margin-top:clamp(26px,3.6vw,44px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd)">
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:22px;justify-content:space-between;transition:background .3s" class="hv1"><div style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2026 · 6 H</div><div style="font:600 17px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">IA Generativa</div></div>
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:22px;justify-content:space-between;transition:background .3s" class="hv1"><div style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2025 · 120 H</div><div style="font:600 17px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">BPM (Business Process Management)</div></div>
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:22px;justify-content:space-between;transition:background .3s" class="hv1"><div style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2025 · 8 H</div><div style="font:600 17px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Power BI + IA</div></div>
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:22px;justify-content:space-between;transition:background .3s" class="hv1"><div style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2014</div><div style="font:600 17px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Macros en Excel VBA</div></div>
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);display:flex;flex-direction:column;gap:22px;justify-content:space-between;transition:background .3s" class="hv1"><div style="font:600 11px/1 Inter;letter-spacing:.12em;color:var(--red)">2013 – 2014</div><div style="font:600 17px/1.3 Inter;letter-spacing:-.01em;color:var(--tx)">Ofimática, Excel Avanzado y Excel Financiero</div></div>
     </div>
   </section>
 
   <section data-panel="herramientas" data-screen-label="Herramientas e idiomas" style="display:none">
-    <div style="display:flex;flex-direction:column;gap:18px"><div style="display:flex;align-items:center;gap:16px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">07 <span style="color:var(--bd2)">/ 07</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 style="margin:0;font:600 clamp(28px,3.3vw,44px)/1.08 Inter;letter-spacing:-.03em;color:var(--tx)">Herramientas e idiomas</h2></div>
-    <div class="g5" style="margin-top:clamp(24px,3.4vw,40px);border:1px solid var(--bd)">
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Datos y análisis</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">Excel avanzado<br>Power BI básico<br>VBA básico</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Automatización</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">Make<br>ManyChat<br>Automatización de workflows</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Inteligencia artificial</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">OpenAI Codex<br>Claude Code<br>IA Generativa</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Procesos</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">Microsoft Visio<br>Google Workspace<br>CRM</div></div>
-      <div style="background:var(--bg2);padding:clamp(20px,2.2vw,28px) clamp(18px,2vw,24px);box-shadow:inset 0 2px 0 var(--red);transition:background .35s,box-shadow .35s" style-hover="background:var(--bg);box-shadow:inset 0 3px 0 var(--red),0 24px 48px -30px rgba(11,11,12,.28)"><div style="font:600 11.5px/1.3 Inter;letter-spacing:.12em;color:var(--tx3);text-transform:uppercase">Idiomas</div><div style="margin-top:12px;font:400 15px/1.8 Inter;color:var(--tx)">Español nativo<br>Inglés básico</div></div>
+    <div style="display:flex;flex-direction:column;gap:20px"><div style="display:flex;align-items:center;gap:16px"><span data-secnum="" style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">07 <span style="color:var(--bd2)">/ 08</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><h2 data-h2="" style="margin:0;font:500 clamp(30px,3.4vw,46px)/1.08 Inter;letter-spacing:-.035em;color:var(--tx)">Herramientas e idiomas</h2></div>
+    <div class="g5" style="margin-top:clamp(26px,3.6vw,44px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd)">
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);transition:background .3s" class="hv1"><div style="font:600 11px/1.3 Inter;letter-spacing:.12em;color:var(--red);text-transform:uppercase">Datos y análisis</div><div style="margin-top:16px;font:400 15px/1.9 Inter;color:var(--tx)">Excel avanzado<br>Power BI básico<br>VBA básico</div></div>
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);transition:background .3s" class="hv1"><div style="font:600 11px/1.3 Inter;letter-spacing:.12em;color:var(--red);text-transform:uppercase">Automatización</div><div style="margin-top:16px;font:400 15px/1.9 Inter;color:var(--tx)">Make<br>ManyChat<br>Automatización de workflows</div></div>
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);transition:background .3s" class="hv1"><div style="font:600 11px/1.3 Inter;letter-spacing:.12em;color:var(--red);text-transform:uppercase">Inteligencia artificial</div><div style="margin-top:16px;font:400 15px/1.9 Inter;color:var(--tx)">OpenAI Codex<br>Claude Code<br>IA Generativa</div></div>
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);transition:background .3s" class="hv1"><div style="font:600 11px/1.3 Inter;letter-spacing:.12em;color:var(--red);text-transform:uppercase">Procesos</div><div style="margin-top:16px;font:400 15px/1.9 Inter;color:var(--tx)">Microsoft Visio<br>Google Workspace<br>CRM</div></div>
+      <div style="background:var(--bg);padding:clamp(22px,2.4vw,30px) clamp(18px,2vw,24px);transition:background .3s" class="hv1"><div style="font:600 11px/1.3 Inter;letter-spacing:.12em;color:var(--red);text-transform:uppercase">Idiomas</div><div style="margin-top:16px;font:400 15px/1.9 Inter;color:var(--tx)">Español nativo<br>Inglés básico</div></div>
     </div>
+  </section>
+
+  <section data-panel="proyectos" data-screen-label="Proyectos con IA" style="display:none">
+    <div style="display:flex;flex-direction:column;gap:20px"><div style="display:flex;align-items:center;gap:16px"><span data-secnum="" style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">08 <span style="color:var(--bd2)">/ 08</span></span><span style="flex:1;height:1px;background:var(--bd)"></span></div><span style="font:600 11px/1 Inter;letter-spacing:.18em;color:var(--red);text-transform:uppercase">Proyectos seleccionados</span><h2 data-h2="" style="margin:0;font:500 clamp(30px,3.4vw,46px)/1.08 Inter;letter-spacing:-.035em;color:var(--tx)">Digitalización y automatización de procesos con IA</h2></div>
+    <p style="margin:22px 0 0;font:400 clamp(17px,1.5vw,20px)/1.65 Inter;color:var(--tx2)">Herramientas que diseñé y construí en mi rol de Director Comercial, usando Claude Design, Codex y ChatGPT, y que mejoré con la retroalimentación del equipo.</p>
+    <div class="pjwrap" style="margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:240px minmax(0,1fr);gap:clamp(28px,4vw,64px);align-items:start">
+      <nav class="pjlist" aria-label="Proyectos" style="position:sticky;top:84px;display:flex;flex-direction:column;border-top:1px solid var(--tx);border-bottom:1px solid var(--bd)">
+<button data-pjgo="propuestas" style="position:relative;display:flex;align-items:baseline;gap:12px;width:100%;padding:16px 18px;border:0;border-top:1px solid var(--bd);background:transparent;text-align:left;color:var(--tx3);transition:background .2s,color .2s" class="hv0"><span data-pjn="" style="font:500 11px/1 Inter;color:var(--bd2);font-variant-numeric:tabular-nums">01</span><span style="font:600 14.5px/1.35 Inter;letter-spacing:-.005em">Propuestas comerciales</span><span data-pjind="" style="position:absolute;left:0;top:-1px;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transition:transform .25s"></span></button>
+<button data-pjgo="simulador" style="position:relative;display:flex;align-items:baseline;gap:12px;width:100%;padding:16px 18px;border:0;border-top:1px solid var(--bd);background:transparent;text-align:left;color:var(--tx3);transition:background .2s,color .2s" class="hv0"><span data-pjn="" style="font:500 11px/1 Inter;color:var(--bd2);font-variant-numeric:tabular-nums">02</span><span style="font:600 14.5px/1.35 Inter;letter-spacing:-.005em">Simulador comercial</span><span data-pjind="" style="position:absolute;left:0;top:-1px;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transition:transform .25s"></span></button>
+<button data-pjgo="campus" style="position:relative;display:flex;align-items:baseline;gap:12px;width:100%;padding:16px 18px;border:0;border-top:1px solid var(--bd);background:transparent;text-align:left;color:var(--tx3);transition:background .2s,color .2s" class="hv0"><span data-pjn="" style="font:500 11px/1 Inter;color:var(--bd2);font-variant-numeric:tabular-nums">03</span><span style="font:600 14.5px/1.35 Inter;letter-spacing:-.005em">Campus</span><span data-pjind="" style="position:absolute;left:0;top:-1px;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transition:transform .25s"></span></button>
+<button data-pjgo="analizador" style="position:relative;display:flex;align-items:baseline;gap:12px;width:100%;padding:16px 18px;border:0;border-top:1px solid var(--bd);background:transparent;text-align:left;color:var(--tx3);transition:background .2s,color .2s" class="hv0"><span data-pjn="" style="font:500 11px/1 Inter;color:var(--bd2);font-variant-numeric:tabular-nums">04</span><span style="font:600 14.5px/1.35 Inter;letter-spacing:-.005em">Analizador de CV</span><span data-pjind="" style="position:absolute;left:0;top:-1px;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transition:transform .25s"></span></button>
+<button data-pjgo="agenda" style="position:relative;display:flex;align-items:baseline;gap:12px;width:100%;padding:16px 18px;border:0;border-top:1px solid var(--bd);background:transparent;text-align:left;color:var(--tx3);transition:background .2s,color .2s" class="hv0"><span data-pjn="" style="font:500 11px/1 Inter;color:var(--bd2);font-variant-numeric:tabular-nums">05</span><span style="font:600 14.5px/1.35 Inter;letter-spacing:-.005em">Agenda con video IA</span><span data-pjind="" style="position:absolute;left:0;top:-1px;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transition:transform .25s"></span></button>
+      </nav>
+      <div data-pjstage="" style="min-width:0">
+<article id="propuestas" data-pj="propuestas" style="display:block">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">01 <span style="color:var(--bd2)">/ 05</span></span><h3 style="margin:0;font:600 clamp(26px,2.7vw,36px)/1.12 Inter;letter-spacing:-.03em;color:var(--tx)">Propuestas comerciales y financiación</h3><p style="margin:0;max-width:680px;font:400 17px/1.6 Inter;color:var(--tx2)">Preparar y presentar propuestas de inversión y financiación de forma rápida, correcta y profesional.</p></div>
+<div class="g3p" style="margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd);border-top:1px solid var(--tx)">
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Reto</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">Cada propuesta se armaba a mano en Excel y llegaba al cliente como captura de pantalla: poco formal, lenta de preparar y con cálculos que a veces fallaban. Eso restaba confianza justo en el momento de cerrar.</p></div>
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Qué construí</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">Una aplicación web donde el asesor ingresa los datos del cliente, la cantidad de unidades y la forma de pago, y obtiene una propuesta ejecutiva lista para enviar. La categoría, el descuento máximo y el plan de cuotas se calculan solos. Incluye una página pública de precios y beneficios y un panel de administración para actualizar precios y condiciones sin tocar código.</p></div>
+<div style="background:var(--bg2);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Impacto</span><ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 Inter;color:var(--tx)"><li>El tiempo de preparar una propuesta bajó de unos <strong>5 minutos a cerca de 1 minuto</strong>.</li><li>Se eliminaron los errores de cálculo del Excel.</li><li>Mejor imagen ante el cliente: documento formal en PDF, imagen o enlace.</li><li>La usa el equipo de asesores comerciales.</li></ul></div>
+</div>
+<details style="margin-top:0;border:1px solid var(--bd);border-top:0"><summary style="cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 22px;font:600 11px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)">Ver detalle<span style="font:400 18px/1 Inter;color:var(--red)">+</span></summary><dl style="margin:0;padding:0 22px 8px">
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx)">Qué permite hacer</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx2)">Calcular descuentos por categoría, simular pago de contado o financiado, editar cuotas y fechas, descargar en PDF o imagen, compartir por enlace y administrar precios en un solo lugar.</dd></div>
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--red)">Mi aporte</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx)">Identifiqué el problema, diseñé el flujo, construí la herramienta con IA y la ajusté con la retroalimentación del equipo.</dd></div>
+</dl></details>
+<div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Claude Design</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Codex</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">ChatGPT</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">HTML/JavaScript</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">GitHub</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Vercel</span></div>
+<figure style="margin:36px 0 0;min-width:0">
+<button data-main="" aria-label="Ampliar imagen" style="display:block;width:100%;padding:0;border:1px solid var(--bd);border-radius:10px;background:#fff;overflow:hidden;cursor:zoom-in;box-shadow:0 1px 2px rgba(17,19,20,.04),0 24px 48px -28px rgba(17,19,20,.28);text-align:left">
+<span style="display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-bottom:1px solid var(--bd);background:var(--bg2)"><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span></span>
+<img data-mainimg="" src="brand/proyectos/capturas/01-propuestas/01-propuesta-financiada.png" alt="Captura de la herramienta de propuestas mostrando una propuesta financiada con su plan de cuotas" style="display:block;width:100%;height:auto">
+</button>
+<figcaption data-maincap="" style="margin-top:12px;font:500 13.5px/1.4 Inter;color:var(--tx2)">Propuesta financiada lista para el cliente</figcaption>
+</figure>
+<div class="pjthumbs" style="margin-top:14px;display:flex;gap:12px;overflow-x:auto;padding-bottom:4px"><button data-thumb="" data-src="brand/proyectos/capturas/01-propuestas/01-propuesta-financiada.png" data-cap="Propuesta financiada lista para el cliente" data-alt="Captura de la herramienta de propuestas mostrando una propuesta financiada con su plan de cuotas" aria-label="Ver: Propuesta financiada lista para el cliente" style="flex:0 0 clamp(120px,16vw,176px);padding:0;border:1px solid var(--red);border-radius:6px;background:#fff;overflow:hidden;aspect-ratio:16/9;opacity:1;transition:opacity .2s,border-color .2s" class="hv2"><img src="brand/proyectos/capturas/01-propuestas/01-propuesta-financiada.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></button><button data-thumb="" data-src="brand/proyectos/capturas/01-propuestas/02-precios-y-beneficios.png" data-cap="Tabla pública de precios y beneficios" data-alt="Captura de la página de precios y beneficios con las cuatro categorías y la tabla comparativa" aria-label="Ver: Tabla pública de precios y beneficios" style="flex:0 0 clamp(120px,16vw,176px);padding:0;border:1px solid var(--bd);border-radius:6px;background:#fff;overflow:hidden;aspect-ratio:16/9;opacity:.7;transition:opacity .2s,border-color .2s" class="hv2"><img src="brand/proyectos/capturas/01-propuestas/02-precios-y-beneficios.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></button></div>
+<div style="margin-top:40px;padding-top:20px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<button data-pjgo="agenda" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx2);text-align:left" class="hv3">← Agenda con video IA</button>
+<button data-pjgo="simulador" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx);text-align:right" class="hv3">Siguiente: Simulador comercial →</button>
+</div>
+</article>
+<article id="simulador" data-pj="simulador" style="display:none">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">02 <span style="color:var(--bd2)">/ 05</span></span><h3 style="margin:0;font:600 clamp(26px,2.7vw,36px)/1.12 Inter;letter-spacing:-.03em;color:var(--tx)">Simulador comercial interactivo</h3><p style="margin:0;max-width:680px;font:400 17px/1.6 Inter;color:var(--tx2)">Explicar el modelo y sus proyecciones de forma comprensible en una reunión comercial.</p></div>
+<div class="g3p" style="margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd);border-top:1px solid var(--tx)">
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Reto</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">El modelo de negocio tiene muchas variables y explicarlo en una reunión tomaba tiempo. Las proyecciones se mostraban en tablas que el cliente no siempre lograba seguir, y eso generaba dudas al momento de decidir.</p></div>
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Qué construí</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">Un recorrido guiado de 19 pantallas, tipo webinar, que explica el modelo paso a paso con analogías cotidianas, muestra qué beneficios se abren según la cantidad elegida y cierra con una simulación personalizada: ingresos, ganancia, ROI, TIR y periodo de recuperación.</p></div>
+<div style="background:var(--bg2);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Impacto</span><ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 Inter;color:var(--tx)"><li>Explicación del negocio más simple y ordenada.</li><li>El cliente entiende mejor las cifras y las condiciones.</li><li>Apoya el cierre comercial y reduce las dudas en la negociación.</li></ul></div>
+</div>
+<details style="margin-top:0;border:1px solid var(--bd);border-top:0"><summary style="cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 22px;font:600 11px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)">Ver detalle<span style="font:400 18px/1 Inter;color:var(--red)">+</span></summary><dl style="margin:0;padding:0 22px 8px">
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx)">Qué permite hacer</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx2)">Avanzar por etapas (lo básico, ingresos, respaldo, aviso legal, números), comparar beneficios por rango, configurar cantidad y descuento, y ver el resultado de la simulación.</dd></div>
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--red)">Mi aporte</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx)">Diseñé el recorrido y la narrativa comercial con analogías, y desarrollé la herramienta con IA.</dd></div>
+</dl></details>
+<div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Claude Design</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Codex</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">ChatGPT</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Vercel</span></div>
+<figure style="margin:36px 0 0;min-width:0">
+<button data-main="" aria-label="Ampliar imagen" style="display:block;width:100%;padding:0;border:1px solid var(--bd);border-radius:10px;background:#fff;overflow:hidden;cursor:zoom-in;box-shadow:0 1px 2px rgba(17,19,20,.04),0 24px 48px -28px rgba(17,19,20,.28);text-align:left">
+<span style="display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-bottom:1px solid var(--bd);background:var(--bg2)"><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span></span>
+<img data-mainimg="" src="brand/proyectos/capturas/05-simulador/01-inicio-recorrido.png" alt="Captura de la primera pantalla del simulador con la barra de progreso y una analogía explicativa" style="display:block;width:100%;height:auto">
+</button>
+<figcaption data-maincap="" style="margin-top:12px;font:500 13.5px/1.4 Inter;color:var(--tx2)">Recorrido guiado con analogías</figcaption>
+</figure>
+<div class="pjthumbs" style="margin-top:14px;display:flex;gap:12px;overflow-x:auto;padding-bottom:4px"><button data-thumb="" data-src="brand/proyectos/capturas/05-simulador/01-inicio-recorrido.png" data-cap="Recorrido guiado con analogías" data-alt="Captura de la primera pantalla del simulador con la barra de progreso y una analogía explicativa" aria-label="Ver: Recorrido guiado con analogías" style="flex:0 0 clamp(120px,16vw,176px);padding:0;border:1px solid var(--red);border-radius:6px;background:#fff;overflow:hidden;aspect-ratio:16/9;opacity:1;transition:opacity .2s,border-color .2s" class="hv2"><img src="brand/proyectos/capturas/05-simulador/01-inicio-recorrido.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></button><button data-thumb="" data-src="brand/proyectos/capturas/05-simulador/02-beneficios-interactivos.png" data-cap="Beneficios según la cantidad elegida" data-alt="Captura del simulador mostrando los beneficios que se abren según la cantidad elegida" aria-label="Ver: Beneficios según la cantidad elegida" style="flex:0 0 clamp(120px,16vw,176px);padding:0;border:1px solid var(--bd);border-radius:6px;background:#fff;overflow:hidden;aspect-ratio:16/9;opacity:.7;transition:opacity .2s,border-color .2s" class="hv2"><img src="brand/proyectos/capturas/05-simulador/02-beneficios-interactivos.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></button><button data-thumb="" data-src="brand/proyectos/capturas/05-simulador/03-resultado-simulacion.png" data-cap="Resultado personalizado de la simulación" data-alt="Captura del resultado de la simulación con indicadores de ingreso, ganancia, ROI, TIR y PRI" aria-label="Ver: Resultado personalizado de la simulación" style="flex:0 0 clamp(120px,16vw,176px);padding:0;border:1px solid var(--bd);border-radius:6px;background:#fff;overflow:hidden;aspect-ratio:16/9;opacity:.7;transition:opacity .2s,border-color .2s" class="hv2"><img src="brand/proyectos/capturas/05-simulador/03-resultado-simulacion.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></button></div>
+<div style="margin-top:40px;padding-top:20px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<button data-pjgo="propuestas" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx2);text-align:left" class="hv3">← Propuestas comerciales</button>
+<button data-pjgo="campus" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx);text-align:right" class="hv3">Siguiente: Campus →</button>
+</div>
+</article>
+<article id="campus" data-pj="campus" style="display:none">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">03 <span style="color:var(--bd2)">/ 05</span></span><h3 style="margin:0;font:600 clamp(26px,2.7vw,36px)/1.12 Inter;letter-spacing:-.03em;color:var(--tx)">Campus de onboarding, procesos y formación</h3><p style="margin:0;max-width:680px;font:400 17px/1.6 Inter;color:var(--tx2)">Facilitar el onboarding y la consulta diaria de procesos.</p></div>
+<div class="g3p" style="margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd);border-top:1px solid var(--tx)">
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Reto</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">La información para aprender los procesos estaba dispersa en varios documentos y archivos de Excel, desordenada y difícil de consultar para una persona nueva.</p></div>
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Qué construí</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">Un campus de formación que convierte el manual de procesos en una experiencia de aprendizaje: episodios cortos, una idea por pantalla, prácticas y evaluación, con los documentos oficiales siempre a mano para consulta.</p></div>
+<div style="background:var(--bg2);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Impacto</span><ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 Inter;color:var(--tx)"><li>Información oficial centralizada en un solo lugar.</li><li>Ruta clara para las personas nuevas.</li><li>En uso por los equipos <strong>comercial y de cartera</strong>; procesos administrativos en carga.</li></ul></div>
+</div>
+<details style="margin-top:0;border:1px solid var(--bd);border-top:0"><summary style="cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 22px;font:600 11px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)">Ver detalle<span style="font:400 18px/1 Inter;color:var(--red)">+</span></summary><dl style="margin:0;padding:0 22px 8px">
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx)">Qué permite hacer</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx2)">Recorrer episodios de aprendizaje, buscar contenidos, evaluar conocimientos y consultar manuales y tablas oficiales.</dd></div>
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--red)">Mi aporte</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx)">Organicé el contenido, diseñé la experiencia de aprendizaje y desarrollé la plataforma con IA.</dd></div>
+</dl></details>
+<div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Claude Design</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Codex</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">ChatGPT</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Vercel</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">GitHub</span></div>
+<figure style="margin:36px 0 0;min-width:0">
+<button data-main="" aria-label="Ampliar imagen" style="display:block;width:100%;padding:0;border:1px solid var(--bd);border-radius:10px;background:#fff;overflow:hidden;cursor:zoom-in;box-shadow:0 1px 2px rgba(17,19,20,.04),0 24px 48px -28px rgba(17,19,20,.28);text-align:left">
+<span style="display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-bottom:1px solid var(--bd);background:var(--bg2)"><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span></span>
+<img data-mainimg="" src="brand/proyectos/capturas/03-campus-onboarding/02-ruta-aprendizaje.png" alt="Captura del Campus mostrando la ruta de aprendizaje por módulos y el siguiente paso" style="display:block;width:100%;height:auto">
+</button>
+<figcaption data-maincap="" style="margin-top:12px;font:500 13.5px/1.4 Inter;color:var(--tx2)">Ruta de aprendizaje por módulos</figcaption>
+</figure>
+<div class="pjthumbs" style="margin-top:14px;display:flex;gap:12px;overflow-x:auto;padding-bottom:4px"><button data-thumb="" data-src="brand/proyectos/capturas/03-campus-onboarding/02-ruta-aprendizaje.png" data-cap="Ruta de aprendizaje por módulos" data-alt="Captura del Campus mostrando la ruta de aprendizaje por módulos y el siguiente paso" aria-label="Ver: Ruta de aprendizaje por módulos" style="flex:0 0 clamp(120px,16vw,176px);padding:0;border:1px solid var(--red);border-radius:6px;background:#fff;overflow:hidden;aspect-ratio:16/9;opacity:1;transition:opacity .2s,border-color .2s" class="hv2"><img src="brand/proyectos/capturas/03-campus-onboarding/02-ruta-aprendizaje.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></button><button data-thumb="" data-src="brand/proyectos/capturas/03-campus-onboarding/03-contenido-modulo.png" data-cap="Contenido del manual dentro de cada módulo" data-alt="Captura de un módulo del Campus con el contenido del manual oficial" aria-label="Ver: Contenido del manual dentro de cada módulo" style="flex:0 0 clamp(120px,16vw,176px);padding:0;border:1px solid var(--bd);border-radius:6px;background:#fff;overflow:hidden;aspect-ratio:16/9;opacity:.7;transition:opacity .2s,border-color .2s" class="hv2"><img src="brand/proyectos/capturas/03-campus-onboarding/03-contenido-modulo.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></button><button data-thumb="" data-src="brand/proyectos/capturas/03-campus-onboarding/04-practica-interactiva.png" data-cap="Práctica interactiva con puntos" data-alt="Captura de la práctica interactiva del Campus con barra de puntos" aria-label="Ver: Práctica interactiva con puntos" style="flex:0 0 clamp(120px,16vw,176px);padding:0;border:1px solid var(--bd);border-radius:6px;background:#fff;overflow:hidden;aspect-ratio:16/9;opacity:.7;transition:opacity .2s,border-color .2s" class="hv2"><img src="brand/proyectos/capturas/03-campus-onboarding/04-practica-interactiva.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></button><button data-thumb="" data-src="brand/proyectos/capturas/03-campus-onboarding/01-portada-acceso.png" data-cap="Acceso individual al Campus" data-alt="Captura de la pantalla de acceso con usuario y contraseña al Campus" aria-label="Ver: Acceso individual al Campus" style="flex:0 0 clamp(120px,16vw,176px);padding:0;border:1px solid var(--bd);border-radius:6px;background:#fff;overflow:hidden;aspect-ratio:16/9;opacity:.7;transition:opacity .2s,border-color .2s" class="hv2"><img src="brand/proyectos/capturas/03-campus-onboarding/01-portada-acceso.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"></button></div>
+<div style="margin-top:40px;padding-top:20px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<button data-pjgo="simulador" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx2);text-align:left" class="hv3">← Simulador comercial</button>
+<button data-pjgo="analizador" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx);text-align:right" class="hv3">Siguiente: Analizador de CV →</button>
+</div>
+</article>
+<article id="analizador" data-pj="analizador" style="display:none">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">04 <span style="color:var(--bd2)">/ 05</span></span><h3 style="margin:0;font:600 clamp(26px,2.7vw,36px)/1.12 Inter;letter-spacing:-.03em;color:var(--tx)">Analizador de hojas de vida con IA (ATS)</h3><p style="margin:0;max-width:680px;font:400 17px/1.6 Inter;color:var(--tx2)">Comparar una hoja de vida con los requisitos de un cargo y orientar la decisión.</p></div>
+<div class="g3p" style="margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd);border-top:1px solid var(--tx)">
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Reto</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">Revisar hojas de vida para el equipo comercial tomaba tiempo y cada revisor aplicaba su propio criterio. Era difícil comparar candidatos de forma uniforme frente a los requisitos del cargo.</p></div>
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Qué construí</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">Una aplicación web que recibe la hoja de vida en PDF o Word y el cargo objetivo, la analiza con IA (DeepSeek) y entrega un diagnóstico tipo ATS con puntaje, palabras clave, riesgos, prioridades y frases sugeridas. El archivo se lee en el navegador y la clave de la API queda protegida en el servidor.</p></div>
+<div style="background:var(--bg2);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Impacto</span><ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 Inter;color:var(--tx)"><li>Diagnóstico en un solo paso en lugar de una lectura manual.</li><li>Criterio uniforme para comparar candidatos.</li><li>Reporte descargable para apoyar la decisión.</li></ul></div>
+</div>
+<details style="margin-top:0;border:1px solid var(--bd);border-top:0"><summary style="cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 22px;font:600 11px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)">Ver detalle<span style="font:400 18px/1 Inter;color:var(--red)">+</span></summary><dl style="margin:0;padding:0 22px 8px">
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx)">Qué permite hacer</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx2)">Cargar documentos, analizar con IA, ver el diagnóstico y descargar el reporte. El archivo se lee en el navegador y la API key queda protegida en el servidor.</dd></div>
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--red)">Mi aporte</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx)">Desarrollé la aplicación e integré el análisis con la API de DeepSeek.</dd></div>
+</dl></details>
+<div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Codex</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">API de DeepSeek</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Vercel</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">GitHub</span></div>
+<figure style="margin:36px 0 0;min-width:0">
+<button data-main="" aria-label="Ampliar imagen" style="display:block;width:100%;padding:0;border:1px solid var(--bd);border-radius:10px;background:#fff;overflow:hidden;cursor:zoom-in;box-shadow:0 1px 2px rgba(17,19,20,.04),0 24px 48px -28px rgba(17,19,20,.28);text-align:left">
+<span style="display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-bottom:1px solid var(--bd);background:var(--bg2)"><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span></span>
+<img data-mainimg="" src="brand/proyectos/capturas/04-analizador-cv/01-pantalla-principal.png" alt="Captura del analizador con la carga de la hoja de vida y el campo del cargo objetivo" style="display:block;width:100%;height:auto">
+</button>
+<figcaption data-maincap="" style="margin-top:12px;font:500 13.5px/1.4 Inter;color:var(--tx2)">Carga de CV y cargo objetivo</figcaption>
+</figure>
+
+<div style="margin-top:40px;padding-top:20px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<button data-pjgo="campus" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx2);text-align:left" class="hv3">← Campus</button>
+<button data-pjgo="agenda" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx);text-align:right" class="hv3">Siguiente: Agenda con video IA →</button>
+</div>
+</article>
+<article id="agenda" data-pj="agenda" style="display:none">
+<div style="display:flex;flex-direction:column;gap:14px"><span style="font:500 12px/1 Inter;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums">05 <span style="color:var(--bd2)">/ 05</span></span><h3 style="margin:0;font:600 clamp(26px,2.7vw,36px)/1.12 Inter;letter-spacing:-.03em;color:var(--tx)">Agenda automatizada con video personalizado con IA</h3><p style="margin:0;max-width:680px;font:400 17px/1.6 Inter;color:var(--tx2)">Dar una experiencia más cercana y profesional al agendar una reunión.</p></div>
+<div class="g3p" style="margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd);border-top:1px solid var(--tx)">
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Reto</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">Las confirmaciones de reuniones formales eran genéricas y manuales, sin un toque personal que generara confianza desde el primer contacto.</p></div>
+<div style="background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Qué construí</span><p style="margin:0;font:400 15px/1.65 Inter;color:var(--tx2)">Un formulario público que muestra solo los horarios libres y valida la disponibilidad en el servidor. Al reservar, genera un video personalizado con avatar y voz de IA (HeyGen) y lo envía por correo junto con la confirmación. Fechas, pausas y bloqueos se administran desde un panel, sin código.</p></div>
+<div style="background:var(--bg2);padding:24px 22px;display:flex;flex-direction:column;gap:14px"><span style="font:600 11px/1.4 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--red)">Impacto</span><ul class="xul" style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font:400 15px/1.6 Inter;color:var(--tx)"><li>Confirmación inmediata y personalizada de cada reunión, sin trabajo manual.</li><li>Cero cruces de agenda: el sistema valida la disponibilidad en el servidor.</li><li>Proyecto de uso personal para mis reuniones formales.</li></ul></div>
+</div>
+<details style="margin-top:0;border:1px solid var(--bd);border-top:0"><summary style="cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 22px;font:600 11px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--tx2)">Ver detalle<span style="font:400 18px/1 Inter;color:var(--red)">+</span></summary><dl style="margin:0;padding:0 22px 8px">
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--tx)">Qué permite hacer</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx2)">Ver horarios libres, reservar, bloquear fechas, pausar la agenda, generar el video y enviar el correo de confirmación automáticamente. Todo se administra desde un panel, sin editar código.</dd></div>
+<div class="vrow" style="display:grid;grid-template-columns:170px minmax(0,1fr);gap:6px 24px;padding:16px 0;border-top:1px solid var(--bd)"><dt style="font:600 11px/1.5 Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--red)">Mi aporte</dt><dd style="margin:0;font:400 15px/1.6 Inter;color:var(--tx)">Diseñé el flujo completo e integré las herramientas: formulario, Google Sheets, Apps Script, HeyGen, API de DeepSeek y Gmail.</dd></div>
+</dl></details>
+<div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Claude Design</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Codex</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">ChatGPT</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">HeyGen</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">API de DeepSeek</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Google Sheets y Apps Script</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">Gmail</span><span style="display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid var(--bd2);border-radius:999px;font:500 12.5px/1 Inter;color:var(--tx2)">GitHub Pages</span></div>
+<figure style="margin:36px 0 0;min-width:0">
+<button data-main="" aria-label="Ampliar imagen" style="display:block;width:100%;padding:0;border:1px solid var(--bd);border-radius:10px;background:#fff;overflow:hidden;cursor:zoom-in;box-shadow:0 1px 2px rgba(17,19,20,.04),0 24px 48px -28px rgba(17,19,20,.28);text-align:left">
+<span style="display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-bottom:1px solid var(--bd);background:var(--bg2)"><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span><span style="width:9px;height:9px;border-radius:50%;background:#E2DFD8"></span></span>
+<img data-mainimg="" src="brand/proyectos/capturas/02-agenda-video-ia/01-formulario-reserva.png" alt="Captura del formulario de reserva con fecha y hora disponibles" style="display:block;width:100%;height:auto">
+</button>
+<figcaption data-maincap="" style="margin-top:12px;font:500 13.5px/1.4 Inter;color:var(--tx2)">Reserva con horarios disponibles</figcaption>
+</figure>
+
+<div style="margin-top:40px;padding-top:20px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+<button data-pjgo="analizador" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx2);text-align:left" class="hv3">← Analizador de CV</button>
+<button data-pjgo="propuestas" style="min-height:44px;border:0;background:transparent;padding:0;font:600 12px/1.3 Inter;letter-spacing:.06em;color:var(--tx);text-align:right" class="hv3">Siguiente: Propuestas comerciales →</button>
+</div>
+</article>
+      </div>
+    </div>
+    <p style="margin:clamp(48px,6vw,72px) 0 0;padding-top:20px;border-top:1px solid var(--bd);max-width:880px;font:400 13px/1.75 Inter;color:var(--tx3)">Las imágenes son capturas reales con datos de ejemplo; se ocultan valores, precios y datos internos por confidencialidad.</p>
   </section>
 
 </main>
 
-<footer data-screen-label="Contacto" style="position:relative;z-index:5;border-top:1px solid var(--bd);background:var(--bg2)">
-  <div style="max-width:1340px;margin:0 auto;padding:clamp(36px,5vh,56px) clamp(18px,4vw,60px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px">
-    <div style="display:flex;flex-direction:column;gap:8px">
-      <span style="font:600 11.5px/1 Inter;letter-spacing:.18em;color:var(--red);text-transform:uppercase">Contacto</span>
-      <span style="font:600 clamp(22px,2.4vw,30px)/1.15 Inter;letter-spacing:-.03em;color:var(--tx)">Rodrigo Páez Parra</span>
+<footer data-contact="" data-screen-label="Contacto" style="position:relative;z-index:5;border-top:1px solid var(--bd);background:var(--bg2)">
+  <div style="max-width:1340px;margin:0 auto;padding:clamp(44px,6vh,72px) clamp(18px,4vw,60px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px 40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span data-ctag="" style="font:600 11px/1 Inter;letter-spacing:.2em;color:var(--red);text-transform:uppercase">Contacto</span>
+      <span data-cname="" style="font:400 clamp(32px,4vw,54px)/1 'Instrument Serif',Georgia,serif;letter-spacing:-.02em;color:var(--tx)">Rodrigo Páez Parra</span>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:10px">
-      <a href="https://www.linkedin.com/in/rodrigopaezparra/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:1px solid var(--tx);background:var(--tx);color:var(--bg);font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap" style-hover="background:var(--red);border-color:var(--red);color:#fff">LinkedIn</a>
-      <a href="https://wa.me/RPP2026_?text=Hola%2C%20vimos%20tu%20hoja%20de%20vida%20y%20quisi%C3%A9ramos%20contactar%20contigo." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:1px solid var(--tx);background:var(--tx);color:var(--bg);font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap" style-hover="background:var(--red);border-color:var(--red);color:#fff">WhatsApp</a>
-      <a href="https://drive.google.com/uc?export=download&amp;id=15sF5MOBtKl8okMLj1QRIF4ucalKYW_Q4" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:1px solid var(--tx);background:var(--tx);color:var(--bg);font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap" style-hover="background:var(--red);border-color:var(--red);color:#fff">Descargar CV</a>
-      <a href="contacto.html" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:1px solid var(--tx);background:var(--tx);color:var(--bg);font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap" style-hover="background:var(--red);border-color:var(--red);color:#fff">Correo</a>
-      <a href="proyectos.html" style="display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border:1px solid var(--tx);background:var(--tx);color:var(--bg);font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap" style-hover="background:var(--red);border-color:var(--red);color:#fff">Proyectos</a>
+      <a class="hv4 cbtn" data-cbtn="" href="https://www.linkedin.com/in/rodrigopaezparra/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;min-height:50px;padding:0 26px;border:1px solid var(--bd);border-radius:2px;background:#fff;color:var(--tx);font:600 11.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:0 1px 2px rgba(17,19,20,.05);transition:box-shadow .25s,transform .25s,border-color .25s">LinkedIn</a>
+      <a class="hv4 cbtn" data-cbtn="" href="https://wa.me/RPP2026_?text=Hola%2C%20vimos%20tu%20hoja%20de%20vida%20y%20quisi%C3%A9ramos%20contactar%20contigo." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:50px;padding:0 26px;border:1px solid var(--bd);border-radius:2px;background:#fff;color:var(--tx);font:600 11.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:0 1px 2px rgba(17,19,20,.05);transition:box-shadow .25s,transform .25s,border-color .25s">WhatsApp</a>
+      <a class="hv4 cbtn" data-cbtn="" href="https://drive.google.com/uc?export=download&amp;id=15sF5MOBtKl8okMLj1QRIF4ucalKYW_Q4" style="display:inline-flex;align-items:center;min-height:50px;padding:0 26px;border:1px solid var(--bd);border-radius:2px;background:#fff;color:var(--tx);font:600 11.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:0 1px 2px rgba(17,19,20,.05);transition:box-shadow .25s,transform .25s,border-color .25s">Descargar CV</a>
+      <a class="hv4 cbtn" data-cbtn="" href="contacto.html" style="display:inline-flex;align-items:center;min-height:50px;padding:0 26px;border:1px solid var(--bd);border-radius:2px;background:#fff;color:var(--tx);font:600 11.5px/1 Inter;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:0 1px 2px rgba(17,19,20,.05);transition:box-shadow .25s,transform .25s,border-color .25s">Correo</a>
     </div>
   </div>
 </footer>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return { rootRef: (el) => { if (el) this.root = el; }, onClick: (e) => this.handle(e) };
-  }
-  componentDidMount() { setTimeout(() => this.setup(), 60); }
-  q(s) { return this.root ? [...this.root.querySelectorAll(s)] : []; }
 
+<dialog data-lightbox="" aria-label="Imagen ampliada" style="width:min(1240px,calc(100% - 32px));max-height:calc(100dvh - 32px);padding:20px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);overflow:auto">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px"><span data-lb-title="" style="font:600 16px/1.3 Inter;letter-spacing:-.01em"></span><button data-lb-close="" style="flex-shrink:0;min-height:44px;padding:0 16px;border:1px solid var(--tx);background:var(--tx);color:var(--bg);font:600 12px/1 Inter" class="hv5">Cerrar ×</button></div>
+  <img data-lb-img="" alt="" style="display:block;width:100%;height:auto;border:1px solid var(--bd)">
+  <p data-lb-cap="" style="margin:12px 0 0;font:500 13.5px/1.4 Inter;color:var(--tx2)"></p>
+</dialog>
+</div>
+<script>
+class CVApp {
+  
+  componentDidMount() {
+    this._hc = () => this.fromHash(true);
+    window.addEventListener('hashchange', this._hc);
+    setTimeout(() => this.setup(), 60);
+  }
+  componentWillUnmount() { window.removeEventListener('hashchange', this._hc); }
+  componentDidUpdate() { this.initVideo(); }
+  q(s) { return this.root ? [...this.root.querySelectorAll(s)] : []; }
+  ids() { return this.q('[data-panel]').map((p) => p.getAttribute('data-panel')); }
+  pids() { return this.q('[data-pj]').map((p) => p.getAttribute('data-pj')); }
+  reduce() { return matchMedia('(prefers-reduced-motion: reduce)').matches; }
   setup() {
     if (!this.root) return;
-    this.active = 'perfil';
-    this.paint();
-    this.q('video').forEach((v) => {
-      v.muted = true; v.defaultMuted = true; v.playsInline = true; v.loop = true;
-      const show = () => { v.style.opacity = '.62'; };
-      if (v.readyState >= 3) show(); else v.addEventListener('playing', show, { once: true });
-      const p = v.play(); if (p && p.catch) p.catch(() => show());
-    });
+    this.active = this.props.tabInicial || 'perfil';
+    this.project = this.pids()[0];
+    if (!this.fromHash(true)) this.paint();
+    this.paintProject();
+    this.initVideo();
     this.q('[data-exp-t]').forEach((b) => {
       const m = b.querySelector('[data-more]');
       b.addEventListener('mouseenter', () => { if (m && b.getAttribute('aria-expanded') !== 'true') { m.style.borderColor = 'var(--red)'; m.style.color = 'var(--red)'; } });
       b.addEventListener('mouseleave', () => { if (m && b.getAttribute('aria-expanded') !== 'true') { m.style.borderColor = 'var(--bd2)'; m.style.color = 'var(--tx2)'; } });
     });
+    const lb = this.root.querySelector('[data-lightbox]');
+    if (lb) lb.addEventListener('click', (e) => { if (e.target === lb) lb.close(); });
   }
-
+  initVideo() {
+    this.q('video').forEach((v) => {
+      if (v._init) return; v._init = true;
+      v.muted = true; v.defaultMuted = true; v.playsInline = true; v.loop = true;
+      const show = () => { v.style.opacity = '.6'; };
+      if (v.readyState >= 3) show(); else v.addEventListener('playing', show, { once: true });
+      const p = v.play(); if (p && p.catch) p.catch(() => show());
+    });
+  }
+  fromHash(scroll) {
+    const h = decodeURIComponent((location.hash || '').slice(1));
+    if (!h) return false;
+    let tab = h;
+    if (this.pids().indexOf(h) >= 0) { tab = 'proyectos'; this.project = h; this.paintProject(); }
+    if (this.ids().indexOf(tab) < 0) return false;
+    this.active = tab;
+    this.paint();
+    if (scroll) setTimeout(() => this.scrollToEl(), 30);
+    return true;
+  }
+  scrollToEl() {
+    const el = this.root.querySelector('[data-stage]');
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 58;
+    window.scrollTo({ top: y, behavior: this.reduce() ? 'auto' : 'smooth' });
+  }
+  setHash(h) { try { history.replaceState(null, '', '#' + h); } catch (e) {} }
   paint() {
     const a = this.active;
     this.q('[data-panel]').forEach((p) => {
@@ -361,6 +522,7 @@ class Component extends DCLogic {
     this.q('[data-topitem]').forEach((t) => {
       const on = t.getAttribute('data-go') === a;
       const lbl = t.querySelector('[data-lbl]'), num = t.querySelector('[data-num]'), ind = t.querySelector('[data-ind]');
+      t.setAttribute('aria-current', on ? 'page' : 'false');
       if (lbl) { lbl.style.color = on ? 'var(--tx)' : 'var(--tx3)'; if (on) label = lbl.textContent; }
       if (num) num.style.color = on ? 'var(--red)' : 'var(--bd2)';
       if (ind) ind.style.transform = on ? 'scale(1)' : 'scaleX(0)';
@@ -368,30 +530,59 @@ class Component extends DCLogic {
     const cur = this.root.querySelector('[data-navcurrent]');
     if (cur) cur.textContent = label;
   }
-
-  closeNav() {
-    const row = this.root.querySelector('.navrow');
-    if (row) row.classList.remove('open');
+  paintProject() {
+    const id = this.project;
+    this.q('[data-pj]').forEach((a) => {
+      const on = a.getAttribute('data-pj') === id;
+      a.style.display = on ? 'block' : 'none';
+      a.classList.remove('pan'); if (on) { void a.offsetWidth; a.classList.add('pan'); }
+    });
+    this.q('.pjlist [data-pjgo]').forEach((b) => {
+      const on = b.getAttribute('data-pjgo') === id;
+      b.setAttribute('aria-current', on ? 'true' : 'false');
+      b.style.color = on ? 'var(--tx)' : 'var(--tx3)';
+      b.style.background = on ? 'var(--bg2)' : 'transparent';
+      const n = b.querySelector('[data-pjn]'), i = b.querySelector('[data-pjind]');
+      if (n) n.style.color = on ? 'var(--red)' : 'var(--bd2)';
+      if (i) i.style.transform = on ? 'none' : (matchMedia('(max-width:1040px)').matches ? 'scaleX(0)' : 'scaleY(0)');
+    });
   }
-
-  go(id) {
-    this.active = id;
-    this.paint();
-    this.closeNav();
-    const st = this.root.querySelector('[data-stage]');
-    const y = st.getBoundingClientRect().top + window.pageYOffset - 56;
-    window.scrollTo({ top: y, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
-  }
-
+  closeNav() { const row = this.root.querySelector('.navrow'); if (row) row.classList.remove('open'); }
+  go(id) { this.active = id; this.paint(); this.closeNav(); this.setHash(id); this.scrollToEl(); }
   handle(e) {
     const g = e.target.closest('[data-go]');
-    if (g) { this.go(g.getAttribute('data-go')); return; }
-    if (e.target.closest('[data-navtoggle]')) {
-      const row = this.root.querySelector('.navrow');
-      if (row) row.classList.toggle('open');
+    if (g) { e.preventDefault(); this.go(g.getAttribute('data-go')); return; }
+    if (e.target.closest('[data-navtoggle]')) { const row = this.root.querySelector('.navrow'); if (row) row.classList.toggle('open'); return; }
+    if (!e.target.closest('[data-top]')) this.closeNav();
+    const pg = e.target.closest('[data-pjgo]');
+    if (pg) {
+      this.project = pg.getAttribute('data-pjgo'); this.paintProject(); this.setHash(this.project);
+      const w = this.root.querySelector('.pjwrap');
+      if (w && w.getBoundingClientRect().top < 0) window.scrollTo({ top: w.getBoundingClientRect().top + window.pageYOffset - 80, behavior: this.reduce() ? 'auto' : 'smooth' });
       return;
     }
-    if (!e.target.closest('[data-top]')) this.closeNav();
+    const th = e.target.closest('[data-thumb]');
+    if (th) {
+      const art = th.closest('[data-pj]');
+      const img = art.querySelector('[data-mainimg]');
+      img.src = th.getAttribute('data-src'); img.alt = th.getAttribute('data-alt');
+      art.querySelector('[data-maincap]').textContent = th.getAttribute('data-cap');
+      art.querySelectorAll('[data-thumb]').forEach((t) => { const on = t === th; t.style.borderColor = on ? 'var(--red)' : 'var(--bd)'; t.style.opacity = on ? '1' : '.7'; });
+      return;
+    }
+    const mn = e.target.closest('[data-main]');
+    if (mn) {
+      const art = mn.closest('[data-pj]');
+      const img = mn.querySelector('[data-mainimg]');
+      const lb = this.root.querySelector('[data-lightbox]');
+      lb.querySelector('[data-lb-img]').src = img.src;
+      lb.querySelector('[data-lb-img]').alt = img.alt;
+      lb.querySelector('[data-lb-title]').textContent = art.querySelector('h3').textContent;
+      lb.querySelector('[data-lb-cap]').textContent = art.querySelector('[data-maincap]').textContent;
+      lb.showModal();
+      return;
+    }
+    if (e.target.closest('[data-lb-close]')) { this.root.querySelector('[data-lightbox]').close(); return; }
     const t = e.target.closest('[data-exp-t]');
     if (t) {
       const body = t.parentElement.querySelector('[data-exp-b]');
@@ -405,11 +596,16 @@ class Component extends DCLogic {
         m.style.color = open ? 'var(--tx2)' : 'var(--bg)';
         m.style.borderColor = open ? 'var(--bd2)' : 'var(--tx)';
       }
-      return;
     }
   }
 }
+(function(){
+  const app=new CVApp();
+  app.props={mostrarVideo:true,tabInicial:'perfil'};
+  app.root=document.getElementById('app');
+  app.root.addEventListener('click',(e)=>app.handle(e));
+  app.componentDidMount();
+})();
 </script>
 </body>
 </html>
-
