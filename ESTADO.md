@@ -50,3 +50,4 @@ Contexto general y reglas: `LEEME-PRIMERO.md`.
 - [x] Proyecto 06 «Hoja de vida web ejecutiva» agregado a la pestaña Proyectos (`/#web`), con 2 capturas en `brand/proyectos/capturas/06-web-ejecutiva/`. Numeración pasa a «/ 06»; Agenda → Web → Propuestas.
 - [x] Botón «Ver detalle» rediseñado y más visible en los 6 proyectos (fondo crema con borde y texto rojo de acento, cambia a «Ocultar detalle»).
 - [x] Optimización de carga: capturas y foto en WebP (4,8 MB → 0,4 MB), video del encabezado comprimido (850 KB → 137 KB), imágenes con carga diferida, caché de 30 días para `brand/` en Vercel. Se eliminaron archivos sin uso (`support.js`, `ambient-architecture.mp4`, PNG de capturas).
+- [x] Corrección: las imágenes de proyectos ya no usan carga diferida (causaba que aparecieran tarde); se descargan en segundo plano al cargar la página y quedan listas al abrir cada proyecto.
