@@ -48,3 +48,4 @@ Contexto general y reglas: `LEEME-PRIMERO.md`.
 
 ## 2 oct 2026
 - [x] Proyecto 06 «Hoja de vida web ejecutiva» agregado a la pestaña Proyectos (`/#web`), con 2 capturas en `brand/proyectos/capturas/06-web-ejecutiva/`. Numeración pasa a «/ 06»; Agenda → Web → Propuestas.
+- [x] Botón «Ver detalle» rediseñado y más visible en los 6 proyectos (pastilla oscura con + rojo, cambia a «Ocultar detalle»).
