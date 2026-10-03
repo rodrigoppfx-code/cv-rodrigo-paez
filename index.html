@@ -72,14 +72,14 @@ details[open] summary:not(.vdet)>span{transform:rotate(45deg)}summary::-webkit-d
 
 .vdet{cursor:pointer;list-style:none;display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 22px}
 .vdet::-webkit-details-marker{display:none}
-.vdet-btn{display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 18px 0 8px;border:1px solid var(--tx);border-radius:999px;background:var(--tx);color:var(--bg);font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}
-.vdet-ic{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;font:400 18px/1 Inter;transition:transform .25s}
+.vdet-btn{display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 18px 0 8px;border:1px solid var(--red);border-radius:999px;background:var(--bg2);color:var(--red);font:600 12px/1 Inter;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}
+.vdet-ic{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--bg);border:1px solid var(--red);color:var(--red);font:400 18px/1 Inter;transition:transform .25s,background .2s,color .2s}
 .vdet-hint{transform:none!important;font:400 13.5px/1.4 Inter;color:var(--tx3)}
-.vdet:hover .vdet-btn,.vdet:focus-visible .vdet-btn{background:var(--red);border-color:var(--red)}
-.vdet:hover .vdet-ic{background:#fff;color:var(--red)}
+.vdet:hover .vdet-btn,.vdet:focus-visible .vdet-btn{background:color-mix(in srgb,var(--red) 8%,var(--bg))}
+.vdet:hover .vdet-ic{background:var(--red);color:#fff}
 .vdet:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 details[open]>.vdet .vdet-ic{transform:rotate(45deg)}
-details[open]>.vdet .vdet-btn{background:transparent;color:var(--tx)}
+details[open]>.vdet .vdet-btn{background:var(--bg)}
 .vdet-off{display:none}details[open]>.vdet .vdet-on{display:none}details[open]>.vdet .vdet-off{display:inline}
 </style>
 </head>
