@@ -25,7 +25,7 @@ Hoja de vida web de Rodrigo Páez Parra (Director Comercial, Ingeniero Industria
 - `proyectos.html`: solo redirige a `index.html#proyectos` y tiene la vista previa (Open Graph) para LinkedIn.
 - `contacto.html` + `contacto.js`: formulario de contacto (Web3Forms).
 - `brand/`: foto, video del encabezado, `og-perfil.png` y `og-proyectos.png` (1200×627, vista previa en LinkedIn).
-- `brand/proyectos/capturas/`: 13 capturas reales de los 6 proyectos, con datos sensibles difuminados.
+- `brand/proyectos/capturas/`: 13 capturas reales de los 6 proyectos (WebP), con datos sensibles difuminados.
 - `brand/proyectos/_archivo/`: maquetas SVG antiguas (respaldo, no se usan).
 - `vercel.json`: `cleanUrls` para usar rutas sin `.html`.
 
