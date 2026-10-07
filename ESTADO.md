@@ -1,6 +1,9 @@
 # Estado del sitio — Hoja de vida web de Rodrigo Páez Parra
 
-_Última actualización: 1 de octubre de 2026_
+_Última actualización: 7 de octubre de 2026_
+
+## Ajuste de perfil — 7 de octubre de 2026
+Se añadió únicamente la frase aprobada sobre análisis, estructuración e integración de datos al primer párrafo de «Quién soy», al perfil profesional del Word de Drive y a «Acerca de» de LinkedIn. Se conservaron el resto del contenido, el diseño, los enlaces y la configuración de privacidad.
 
 ## Enlaces oficiales
 | Página | Enlace nuevo (Vercel) | Enlace anterior (GitHub Pages, sigue activo) |
