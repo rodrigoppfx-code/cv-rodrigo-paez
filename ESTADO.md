@@ -1,6 +1,9 @@
 # Estado del sitio — Hoja de vida web de Rodrigo Páez Parra
 
-_Última actualización: 7 de octubre de 2026_
+_Última actualización: 8 de octubre de 2026_
+
+## Presentación común — 8 de octubre de 2026
+Se sustituyó únicamente la presentación de «Quién soy» por los cuatro párrafos aprobados por Rodrigo, con los cuatro ajustes de redacción autorizados. La misma presentación se publica en el perfil profesional del Word de Drive y en «Acerca de» de LinkedIn. Se conservan el titular, las competencias, las habilidades, las aptitudes, la experiencia, los estudios, el diseño y los enlaces. Los demás bloques siguen pendientes de revisión.
 
 ## Ajuste de perfil — 7 de octubre de 2026
 Se añadió únicamente la frase aprobada sobre análisis, estructuración e integración de datos al primer párrafo de «Quién soy», al perfil profesional del Word de Drive y a «Acerca de» de LinkedIn. Se conservaron el resto del contenido, el diseño, los enlaces y la configuración de privacidad.
