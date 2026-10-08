@@ -2,6 +2,9 @@
 
 _Última actualización: 8 de octubre de 2026_
 
+## Formato de la presentación — 8 de octubre de 2026
+Los cuatro párrafos de «Quién soy» usan el mismo formato del primero: fuente, tamaño adaptable, color e interlineado. Se conserva íntegramente el texto aprobado. Continúa pendiente la revisión del titular de LinkedIn y de los demás bloques del plan.
+
 ## Presentación común — 8 de octubre de 2026
 Se sustituyó únicamente la presentación de «Quién soy» por los cuatro párrafos aprobados por Rodrigo, con los cuatro ajustes de redacción autorizados. La misma presentación se publica en el perfil profesional del Word de Drive y en «Acerca de» de LinkedIn. Se conservan el titular, las competencias, las habilidades, las aptitudes, la experiencia, los estudios, el diseño y los enlaces. Los demás bloques siguen pendientes de revisión.
 
