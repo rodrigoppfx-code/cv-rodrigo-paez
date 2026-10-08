@@ -58,6 +58,10 @@ Contexto general y reglas: `LEEME-PRIMERO.md`.
 ## Otros pendientes
 - [ ] Respaldo del Simulador en GitHub: el código está solo en Vercel; subirlo desde el equipo de Rodrigo a un repo privado `simulador-avovite`.
 
+## 8 oct 2026 — distribución de habilidades
+- [x] Las once habilidades conservan su texto y orden. En escritorio se distribuyen en tres columnas y cuatro filas; las dos tarjetas finales ocupan media fila cada una, sin celdas vacías. En tablet se usan dos columnas y la última tarjeta ocupa todo el ancho; en móvil se usa una columna.
+- [ ] Aptitudes de LinkedIn: revisión pendiente de aprobación; este ajuste solo modifica la distribución visual de habilidades en la web.
+
 ## 2 oct 2026
 - [x] Proyecto 06 «Hoja de vida web ejecutiva» agregado a la pestaña Proyectos (`/#web`), con 2 capturas en `brand/proyectos/capturas/06-web-ejecutiva/`. Numeración pasa a «/ 06»; Agenda → Web → Propuestas.
 - [x] Botón «Ver detalle» rediseñado y más visible en los 6 proyectos (fondo crema con borde y texto rojo de acento, cambia a «Ocultar detalle»).
