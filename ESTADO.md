@@ -2,6 +2,9 @@
 
 _Última actualización: 8 de octubre de 2026_
 
+## Competencias y habilidades — 8 de octubre de 2026
+Se actualizaron los seis bloques de competencias y las once habilidades de gestión con el contenido y orden aprobados por Rodrigo, idénticos en la CV de Drive y en la web. Se conservaron cartera e implementación de procesos; se precisaron operaciones administrativas, análisis de datos, evaluación de proyectos y seguimiento de metas, KPIs y OKRs; se retiraron las traducciones de crecimiento y desarrollo de negocios y se cambió Workflows por Flujos de trabajo. Se añadió Autonomía. La presentación y el resto del contenido permanecen iguales. El titular de LinkedIn ya fue publicado y verificado; queda pendiente revisar y aprobar la lista de aptitudes y las cinco destacadas.
+
 ## Formato de la presentación — 8 de octubre de 2026
 Los cuatro párrafos de «Quién soy» usan el mismo formato del primero: fuente, tamaño adaptable, color e interlineado. Se conserva íntegramente el texto aprobado. Continúa pendiente la revisión del titular de LinkedIn y de los demás bloques del plan.
 
