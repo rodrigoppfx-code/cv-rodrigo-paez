@@ -2,6 +2,9 @@
 
 _Última actualización: 8 de octubre de 2026_
 
+## Diez habilidades de gestión — 8 de octubre de 2026
+Se retiró Autonomía de la CV de Drive y de la web por solicitud de Rodrigo. Se conservan las otras diez habilidades y su orden; en escritorio la web presenta dos filas de cinco, en tablet dos columnas y en móvil una columna. La CV conserva su formato. En LinkedIn se aprobó una lista de catorce aptitudes, incluida IA generativa y conservando Excel avanzado, con las cinco destacadas actuales. Después corresponde revisar preferencias y alertas de empleo en LinkedIn y Magneto.
+
 ## Competencias y habilidades — 8 de octubre de 2026
 Se actualizaron los seis bloques de competencias y las once habilidades de gestión con el contenido y orden aprobados por Rodrigo, idénticos en la CV de Drive y en la web. Se conservaron cartera e implementación de procesos; se precisaron operaciones administrativas, análisis de datos, evaluación de proyectos y seguimiento de metas, KPIs y OKRs; se retiraron las traducciones de crecimiento y desarrollo de negocios y se cambió Workflows por Flujos de trabajo. Se añadió Autonomía. La presentación y el resto del contenido permanecen iguales. El titular de LinkedIn ya fue publicado y verificado; queda pendiente revisar y aprobar la lista de aptitudes y las cinco destacadas.
 

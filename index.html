@@ -30,11 +30,9 @@ dialog::backdrop{background:rgba(17,19,20,.72)}
 .xul>li{position:relative;padding-left:22px}
 .xul>li:before{content:"";position:absolute;left:0;top:.7em;width:10px;height:1px;background:var(--red)}
 .navrow::-webkit-scrollbar{display:none}
-.skills-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
-.skills-grid>.hv1{grid-column:span 2}
-.skills-grid>.hv1:nth-last-child(-n+2){grid-column:span 3}
-@media (max-width:1040px){.skills-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.skills-grid>.hv1:nth-last-child(-n+2){grid-column:span 2}.skills-grid>.hv1:last-child{grid-column:span 4}}
-@media (max-width:560px){.skills-grid{grid-template-columns:minmax(0,1fr)}.skills-grid>.hv1,.skills-grid>.hv1:nth-last-child(-n+2),.skills-grid>.hv1:last-child{grid-column:span 1}}
+.skills-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:1040px){.skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.skills-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:1180px){.navbrand{display:none!important}}
 @media (max-width:1040px){.two,.pj{grid-template-columns:minmax(0,1fr)!important}.g3,.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))!important}.navrow{mask-image:linear-gradient(90deg,#000 calc(100% - 32px),transparent)}}
 @media (max-width:760px){
@@ -165,15 +163,14 @@ details[open]>.vdet .vdet-btn{background:var(--bg)}
 <div class="skills-grid" style="margin-top:clamp(26px,3.6vw,44px);display:grid;gap:1px;background:var(--bd);border:1px solid var(--bd)">
       <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">01</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Pensamiento Analítico</span></div>
       <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">02</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Resolución de Problemas</span></div>
-      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">03</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Autonomía</span></div>
-      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">04</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Toma de Decisiones</span></div>
-      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">05</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Liderazgo de Equipos</span></div>
-      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">06</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Comunicación y Oratoria</span></div>
-      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">07</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Orientación a Resultados</span></div>
-      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">08</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Negociación</span></div>
-      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">09</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Razonamiento Lógico</span></div>
-      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">10</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Análisis Crítico</span></div>
-      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">11</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Creatividad</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">03</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Toma de Decisiones</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">04</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Liderazgo de Equipos</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">05</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Comunicación y Oratoria</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">06</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Orientación a Resultados</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">07</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Negociación</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">08</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Razonamiento Lógico</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">09</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Análisis Crítico</span></div>
+      <div style="background:var(--bg);padding:22px 20px;display:flex;flex-direction:column;gap:18px;transition:background .3s" class="hv1"><span style="font:500 11px/1 Inter;color:var(--red)">10</span><span style="font:500 15.5px/1.4 Inter;color:var(--tx)">Creatividad</span></div>
     </div>
   </section>
 
