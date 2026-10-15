@@ -23,7 +23,18 @@ Cambiar «En curso» por el año de grado y agregar el diploma, exactamente igua
   - La escena «Quién soy» muestra «En curso» junto al máster: quitarlo en `video-fuente/film.js` (lista `creds` de la escena `S.r1`).
   - Exportar de nuevo según la guía de abajo.
 
+## 3. (Opcional) Poner tu propia voz en el video
+Hoy la voz del video es generada. Si grabas el guion con tu voz:
+- Grabar las frases de `video-fuente/guion.json` (mismo orden y texto).
+- Sincronizar con `tools/transcribir.py` de la skill de motion graphics y exportar de nuevo según la guía de abajo.
+
 ---
+
+## Guía: cambiar tu foto (web y video)
+- **Web — encabezado**: reemplazar `brand/foto-rodrigo.webp` y `brand/foto-rodrigo.png` (mismo nombre, formato vertical, fondo limpio).
+- **Web — vista previa al compartir el enlace (LinkedIn, WhatsApp)**: regenerar `brand/og-perfil.png` en **1200 × 627** con la foto nueva.
+- **Caché**: `brand/` se guarda 30 días en el navegador; después de cambiar la foto, agregar o cambiar `?v=` en las rutas de la foto dentro de `index.html`.
+- **Video**: hoy no lleva foto (usa un emblema de crecimiento), así que no hay que cambiar nada. Si se quiere poner la foto, ver «Foto» en la guía de abajo.
 
 ## Guía: cambios en el video de presentación
 El video se hace con código; su fuente está en `video-fuente/` (detalles técnicos en `video-fuente/LEEME.md`).

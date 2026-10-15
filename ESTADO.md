@@ -6,6 +6,10 @@ _Última actualización: 15 de octubre de 2026_
 
 - 15 oct 2026: se retiró el filtro de proyectos por tema (todos los proyectos son de IA y automatización; era redundante).
 
+## Tamaños de texto más contenidos — 15 de octubre de 2026
+- [x] Misma tipografía; se redujeron los tamaños de títulos (nombre, títulos de sección, cargos) y textos (párrafos, listas, tarjetas, cierre) entre 8 % y 25 %, para un aspecto más sobrio. Bloque «Escala tipográfica» en `mejoras.css` (`?v=20261015l`). Revisado en computador y celular.
+- [x] `PENDIENTES.md`: agregadas la guía para cambiar la foto (web y video) y el punto opcional de voz propia en el video.
+
 ## Actualización de experiencias — 15 de octubre de 2026
 
 - **Resultados y logros (15 oct 2026, aprobado por Rodrigo):** en Valor → Resultados, cada cifra indica su origen y enlaza a la experiencia (+240 %, 994 y 2.712 → Avovite · Director Comercial; $519 MM → Consultoría · Avovite; $160 MM + USD 33.000 → Consultoría · Smart Contracts). Además, cuatro logros elegidos por Rodrigo con el texto aprobado y enlace a su experiencia: 3 soluciones con IA (Avovite), Farmacovigilancia administrativa y Estandarización de procesos (Prevenmédica) y Reconocimiento conTACTO (SoulMedical). Al pulsar un enlace se abre el cargo y se resalta el logro; en Experiencia esos logros llevan la marca «Destacado». Se retiró el bloque de logros que estaba en Experiencia. Diseño unificado: los 9 (5 cifras y 4 logros) usan el mismo cuadro en una cuadrícula de 3×3; el rango de Resultados pasa a «2013 – 2025». Años de fondo de Formación y Cursos más pequeños.
