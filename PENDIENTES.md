@@ -25,13 +25,13 @@ Cambiar «En curso» por el año de grado y agregar el diploma, con la misma inf
   - La escena «Quién soy» muestra «En curso» junto al máster: quitarlo en `video-fuente/film.js` (lista `creds` de la escena `S.r1`).
   - Exportar de nuevo según la guía de abajo.
 
----
-
-## Guía: cambiar tu foto (web y video)
+## 3. Cambiar tu foto (web y video) — cuando la actualices
 - **Web — encabezado**: reemplazar `brand/foto-rodrigo.webp` y `brand/foto-rodrigo.png` (mismo nombre, formato vertical, fondo limpio).
 - **Web — vista previa al compartir el enlace (LinkedIn, WhatsApp)**: regenerar `brand/og-perfil.png` en **1200 × 627** con la foto nueva.
 - **Caché**: `brand/` se guarda 30 días en el navegador; después de cambiar la foto, agregar o cambiar `?v=` en las rutas de la foto dentro de `index.html`.
 - **Video**: hoy no lleva foto (usa un emblema de crecimiento), así que no hay que cambiar nada. Si se quiere poner la foto, ver «Foto» en la guía de abajo.
+
+---
 
 ## Guía: cambios en el video de presentación
 El video se hace con código; su fuente está en `video-fuente/` (detalles técnicos en `video-fuente/LEEME.md`).

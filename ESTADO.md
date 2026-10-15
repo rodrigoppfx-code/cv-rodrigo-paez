@@ -10,12 +10,13 @@ _Última actualización: 15 de octubre de 2026_
 - CV vigente de Drive cargada y verificada en **LinkedIn y Magneto**. En cada plataforma queda **un solo adjunto**, `CV_Rodrigo_Paez_Parra_20261015.docx`: el anterior del 9 de octubre se retiró de LinkedIn con autorización expresa de Rodrigo; en Magneto el adjunto anterior ya se había reemplazado.
 - Magneto: seis experiencias actualizadas con responsabilidades y logros, consultoría en orden descendente y sin MAM; Avovite finalizado en octubre de 2026. Presentación, competencias, estudios e inglés básico revisados. Completada la clasificación de Ingeniería Industrial como nivel profesional; reconocimiento conTACTO añadido sin publicar la carta original. Preferencias y privacidad conservadas.
 - Diplomado en BPM (Business Process Management), **120 horas**, **Politécnico de Suramérica**, **octubre de 2025**, añadido y verificado en las certificaciones de LinkedIn y Magneto. Las participaciones breves en IA permanecen como soportes en Drive, por decisión de Rodrigo.
-- Únicos pendientes abiertos del proyecto: diploma adicional de EUDE de la doble titulación y finalización futura del Máster en Marketing, Dirección Comercial e IA Generativa. `PENDIENTES.md` incluye también Magneto para ambas actualizaciones.
+- Únicos pendientes abiertos del proyecto: diploma adicional de EUDE de la doble titulación y finalización futura del Máster en Marketing, Dirección Comercial e IA Generativa; además, cuando se actualice, el cambio de foto (punto 3). `PENDIENTES.md` incluye también Magneto para ambas actualizaciones.
 - Las menciones a tareas pendientes en las entradas históricas de abajo quedan superadas por este cierre. Esta actualización solo modifica documentación.
 
 - 15 oct 2026: se retiró el filtro de proyectos por tema (todos los proyectos son de IA y automatización; era redundante).
 
 ## Ajuste en todas las secciones — 15 de octubre de 2026
+- [x] Revisión del repositorio: se quitó un archivo de prueba (`t-exp.png`) y la fila «Otros personales» del mapa en `LEEME-PRIMERO.md` (proyectos ajenos a esta web). Pendientes reales: diploma EUDE, fin del máster y cambio de foto cuando se actualice.
 - [x] Foto del encabezado más grande (160 px en computador, 112 px en celular) sin cambiar el alto del video de fondo.
 - [x] Mismo tamaño de título en todas las secciones (incluido «Resultados») y cifras/títulos de los 9 cuadros de Resultados iguales y más contenidos.
 - [x] Líneas de las cuadrículas nítidas en Habilidades, Cursos, Herramientas, Resultados y Proyectos (antes algunas se perdían por el efecto 3D).
@@ -42,13 +43,13 @@ _Última actualización: 15 de octubre de 2026_
 - LinkedIn: consultoría ordenada por la actividad más reciente de cada proyecto: Smart Contracts (consultoría 2023), Avovite (2021–2022), RPP Capital Profits (2021), LEMI (2020–2021) y emprendimientos propios (2017–2020). Se conservaron todas las palabras, cifras, responsabilidades y logros.
 - LinkedIn: separación con una línea vacía antes de Responsabilidades y Logros en las seis experiencias con ese formato; consultoría conserva espacios entre proyectos y antes de cada logro. Los espacios que Rodrigo añadió en Avovite se mantuvieron. Descripciones verificadas, todas dentro de 2.000 caracteres; sin notificar a la red ni cambiar otros campos.
 - CV Word: ajuste únicamente de espacios vacíos e interlineado de las secciones finales para conservar seis páginas, sin recortar contenido ni cambiar tamaño de letra, márgenes o enlaces. Se respetaron los últimos cambios de Rodrigo en el encabezado y en «Competencias» del título técnico.
-- Web: retiro de «Toma de decisiones» de Estrategia y Habilidades de gestión registrado en el punto 6 de `PENDIENTES.md`; implementación pendiente con Rodrigo y Claudia. La presentación se conserva.
+- Web: retiro de «Toma de decisiones» de Estrategia y Habilidades de gestión registrado en el punto 6 de `PENDIENTES.md`; ya implementado y publicado. La presentación se conserva.
 
 - Word de Drive: seis experiencias actualizadas con las versiones ejecutivas aprobadas, responsabilidades y logros separados, 45 responsabilidades y 21 logros; seis páginas revisadas visualmente. Se conservaron el resto de las secciones y los cinco hipervínculos.
 - LinkedIn: seis descripciones guardadas y verificadas contra los textos aprobados; Avovite finaliza en octubre de 2026 y dejó de figurar como empleo actual. Reconocimiento de conTACTO añadido en Reconocimientos y premios, julio de 2013, emisor Prevenmédica E.U. IPS, asociado al cargo de SoulMedical (Grupo Soul en LinkedIn). Se conservaron el titular, Acerca de, aptitudes, formación y Open to Work solo para reclutadores, sin notificar a la red.
 - Web: **implementada y publicada el 15 de octubre de 2026**. Se entregaron instrucciones y textos completos (archivo `PENDIENTES-ACTUALIZACION-EXPERIENCIAS.md`, ya implementado y retirado; consultar el historial de GitHub). Abrir «+» mostrará responsabilidades y logros en el mismo panel. La selección y el diseño de logros destacados están por definir.
 - Este cambio de repositorio contiene únicamente documentación. No modifica HTML, CSS, JavaScript, imágenes, video, animaciones ni interacciones existentes.
-- Sigue pendiente reemplazar la CV adjunta en Magneto y LinkedIn. El diploma adicional de EUDE y la finalización del máster permanecen pendientes.
+- (Cerrado el 15 oct 2026: la CV adjunta ya se reemplazó en Magneto y LinkedIn; ver «Cierre de sincronización».)
 
 ## Diseño, interacciones y video de presentación — 15 de octubre de 2026 (publicado)
 Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en pocas líneas de `index.html`. Se conserva la tipografía original y no se cambió ningún texto existente. Aprobado y publicado por solicitud de Rodrigo.

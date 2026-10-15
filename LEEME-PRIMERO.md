@@ -49,7 +49,6 @@ Hoja de vida web de Rodrigo Páez Parra (Director Comercial, Ingeniero Industria
 | Analizador de CV (ATS, API DeepSeek) | `ANALIZADOR-DE-CV` (privado) | Vercel `analizador-de-cv` |
 | Simulador comercial | **sin repo** (solo en Vercel) | Vercel `simulador-avovite` |
 | Agenda con video IA (HeyGen, Apps Script, Gmail) | `confirmacion-reuniones` (público) | GitHub Pages |
-| Otros personales | `bomba-timer`, `calculadora-interes-compuesto`, `propuestas-comerciales`, `FINAL-BOT` (privado, MQL5) | — |
 
 
 ## Herramientas usadas para construir
