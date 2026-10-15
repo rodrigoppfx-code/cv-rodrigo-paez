@@ -4,6 +4,14 @@ _Última actualización: 15 de octubre de 2026_
 
 **Pendientes abiertos:** ver `PENDIENTES.md` (solo lo que falta).
 
+## Unificación del título de experiencia — 15 de octubre de 2026
+
+- Cargo de marzo de 2009 a enero de 2013: título actualizado en LinkedIn y web a **Mensajero / Auxiliar de Archivo y Soporte Técnico**, igual que en la CV Word y Magneto.
+- Se conservaron las fechas y la descripción completa de responsabilidades y logros; LinkedIn mantiene desactivada la notificación a la red.
+- Web publicada y revisada en computador y celular. Cambio de contenido limitado al título; sin cambios de estilos, interacciones ni otros textos.
+- La triangulación confirma la misma presentación y el mismo contenido de responsabilidades, logros y cifras de las seis experiencias. Word/web comparten las nueve habilidades de gestión y LinkedIn/Magneto las catorce aptitudes aprobadas. Los cursos breves permanecen en Word/web y solo BPM se publica como certificación en LinkedIn/Magneto, según la decisión previa de Rodrigo.
+- Se conservan únicamente los tres pendientes futuros de `PENDIENTES.md`: diploma de doble titulación EUDE, finalización del máster EUDE y nueva fotografía.
+
 ## Cierre de sincronización — 15 de octubre de 2026
 
 - Rodrigo confirma terminados con **Claude** los cambios de experiencias, fecha de Avovite, retiro de «Toma de decisiones» y selección/diseño de logros destacados de la web.
