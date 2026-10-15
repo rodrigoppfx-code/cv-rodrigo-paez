@@ -24,17 +24,20 @@
       });
     }
 
-    // ── Presentación profesional (Quién soy): el video se descarga solo al hacer clic ──
+    // ── Presentación profesional (Quién soy): vista previa sin sonido; con un clic arranca desde el inicio con sonido ──
     const pres = $('[data-pres]');
     if (pres) {
-      const v = $('video', pres), b = $('.mx-pres-play', pres);
+      const v = $('video', pres), b = $('.mx-pres-play', pres), SRC = 'brand/video/presentacion.mp4';
+      const preview = () => { if (pres.classList.contains('on') || reduce()) return; if (!v.src) v.src = SRC; v.muted = true; v.loop = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      if ('IntersectionObserver' in window) new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) preview(); else if (!pres.classList.contains('on')) v.pause(); }), { threshold: 0.3 }).observe(pres);
+      else preview();
       b.addEventListener('click', (e) => {
         e.stopPropagation();
-        if (!v.src) v.src = 'brand/video/presentacion.mp4';
-        v.controls = true; pres.classList.add('on');
+        if (!v.src) v.src = SRC;
+        pres.classList.add('on'); v.loop = false; v.muted = false; v.controls = true; v.currentTime = 0;
         const p = v.play(); if (p && p.catch) p.catch(() => {});
       });
-      v.addEventListener('ended', () => { pres.classList.remove('on'); v.controls = false; v.load(); });
+      v.addEventListener('ended', () => { pres.classList.remove('on'); v.controls = false; preview(); });
       // pausa si se cambia de pestaña
       document.getElementById('app')?.addEventListener('click', (e) => { if (e.target.closest('[data-go]') && !v.paused) v.pause(); });
     }
