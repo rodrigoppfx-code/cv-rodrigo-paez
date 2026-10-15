@@ -6,6 +6,12 @@ _Última actualización: 15 de octubre de 2026_
 
 - 15 oct 2026: se retiró el filtro de proyectos por tema (todos los proyectos son de IA y automatización; era redundante).
 
+## Ajuste en todas las secciones — 15 de octubre de 2026
+- [x] Foto del encabezado más grande (160 px en computador, 112 px en celular) sin cambiar el alto del video de fondo.
+- [x] Mismo tamaño de título en todas las secciones (incluido «Resultados») y cifras/títulos de los 9 cuadros de Resultados iguales y más contenidos.
+- [x] Líneas de las cuadrículas nítidas en Habilidades, Cursos, Herramientas, Resultados y Proyectos (antes algunas se perdían por el efecto 3D).
+- [x] Etiquetas largas de Herramientas ya no se cortan. La línea roja de Resultados aparece igual en los 9 cuadros al pasar el cursor.
+
 ## Página más compacta — 15 de octubre de 2026
 - [x] Mismo diseño, tipografía e interacciones; menos desplazamiento (entre 20 % y 38 % menos alto en computador). Encabezado con el video de fondo más bajo (máx. 440 px en vez de 660 px) y foto algo menor; menos espacio entre secciones, filas, cuadros de Resultados y cierre «Conversemos».
 - [x] «Quién soy»: en pantallas anchas el video y el texto quedan lado a lado (en celular siguen uno debajo del otro).
