@@ -75,7 +75,7 @@
       el.classList.add('mx-rv'); el.style.setProperty('--d', Math.min(i, 8) * step + 'ms'); io.observe(el);
     });
     $$('[data-panel]').forEach((p) => {
-      reveal($$(':scope > div:not(:first-child) > *, :scope > p', p).filter((el) => !el.matches('.pjwrap, .mx-filter')));
+      reveal($$(':scope > div:not(:first-child) > *, :scope > p', p).filter((el) => !el.matches('.pjwrap')));
     });
     $$('.g3p, .g3, .g4, .g5, .skills-grid').forEach((g) => reveal([...g.children], 70));
     $$('[data-panel] [data-secnum] + span').forEach((l) => { if (io && !reduce()) { l.classList.add('mx-line'); io.observe(l); } });
@@ -94,25 +94,6 @@
     // ── Experiencia: línea de tiempo ─────────────────────────────────────
     const exp = $('[data-panel="experiencia"] [data-exp]');
     if (exp) exp.parentElement.classList.add('mx-tl');
-
-    // ── Proyectos: filtro por tema ───────────────────────────────────────
-    const TAGS = { propuestas: ['ventas', 'automatizacion'], simulador: ['ventas'], campus: ['procesos', 'ia'], analizador: ['ia', 'procesos'], agenda: ['ia', 'automatizacion'], web: ['ia'] };
-    const NAMES = [['todos', 'Todos'], ['ventas', 'Ventas'], ['procesos', 'Procesos'], ['automatizacion', 'Automatización'], ['ia', 'IA']];
-    const wrap = $('.pjwrap');
-    if (wrap) {
-      const f = document.createElement('div'); f.className = 'mx-filter'; f.setAttribute('role', 'group'); f.setAttribute('aria-label', 'Filtrar proyectos por tema');
-      f.innerHTML = NAMES.map(([k, n], i) => `<button type="button" class="mx-chip" data-f="${k}" aria-pressed="${i ? 'false' : 'true'}">${n}</button>`).join('');
-      wrap.parentElement.insertBefore(f, wrap); wrap.style.marginTop = '0';
-      f.addEventListener('click', (e) => {
-        const b = e.target.closest('[data-f]'); if (!b) return; e.stopPropagation();
-        const k = b.getAttribute('data-f');
-        $$('[data-f]', f).forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
-        const btns = $$('.pjlist [data-pjgo]'); let first = null;
-        btns.forEach((x) => { const ok = k === 'todos' || (TAGS[x.getAttribute('data-pjgo')] || []).includes(k); x.classList.toggle('mx-dim', !ok); if (ok && !first) first = x; });
-        const cur = $('.pjlist [data-pjgo][aria-current="true"]');
-        if (first && cur && cur.classList.contains('mx-dim')) first.click();
-      });
-    }
 
     // ── Propuestas: antes / ahora ────────────────────────────────────────
     const imp = $$('[data-pj="propuestas"] .g3p > div').pop();

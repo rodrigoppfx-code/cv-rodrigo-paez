@@ -2,6 +2,10 @@
 
 _Última actualización: 15 de octubre de 2026_
 
+**Pendientes abiertos:** ver `PENDIENTES.md` (diploma de EUDE, cierre del máster y fecha de finalización en Avovite).
+
+- 15 oct 2026: se retiró el filtro de proyectos por tema (todos los proyectos son de IA y automatización; era redundante).
+
 ## Diseño, interacciones y video de presentación — 15 de octubre de 2026 (publicado)
 Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en pocas líneas de `index.html`. Se conserva la tipografía original y no se cambió ningún texto existente. Aprobado y publicado por solicitud de Rodrigo.
 - Video de presentación en **«Quién soy»**, arriba del texto, con el título «Presentación profesional» (recupera el bloque «Presentación profesional — Próximamente» del diseño del 16 de septiembre de 2026). Se reproduce solo y sin sonido como vista previa cuando está a la vista; con un clic arranca desde el inicio con sonido y controles. No aparece en ninguna otra parte de la web. Se eliminó la página `/presentacion`.
@@ -9,7 +13,7 @@ Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en
 - Botones de contacto y «Ver más» con forma ovalada.
 - Video (~43 s, 1080p horizontal en la web; versión vertical entregada aparte para redes; voz generada grave; fuente en `video-fuente/`): problema → la persona correcta → quién soy (incluye el máster en curso) → «Te ayudo a medir, optimizar y crecer» → resultados reales (+240 %, de 241 a 994 clientes) → «Me sumo a tu equipo» → «Si buscas a alguien que sume a tu equipo, conversemos.» Se puede reemplazar la voz por la de Rodrigo.
 - Movimiento: nombre letra a letra, aparición suave al bajar, transición entre pestañas, barra de progreso, textura de papel.
-- Interacción: línea de tiempo en Experiencia, inclinación 3D en habilidades, foco en tarjetas, filtro de proyectos por tema, barra antes/ahora (~5 → ~1 min) en Propuestas, visor de capturas con anterior/siguiente, teclado y deslizar, cifras de Resultados que cuentan hacia arriba, año de fondo al pasar el mouse en Formación y Cursos, herramientas como etiquetas.
+- Interacción: línea de tiempo en Experiencia, inclinación 3D en habilidades, foco en tarjetas, barra antes/ahora (~5 → ~1 min) en Propuestas, visor de capturas con anterior/siguiente, teclado y deslizar, cifras de Resultados que cuentan hacia arriba, año de fondo al pasar el mouse en Formación y Cursos, herramientas como etiquetas.
 - Cierre antes del contacto: «Conversemos» y «Si buscas a alguien que sume a tu equipo, conversemos.»
 - Sin modo oscuro y sin cambios de letra (decisiones de Rodrigo).
 - Correcciones: precarga de capturas en Chrome; menú en tablet que cortaba las primeras pestañas.

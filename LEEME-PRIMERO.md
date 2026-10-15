@@ -4,7 +4,7 @@
 Sitio diseñado y construido por él con apoyo de IA (Claude Design, Codex, Claude Code).
 
 ## Antes de cualquier cambio
-1. Lee este archivo completo y `ESTADO.md`.
+1. Lee este archivo completo, `ESTADO.md` y `PENDIENTES.md`.
 2. No cambies textos, diseño ni enlaces sin que Rodrigo lo pida.
 3. Haz los cambios en `main`; Vercel publica solo. Revisa en computador y celular.
 4. Al terminar, actualiza `ESTADO.md` (fecha, qué cambió, pendientes).
