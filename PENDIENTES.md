@@ -37,3 +37,11 @@ _Creado: 15 de octubre de 2026._ Al completar un punto, márcalo con `[x]`, anot
 - [ ] Definir con Rodrigo la selección y el diseño de logros destacados. Las opciones del documento son ideas, no decisiones aprobadas.
 - La fecha de Avovite en la web continúa pendiente del punto 3; debe quedar **octubre de 2026**.
 - El reconocimiento de conTACTO permanece entre los logros de SoulMedical y se propone como opción destacada, sin publicar la carta original.
+
+## 6. Retirar «Toma de decisiones» de competencias y habilidades
+- [ ] En **Valor → Áreas donde genero valor → Estrategia**, retirar « · Toma de decisiones»; debe quedar «Estrategia comercial y de mercadeo · Propuesta de valor · Estructuración de negocios.».
+- [ ] En **Habilidades de gestión**, retirar la tarjeta «Toma de Decisiones». Quedan nueve habilidades; conservar las demás y revisar con Rodrigo y Claudia la distribución para evitar huecos, manteniendo el diseño y las interacciones.
+- [x] Word de Drive: retirada de Competencias Clave y Habilidades de Gestión, verificado el 15 de octubre de 2026.
+- [x] LinkedIn: revisadas las catorce aptitudes; «Toma de decisiones» no figura como aptitud.
+- Este retiro se limita a la competencia y la habilidad. La frase sobre el respaldo analítico para la toma de decisiones dentro de la presentación permanece igual.
+- La implementación web continúa pendiente con Rodrigo y Claudia; este registro no modifica HTML, estilos ni scripts.
