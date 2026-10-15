@@ -58,6 +58,7 @@ async def main():
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp3), "-ar", "48000", "-ac", "2", str(wav)], check=True)
         mp3.unlink()
         d = dur_of(wav)
+        if words: d = min(d, words[-1]["end"] + 0.2)  # recorta el silencio final de cada frase
         words = merge(words, L.get("show"))
         for w in words: allw.append({"text": w["text"], "start": round(t + w["start"], 3), "end": round(t + w["end"], 3), "line": L["id"]})
         lines.append({"id": L["id"], "src": f"voz/{n:02d}.wav", "start": round(t, 3), "end": round(t + d, 3), "text": L["text"]})

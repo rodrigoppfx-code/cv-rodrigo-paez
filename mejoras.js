@@ -4,23 +4,10 @@
   const reduce = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
   const root = document.documentElement;
 
-  // ── Tema claro / oscuro (recordado en este navegador) ──────────────────
-  const getTheme = () => { try { return localStorage.getItem('rpp-theme'); } catch (e) { return null; } };
-  const setTheme = (t) => { root.setAttribute('data-theme', t); try { localStorage.setItem('rpp-theme', t); } catch (e) {} paintThemeBtn(); };
-  const saved = getTheme(); if (saved) root.setAttribute('data-theme', saved);
-  const SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>';
-  const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>';
-  let themeBtn;
-  function paintThemeBtn() { if (!themeBtn) return; const dark = root.getAttribute('data-theme') === 'dark'; themeBtn.innerHTML = dark ? SUN : MOON; themeBtn.setAttribute('aria-label', dark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'); }
+  // Solo modo crema: limpia cualquier preferencia de tema guardada antes
+  root.removeAttribute('data-theme'); try { localStorage.removeItem('rpp-theme'); } catch (e) {}
 
   function init() {
-    const nav = $('.navwrap');
-    if (nav) {
-      themeBtn = document.createElement('button'); themeBtn.className = 'mx-theme'; themeBtn.type = 'button';
-      themeBtn.addEventListener('click', (e) => { e.stopPropagation(); setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
-      nav.appendChild(themeBtn); paintThemeBtn();
-    }
-
     // ── Barra de progreso ────────────────────────────────────────────────
     const bar = document.createElement('div'); bar.className = 'mx-progress'; bar.setAttribute('aria-hidden', 'true'); document.body.appendChild(bar);
 
@@ -164,6 +151,46 @@
       let x0 = null;
       lb.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
       lb.addEventListener('touchend', (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1)); x0 = null; });
+    }
+
+    // ── Resultados: cifras que cuentan hacia arriba ──────────────────────
+    $$('[data-fig]').forEach((el) => {
+      const txt = el.textContent.trim(), nums = txt.match(/\d[\d.]*/g);
+      if (!nums || nums.length !== 1) return; // solo cifras simples (no «$160 MM COP + USD 33.000»)
+      const raw = nums[0], target = parseInt(raw.replace(/\./g, ''), 10), [pre, post] = txt.split(raw);
+      const card = el.closest('.hv1'); if (card) card.classList.add('mx-figcard');
+      const fmt = (n) => Math.round(n).toLocaleString('es-CO');
+      const run = () => {
+        if (reduce()) return; const t0 = performance.now(), D = 1600;
+        const step = (now) => { const k = Math.min(1, (now - t0) / D), e = 1 - Math.pow(1 - k, 3); el.textContent = pre + fmt(target * e) + post; if (k < 1) requestAnimationFrame(step); else el.textContent = txt; };
+        requestAnimationFrame(step);
+      };
+      if (io && !reduce()) {
+        const o = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { run(); card && card.classList.add('in'); o.disconnect(); } }), { threshold: 0.4 });
+        o.observe(el);
+      } else if (card) card.classList.add('in');
+    });
+
+    // ── Formación y Cursos: año grande de fondo ──────────────────────────
+    $$('[data-panel="formacion"] .vrow, [data-panel="cursos"] .g3 > div').forEach((row) => {
+      const y = (row.textContent.match(/\b(19|20)\d{2}\b/) || [])[0]; if (y) { row.setAttribute('data-year', y); row.classList.add('mx-year'); }
+    });
+
+    // ── Herramientas: etiquetas que aparecen en cascada ──────────────────
+    $$('[data-panel="herramientas"] .g5 > div > div:last-child').forEach((box) => {
+      if (!box.innerHTML.includes('<br')) return;
+      const items = box.innerHTML.split(/<br\s*\/?>/i).map((x) => x.trim()).filter(Boolean);
+      box.innerHTML = items.map((x, i) => `<span class="mx-tag" style="--d:${i * 70}ms">${x}</span>`).join('');
+      box.classList.add('mx-tags'); if (io && !reduce()) io.observe(box); else box.classList.add('in');
+    });
+
+    // ── Cierre: titular grande antes del contacto ────────────────────────
+    const fwrap = $('footer[data-contact] > div');
+    if (fwrap) {
+      const cta = document.createElement('div'); cta.className = 'mx-close';
+      cta.innerHTML = '<p class="mx-close-h">¿Hablemos<em>?</em></p><p class="mx-close-s">Si buscas a alguien que mida, optimice y haga crecer tu negocio, conversemos.</p>';
+      fwrap.parentElement.insertBefore(cta, fwrap);
+      if (io && !reduce()) io.observe(cta); else cta.classList.add('in');
     }
 
     // Recalcular al cambiar de pestaña (la línea de tiempo y el botón dependen del panel visible)

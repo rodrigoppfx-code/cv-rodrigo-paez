@@ -3,64 +3,67 @@
   {
    "id": "p1",
    "text": "¿Tu empresa no está facturando lo que debería?",
-   "hold": 0.35
+   "hold": 0.12
   },
   {
    "id": "p2",
-   "text": "¿La operación se traba y todo depende de apagar incendios?",
-   "hold": 0.35
+   "text": "¿Tu operación se traba a cada paso?",
+   "hold": 0.12
   },
   {
    "id": "p3",
-   "text": "¿No tienes claro hacia dónde van tus metas?",
-   "hold": 0.35
+   "text": "¿No tienes claras tus metas?",
+   "hold": 0.12
   },
   {
    "id": "p4",
    "text": "¿Cuellos de botella a cada rato?",
-   "hold": 0.6
+   "hold": 0.2
   },
   {
    "id": "g1",
-   "text": "Muchas veces la solución no es otra herramienta.",
-   "hold": 0.2
+   "text": "La solución no siempre es otra herramienta.",
+   "hold": 0.1
   },
   {
    "id": "g2",
    "text": "Es tener en tu equipo a la persona correcta.",
-   "hold": 0.5
+   "hold": 0.2
   },
   {
    "id": "r1",
-   "text": "Soy Rodrigo Páez Parra. Ingeniero Industrial y Magíster en Administración Internacional.",
-   "hold": 0.3
+   "text": "Soy Rodrigo Páez Parra. Ingeniero Industrial, Magíster en Administración Internacional y cursando un Máster en Marketing, Dirección Comercial e IA Generativa.",
+   "say": "Soy Rodrigo Páez Parra. Ingeniero Industrial, Magíster en Administración Internacional, y cursando un Máster en Marketing, Dirección Comercial e I A Generativa.",
+   "show": {
+    "i a": "IA"
+   },
+   "hold": 0.2
   },
   {
    "id": "r2",
-   "text": "Te ayudo a optimizar tus procesos, medir tus metas con KPIs claros, crecer en ventas y mejorar tu operación sin cuellos de botella.",
-   "say": "Te ayudo a optimizar tus procesos, medir tus metas con indicadores claros, crecer en ventas y mejorar tu operación sin cuellos de botella.",
-   "hold": 0.35
+   "text": "Te ayudo a medir, optimizar y crecer, con soluciones apoyadas en tecnología.",
+   "hold": 0.2
   },
   {
    "id": "r3",
-   "text": "Ya lo he hecho: más de 240 % de crecimiento en capital comercializado, y de 241 a 994 clientes.",
+   "text": "Ya lo he hecho: más de 240 % de crecimiento en capital comercializado y de 241 a 994 clientes.",
    "say": "Ya lo he hecho: más de doscientos cuarenta por ciento de crecimiento en capital comercializado, y de doscientos cuarenta y uno a novecientos noventa y cuatro clientes.",
    "show": {
     "doscientos cuarenta por ciento": "240 %",
     "doscientos cuarenta y uno": "241",
     "novecientos noventa y cuatro": "994"
    },
-   "hold": 0.5
-  },
-  {
-   "id": "c1",
-   "text": "No te vendo un servicio. Me sumo a tu equipo.",
    "hold": 0.2
   },
   {
+   "id": "c1",
+   "text": "Me sumo a tu equipo.",
+   "hold": 0.15
+  },
+  {
    "id": "c2",
-   "text": "Hablemos.",
-   "hold": 0.3
+   "text": "Hablemos. Escríbeme.",
+   "hold": 0.2
   }
  ]
 }
