@@ -2,16 +2,16 @@
 
 _Última actualización: 15 de octubre de 2026_
 
-## Propuesta de diseño premium e interacciones — 15 de octubre de 2026 (rama `claude/elegant-brahmagupta-zb8d46`, pendiente de publicar)
-Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en pocas líneas de `index.html`; no se cambió ningún texto existente. Aprobado por Rodrigo; falta su visto bueno final sobre la vista previa antes de pasar a `main`.
-- Portada: frase de valor «Te ayudo a medir, optimizar y hacer crecer tu negocio con soluciones apoyadas en tecnología: la persona correcta en tu equipo.», botones «Hablemos» y «Ver video», tarjeta con el video (escritorio).
-- Video de presentación (~44 s, 1080p, horizontal y vertical, voz generada grave; fuente en `video-fuente/`): problema → la persona correcta → quién soy (incluye el máster en curso) → medir, optimizar y crecer con soluciones apoyadas en tecnología → resultados reales (+240 %, de 241 a 994 clientes) → «Me sumo a tu equipo» → «Hablemos. Escríbeme». Se puede reemplazar la voz por la de Rodrigo.
-- Movimiento: nombre letra a letra, aparición suave al bajar, transición entre pestañas, barra de progreso, botón flotante «Hablemos», textura de papel.
-- Interacción: línea de tiempo en Experiencia, inclinación 3D en habilidades, foco en tarjetas, filtro de proyectos por tema, barra antes/ahora (~5 → ~1 min) en Propuestas, visor de capturas con anterior/siguiente, teclado y deslizar.
-- Resto de la web: títulos de sección en Instrument Serif, cifras de Resultados que cuentan hacia arriba, primer párrafo de «Quién soy» como entrada de revista, año grande de fondo en Formación y Cursos, herramientas como etiquetas, cierre «¿Hablemos?».
-- Sin modo oscuro: solo el crema (decisión de Rodrigo).
+## Propuesta de diseño e interacciones — 15 de octubre de 2026 (rama `claude/elegant-brahmagupta-zb8d46`, pendiente de publicar)
+Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en pocas líneas de `index.html`. Se conserva la tipografía original y no se cambió ningún texto existente. Falta el visto bueno final de Rodrigo sobre la vista previa antes de pasar a `main`.
+- Portada: botones «Conversemos» y «Video de presentación»; tarjeta con un adelanto del video que se reproduce solo y sin sonido (también en celular); al hacer clic se abre en grande con sonido (vertical en celular).
+- Video de presentación (~42 s, 1080p, horizontal y vertical, voz generada grave; fuente en `video-fuente/`): problema → la persona correcta → quién soy (incluye el máster en curso) → «Te ayudo a medir, optimizar y crecer» → resultados reales (+240 %, de 241 a 994 clientes) → «Me sumo a tu equipo» → «Hablemos. Escríbeme». Se puede reemplazar la voz por la de Rodrigo.
+- Movimiento: nombre letra a letra, aparición suave al bajar, transición entre pestañas, barra de progreso, botón flotante «Conversemos», textura de papel.
+- Interacción: línea de tiempo en Experiencia, inclinación 3D en habilidades, foco en tarjetas, filtro de proyectos por tema, barra antes/ahora (~5 → ~1 min) en Propuestas, visor de capturas con anterior/siguiente, teclado y deslizar, cifras de Resultados que cuentan hacia arriba, año de fondo al pasar el mouse en Formación y Cursos, herramientas como etiquetas.
+- Cierre antes del contacto: «Conversemos» y «Si buscas a alguien que sume a tu equipo, conversemos.»
+- Sin modo oscuro y sin cambios de letra (decisiones de Rodrigo).
+- Correcciones: precarga de capturas en Chrome; menú en tablet que cortaba las primeras pestañas.
 - Todo el movimiento se apaga si el visitante tiene activado «reducir movimiento».
-- Corrección: la precarga de capturas fallaba en Chrome (`requestIdleCallback`).
 - Pendiente: el botón WhatsApp apunta a `wa.me/RPP2026_` (número de marcador); falta el número real.
 
 ## Diez habilidades de gestión — 8 de octubre de 2026

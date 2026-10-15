@@ -42,9 +42,20 @@
     dlg.addEventListener('close', () => vid.pause());
     $$('[data-video]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); openVideo(); }));
 
+    // Adelanto silencioso en la tarjeta: se carga y reproduce solo cuando está a la vista
+    const pv = $('[data-preview]');
+    if (pv && !reduce() && 'IntersectionObserver' in window) {
+      new IntersectionObserver((es) => es.forEach((e) => {
+        if (e.isIntersecting && !dlg.open) { if (!pv.src) pv.src = 'brand/video/presentacion-adelanto.mp4'; const p = pv.play(); if (p && p.catch) p.catch(() => {}); }
+        else pv.pause();
+      }), { threshold: 0.25 }).observe(pv);
+      dlg.addEventListener('close', () => { const p = pv.play(); if (p && p.catch) p.catch(() => {}); });
+      $$('[data-video]').forEach((b) => b.addEventListener('click', () => pv.pause()));
+    }
+
     // ── Botón flotante ───────────────────────────────────────────────────
     const fab = document.createElement('a'); fab.className = 'mx-fab'; fab.href = 'contacto.html';
-    fab.innerHTML = '<span class="mx-dot" aria-hidden="true">→</span>Hablemos'; document.body.appendChild(fab);
+    fab.innerHTML = '<span class="mx-dot" aria-hidden="true">→</span>Conversemos'; document.body.appendChild(fab);
     const hero = $('#hero'), foot = $('footer[data-contact]');
 
     // ── Scroll: progreso, botón flotante, línea de tiempo ────────────────
@@ -173,7 +184,7 @@
 
     // ── Formación y Cursos: año grande de fondo ──────────────────────────
     $$('[data-panel="formacion"] .vrow, [data-panel="cursos"] .g3 > div').forEach((row) => {
-      const y = (row.textContent.match(/\b(19|20)\d{2}\b/) || [])[0]; if (y) { row.setAttribute('data-year', y); row.classList.add('mx-year'); }
+      const y = (row.textContent.match(/(?<!\d)(19|20)\d{2}(?!\d)/) || [])[0]; if (y) { row.setAttribute('data-year', y); row.classList.add('mx-year'); }
     });
 
     // ── Herramientas: etiquetas que aparecen en cascada ──────────────────
@@ -188,7 +199,7 @@
     const fwrap = $('footer[data-contact] > div');
     if (fwrap) {
       const cta = document.createElement('div'); cta.className = 'mx-close';
-      cta.innerHTML = '<p class="mx-close-h">¿Hablemos<em>?</em></p><p class="mx-close-s">Si buscas a alguien que mida, optimice y haga crecer tu negocio, conversemos.</p>';
+      cta.innerHTML = '<p class="mx-close-h">Conversemos</p><p class="mx-close-s">Si buscas a alguien que sume a tu equipo, conversemos.</p>';
       fwrap.parentElement.insertBefore(cta, fwrap);
       if (io && !reduce()) io.observe(cta); else cta.classList.add('in');
     }

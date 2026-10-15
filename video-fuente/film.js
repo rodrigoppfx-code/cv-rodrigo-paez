@@ -381,7 +381,6 @@
     bg(ctx, t); const { W, H, u, portrait, m } = Lx(), t0 = LN("r2").start - 0.2;
     label(ctx, "Te ayudo a", m, portrait ? H * 0.15 : H * 0.2, { color: C.red, alpha: seg(t, t0, t0 + 0.4) });
     const items = [["01", "Medir", "tus metas con KPIs claros", at("r2", "medir")], ["02", "Optimizar", "tus procesos", at("r2", "optimizar")], ["03", "Crecer", "en ventas", at("r2", "crecer")]];
-    const tech = at("r2", "soluciones");
     const card = (x, y, w, h, n, a1, a2, ts) => { // tarjeta que gira al frente (rotación en X) con sombra que se proyecta
       const a = seg(t, ts - 0.12, ts + 0.5, E.outCubic), on = t >= ts, k = Math.max(0.001, E.outBack(a, 1.3));
       if (a <= 0) { hair(ctx, x, y, w, 1, C.line); return; }
@@ -396,17 +395,8 @@
       font(ctx, SANS, (portrait ? 32 : 27) * u, 500); ctx.fillStyle = C.ink2; ctx.fillText(a2, x + 28 * u, y + h * 0.62 + (portrait ? 58 : 50) * u, w - 56 * u);
       ctx.restore();
     };
-    if (portrait) { const w = W - 2 * m, h = 250 * u; items.forEach(([n, a1, a2, ts], i) => card(m, H * 0.2 + i * (h + 40 * u), w, h, n, a1, a2, ts)); }
-    else { const gap = 30 * u, w = (W - 2 * m - gap * 2) / 3, h = H * 0.36; items.forEach(([n, a1, a2, ts], i) => card(m + i * (w + gap), H * 0.28, w, h, n, a1, a2, ts)); }
-    // línea de tecnología: chip con circuito que se dibuja
-    const ta = seg(t, tech - 0.1, tech + 0.5, E.outCubic), ty = portrait ? H * 0.2 + 3 * 290 * u + 40 * u : H * 0.75;
-    if (ta > 0) {
-      ctx.save(); ctx.globalAlpha = ta; ctx.strokeStyle = C.red; ctx.lineWidth = 2 * u; const cx0 = m + 22 * u, cl = seg(t, tech, tech + 0.9, E.inOutCubic);
-      ctx.strokeRect(cx0 - 16 * u, ty - 16 * u, 32 * u, 32 * u); ctx.fillStyle = C.red; ctx.fillRect(cx0 - 7 * u, ty - 7 * u, 14 * u, 14 * u);
-      [-1, 1].forEach((sd) => { ctx.beginPath(); ctx.moveTo(cx0 + sd * 16 * u, ty); ctx.lineTo(cx0 + sd * (16 + 26 * cl) * u, ty); ctx.stroke(); ctx.beginPath(); ctx.moveTo(cx0, ty + sd * 16 * u); ctx.lineTo(cx0, ty + sd * (16 + 14 * cl) * u); ctx.stroke(); });
-      ctx.restore();
-      headline(ctx, [{ t: "con" }, { t: "soluciones" }, { t: "apoyadas" }, { t: "en" }, { t: "tecnología.", it: true, red: true }], m + 80 * u, ty + 18 * u, { size: portrait ? 56 : 54, maxW: W - 2 * m - 80 * u, t, t0: tech - 0.05, stagger: 0.06 });
-    }
+    if (portrait) { const w = W - 2 * m, h = 280 * u; items.forEach(([n, a1, a2, ts], i) => card(m, H * 0.22 + i * (h + 50 * u), w, h, n, a1, a2, ts)); }
+    else { const gap = 30 * u, w = (W - 2 * m - gap * 2) / 3, h = H * 0.36; items.forEach(([n, a1, a2, ts], i) => card(m + i * (w + gap), H * 0.32, w, h, n, a1, a2, ts)); }
     chrome(ctx, t, "r2");
   };
 
