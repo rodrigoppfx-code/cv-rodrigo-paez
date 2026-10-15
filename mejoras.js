@@ -24,31 +24,59 @@
       });
     }
 
-    // ── Presentación profesional (Quién soy): vista previa sin sonido; con un clic arranca desde el inicio con sonido ──
+    // ── Presentación profesional (Quién soy) ─────────────────────────────
+    // Vista previa sin sonido cuando está a la vista. Con un clic: pantalla completa, desde el inicio,
+    // con sonido y controles propios (los del navegador ponen una capa gris encima del video).
     const pres = $('[data-pres]');
     if (pres) {
-      const v = $('video', pres), b = $('.mx-pres-play', pres), SRC = 'brand/video/presentacion.mp4?v=40s';
-      const preview = () => { if (pres.classList.contains('on') || reduce()) return; if (!v.src) v.src = SRC; v.muted = true; v.loop = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
-      if ('IntersectionObserver' in window) new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) preview(); else if (!pres.classList.contains('on')) v.pause(); }), { threshold: 0.3 }).observe(pres);
-      else preview();
-      // Clic: pantalla completa, desde el inicio y con sonido (los controles del navegador se esconden solos)
+      const v = $('video', pres), b = $('.mx-pres-play', pres), SRC = 'brand/video/presentacion.mp4?v=40s-c';
+      const pc = (k) => $(`[data-pc="${k}"]`, pres), bPlay = pc('play'), bMute = pc('mute'), seek = pc('seek'), time = pc('time');
+      const isOn = () => pres.classList.contains('on');
       const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement;
-      const backToPreview = () => { pres.classList.remove('on'); v.controls = false; v.pause(); preview(); };
+      const mmss = (x) => { x = Math.max(0, Math.floor(x || 0)); return Math.floor(x / 60) + ':' + String(x % 60).padStart(2, '0'); };
+      const ensureSrc = () => { if (!v.getAttribute('src')) v.src = SRC; };
+      const play = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      const preview = () => { if (isOn() || reduce()) return; ensureSrc(); v.muted = true; v.loop = true; play(); };
+      if ('IntersectionObserver' in window) new IntersectionObserver((es) => es.forEach((e) => { if (isOn()) return; if (e.isIntersecting) preview(); else v.pause(); }), { threshold: 0.3 }).observe(pres);
+      else preview();
+
+      let hideT = 0;
+      const showBar = () => { pres.classList.add('ui'); clearTimeout(hideT); hideT = setTimeout(() => { if (!v.paused) pres.classList.remove('ui'); }, 2500); };
+      const paint = () => {
+        bPlay.textContent = v.paused ? '▶' : '❚❚'; bPlay.setAttribute('aria-label', v.paused ? 'Reproducir' : 'Pausar');
+        bMute.textContent = v.muted ? '🔇' : '🔊'; bMute.setAttribute('aria-label', v.muted ? 'Activar sonido' : 'Silenciar');
+        const d = v.duration || 40; time.textContent = mmss(v.currentTime) + ' / ' + mmss(d);
+        if (!seek.matches(':active')) seek.value = Math.round((v.currentTime / d) * 1000) || 0;
+        seek.style.setProperty('--p', ((v.currentTime / d) * 100).toFixed(2) + '%');
+      };
+      const close = () => {
+        if (fsEl()) { const x = document.exitFullscreen || document.webkitExitFullscreen; if (x) { const r = x.call(document); if (r && r.catch) r.catch(() => {}); } }
+        pres.classList.remove('on', 'ui'); v.controls = false; v.pause(); v.currentTime = 0; preview();
+      };
       b.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (!v.src) v.src = SRC;
-        pres.classList.add('on'); v.loop = false; v.muted = false; v.currentTime = 0; v.controls = true;
-        const p = v.play(); if (p && p.catch) p.catch(() => {});
-        const go = v.requestFullscreen || v.webkitRequestFullscreen;
-        if (go) { const r = go.call(v); if (r && r.catch) r.catch(() => {}); }
-        else if (v.webkitEnterFullscreen) { try { v.webkitEnterFullscreen(); } catch (err) {} } // iPhone
+        e.stopPropagation(); ensureSrc();
+        pres.classList.add('on'); v.loop = false; v.muted = false; v.currentTime = 0; play(); showBar(); paint();
+        const go = pres.requestFullscreen || pres.webkitRequestFullscreen;
+        if (go) { const r = go.call(pres); if (r && r.catch) r.catch(() => {}); }
+        else if (v.webkitEnterFullscreen) { v.controls = true; try { v.webkitEnterFullscreen(); } catch (err) {} } // iPhone: reproductor del sistema
       });
-      const onFs = () => { if (!fsEl() && pres.classList.contains('on')) backToPreview(); };
+      // Controles propios
+      bPlay.addEventListener('click', (e) => { e.stopPropagation(); v.paused ? play() : v.pause(); showBar(); });
+      bMute.addEventListener('click', (e) => { e.stopPropagation(); v.muted = !v.muted; paint(); showBar(); });
+      pc('close').addEventListener('click', (e) => { e.stopPropagation(); close(); });
+      seek.addEventListener('input', (e) => { e.stopPropagation(); const d = v.duration || 40; v.currentTime = (seek.value / 1000) * d; paint(); showBar(); });
+      seek.addEventListener('click', (e) => e.stopPropagation());
+      v.addEventListener('click', (e) => { if (!isOn()) return; e.stopPropagation(); v.paused ? play() : v.pause(); showBar(); });
+      pres.addEventListener('pointermove', () => { if (isOn()) showBar(); });
+      ['play', 'pause', 'timeupdate', 'volumechange', 'loadedmetadata', 'seeked'].forEach((ev) => v.addEventListener(ev, () => { if (isOn()) paint(); }));
+      v.addEventListener('pause', () => { if (isOn()) pres.classList.add('ui'); });
+      v.addEventListener('ended', () => { if (isOn()) close(); });
+      v.addEventListener('webkitendfullscreen', () => { if (isOn()) close(); }); // iPhone
+      const onFs = () => { if (!fsEl() && isOn()) close(); };
       document.addEventListener('fullscreenchange', onFs); document.addEventListener('webkitfullscreenchange', onFs);
-      v.addEventListener('webkitendfullscreen', backToPreview); // iPhone
-      v.addEventListener('ended', () => { if (fsEl()) (document.exitFullscreen || document.webkitExitFullscreen).call(document); backToPreview(); });
+      document.addEventListener('keydown', (e) => { if (!isOn()) return; if (e.key === ' ' || e.key === 'k') { e.preventDefault(); v.paused ? play() : v.pause(); showBar(); } if (e.key === 'Escape' && !fsEl()) close(); });
       // pausa si se cambia de pestaña
-      document.getElementById('app')?.addEventListener('click', (e) => { if (e.target.closest('[data-go]') && !v.paused) v.pause(); });
+      document.getElementById('app')?.addEventListener('click', (e) => { if (e.target.closest('[data-go]') && isOn()) close(); });
     }
 
     // ── Botón flotante ───────────────────────────────────────────────────

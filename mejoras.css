@@ -145,6 +145,24 @@ footer[data-contact]{padding-bottom:72px}
 [data-cbtn]{border-radius:999px!important}
 [data-more]{border-radius:999px!important}
 [data-lb-close]{border-radius:999px!important}
-/* Video en pantalla completa: fondo negro y sin recortes */
-.mx-pres video:fullscreen{object-fit:contain;background:#000}
-.mx-pres video:-webkit-full-screen{object-fit:contain;background:#000}
+
+/* Reproductor propio del video (sin la capa gris de los controles del navegador) */
+.mx-pres:fullscreen{max-width:none;width:100%;height:100%;margin:0;border:0;border-radius:0;background:#000;aspect-ratio:auto}
+.mx-pres:-webkit-full-screen{max-width:none;width:100%;height:100%;margin:0;border:0;border-radius:0;background:#000}
+.mx-pres:fullscreen video,.mx-pres:-webkit-full-screen video{object-fit:contain;background:#000}
+.mx-pres.on video{cursor:pointer}
+.mx-pc{position:absolute;left:50%;bottom:clamp(12px,2.4vw,28px);transform:translate(-50%,10px);display:none;align-items:center;gap:12px;width:min(720px,calc(100% - 24px));padding:8px 14px 8px 8px;border-radius:999px;background:rgba(17,19,20,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;opacity:0;transition:opacity .35s var(--ease),transform .35s var(--ease);z-index:3}
+.mx-pres.on .mx-pc{display:flex}
+.mx-pres.on.ui .mx-pc{opacity:1;transform:translate(-50%,0)}
+.mx-pres.on:not(.ui){cursor:none}
+.mx-pc-b{flex:0 0 auto;width:38px;height:38px;border-radius:50%;border:0;background:transparent;color:#fff;font:600 13px/1 Inter;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
+.mx-pc-b:hover,.mx-pc-b:focus-visible{background:rgba(255,255,255,.14)}
+.mx-pc-b[data-pc="play"]{background:var(--red)}
+.mx-pc-b[data-pc="play"]:hover{background:#d2321c}
+.mx-pc-t{flex:0 0 auto;font:500 12px/1 Inter;font-variant-numeric:tabular-nums;opacity:.9;min-width:78px}
+.mx-pc-r{flex:1 1 auto;min-width:60px;height:4px;-webkit-appearance:none;appearance:none;border-radius:999px;background:linear-gradient(90deg,var(--red) var(--p,0%),rgba(255,255,255,.28) var(--p,0%));cursor:pointer;outline-offset:6px}
+.mx-pc-r::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:#fff;border:0}
+.mx-pc-r::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;border:0}
+@media (max-width:560px){.mx-pc{gap:6px;padding:6px 10px 6px 6px}.mx-pc-t{min-width:0;font-size:11px}}
+/* El script original pone opacidad .6 a todos los videos (pensado para el fondo del encabezado); el de presentación va al 100 % */
+.mx-pres video{opacity:1!important}

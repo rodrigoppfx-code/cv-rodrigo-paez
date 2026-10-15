@@ -113,7 +113,7 @@
     out.forEach((g, i) => { g.end = Math.min(out[i + 1]?.start ?? g.end + 0.5, g.end + 0.5); }); return out; });
   let G = null;
   function subtitles(ctx, t) {
-    if (/[?&]nosub/.test(location.search)) return; // portadas sin subtítulos
+    return; // sin subtítulos: el texto clave ya está en pantalla (decisión de Rodrigo)
     G = G || groups(); const g = G.find((g) => t >= g.start && t < g.end); if (!g) return;
     const { W, H, u, portrait } = MC.L, size = (portrait ? 40 : 34) * u, y = portrait ? H * 0.9 : H * 0.92;
     ctx.save(); font(ctx, SANS, size, 500); ctx.textBaseline = "middle";
@@ -355,8 +355,37 @@
     ctx.save(); ctx.globalAlpha = pa; ctx.translate(px, py); const sc = 0.92 + 0.08 * pa; ctx.scale(sc, sc);
     ctx.save(); ctx.shadowColor = rgba(C.ink, 0.28); ctx.shadowBlur = 50 * u; ctx.shadowOffsetY = 24 * u; ctx.fillStyle = C.bg; ctx.beginPath(); ctx.arc(0, 0, ph / 2, 0, Math.PI * 2); ctx.fill(); ctx.restore();
     ctx.save(); ctx.beginPath(); ctx.arc(0, 0, ph / 2, 0, Math.PI * 2); ctx.clip();
-    const im = MC.IMG.foto; if (im) { const k = Math.max(ph / im.width, ph / im.height) * (1.06 - 0.04 * seg(t, t0, t0 + 6, E.linear)); ctx.drawImage(im, -im.width * k / 2, -im.height * k / 2, im.width * k, im.height * k); }
+    { // Emblema de crecimiento (en lugar de la foto): barras 3D que suben y una línea ascendente con flecha
+      const R = ph / 2, bg2 = ctx.createLinearGradient(0, -R, 0, R); bg2.addColorStop(0, "#FFFFFF"); bg2.addColorStop(1, "#EFEAE0");
+      ctx.fillStyle = bg2; ctx.fillRect(-R, -R, ph, ph);
+      ctx.strokeStyle = rgba(C.ink, 0.07); ctx.lineWidth = 1.2 * u;
+      for (let g = -3; g <= 3; g++) { ctx.beginPath(); ctx.moveTo(-R, g * R / 3.5); ctx.lineTo(R, g * R / 3.5); ctx.stroke(); }
+      const base = R * 0.5, bw = R * 0.24, gap = R * 0.1, hs = [0.32, 0.55, 0.8, 1.12], x0 = -(hs.length * bw + (hs.length - 1) * gap) / 2;
+      const tops = [];
+      hs.forEach((hh, i) => {
+        const k = seg(t, t0 + 0.35 + i * 0.22, t0 + 1.1 + i * 0.22, E.outBack), bh = R * hh * Math.max(0, k), bx = x0 + i * (bw + gap), last = i === hs.length - 1, dd = 12 * u;
+        if (bh <= 0) { tops.push(null); return; }
+        ctx.fillStyle = last ? C.red : rgba(C.ink, 0.2 + i * 0.12); ctx.fillRect(bx, base - bh, bw, bh);
+        ctx.fillStyle = last ? "#8E1A0B" : rgba(C.ink, 0.32 + i * 0.1); ctx.beginPath(); ctx.moveTo(bx + bw, base - bh); ctx.lineTo(bx + bw + dd, base - bh - dd * 0.6); ctx.lineTo(bx + bw + dd, base - dd * 0.6); ctx.lineTo(bx + bw, base); ctx.fill();
+        ctx.fillStyle = last ? "#D9452D" : rgba(C.ink, 0.12 + i * 0.06); ctx.beginPath(); ctx.moveTo(bx, base - bh); ctx.lineTo(bx + dd, base - bh - dd * 0.6); ctx.lineTo(bx + bw + dd, base - bh - dd * 0.6); ctx.lineTo(bx + bw, base - bh); ctx.fill();
+        tops.push([bx + bw / 2, base - bh - R * 0.12]);
+      });
+      ctx.fillStyle = rgba(C.ink, 0.5); ctx.fillRect(x0 - gap, base, hs.length * (bw + gap) + gap, 2 * u);
+      const lk = seg(t, t0 + 1.0, t0 + 2.2, E.inOutCubic), pts = tops.filter(Boolean);
+      if (pts.length > 1 && lk > 0) {
+        const n = (pts.length - 1) * lk; ctx.save(); ctx.strokeStyle = C.red; ctx.lineWidth = 5 * u; ctx.lineCap = ctx.lineJoin = "round"; ctx.shadowColor = rgba(C.red, 0.45); ctx.shadowBlur = 18 * u;
+        ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]); let ex = pts[0][0], ey = pts[0][1], ang = 0;
+        for (let i = 1; i < pts.length; i++) { const f = clamp(n - (i - 1)); if (f <= 0) break; ex = lerp(pts[i - 1][0], pts[i][0], f); ey = lerp(pts[i - 1][1], pts[i][1], f); ang = Math.atan2(pts[i][1] - pts[i - 1][1], pts[i][0] - pts[i - 1][0]); ctx.lineTo(ex, ey); }
+        ctx.stroke(); ctx.translate(ex, ey); ctx.rotate(ang); ctx.fillStyle = C.red; ctx.beginPath(); ctx.moveTo(14 * u, 0); ctx.lineTo(-8 * u, -10 * u); ctx.lineTo(-8 * u, 10 * u); ctx.closePath(); ctx.fill(); ctx.restore();
+      }
+    }
     ctx.restore();
+    { // Sello de confianza: círculo rojo con marca de verificación sobre el anillo
+      const sk = pop(t, t0 + 2.0, 0.6, 2), sx = ph / 2 * 0.72, sy = ph / 2 * 0.72;
+      if (sk > 0) { ctx.save(); ctx.translate(sx, sy); ctx.scale(sk, sk); ctx.shadowColor = rgba(C.ink, 0.25); ctx.shadowBlur = 20 * u; ctx.fillStyle = C.red; ctx.beginPath(); ctx.arc(0, 0, 34 * u, 0, Math.PI * 2); ctx.fill(); ctx.shadowBlur = 0;
+        ctx.strokeStyle = "#fff"; ctx.lineWidth = 5 * u; ctx.lineCap = ctx.lineJoin = "round"; const ck = seg(t, t0 + 2.2, t0 + 2.6, E.outCubic);
+        ctx.beginPath(); ctx.moveTo(-13 * u, 1 * u); ctx.lineTo(-13 * u + 9 * u * Math.min(1, ck * 2), 1 * u + 9 * u * Math.min(1, ck * 2)); if (ck > 0.5) ctx.lineTo(-4 * u + 18 * u * (ck - 0.5) * 2, 10 * u - 20 * u * (ck - 0.5) * 2); ctx.stroke(); ctx.restore(); }
+    }
     ctx.strokeStyle = C.red; ctx.lineWidth = 3 * u; ctx.beginPath(); ctx.arc(0, 0, ph / 2 + 14 * u, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * ring); ctx.stroke();
     ctx.save(); ctx.rotate(t * 0.25); ctx.setLineDash([3 * u, 14 * u]); ctx.strokeStyle = rgba(C.ink, 0.45 * ring); ctx.lineWidth = 2 * u;
     ctx.beginPath(); ctx.arc(0, 0, ph / 2 + 38 * u, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
@@ -482,7 +511,7 @@
   });
 
   MC.start({
-    brand: B, style: B.style, duration: V.duration, scenes, words: [], captions: false, motionBlur: { samples: 4, shutter: 0.25 },
+    brand: B, style: B.style, duration: V.duration, scenes, words: [], captions: false,
     images: B.images, defaultFormat: "horizontal",
     voice: (V.tracks ?? V.lines).filter((l) => l.src).map((l) => ({ src: l.src, start: l.start })),
     score(oc, out, K) {
