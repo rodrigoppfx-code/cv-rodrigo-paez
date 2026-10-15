@@ -149,3 +149,8 @@ footer[data-contact]{padding-bottom:72px}
 @keyframes mxRing{0%{box-shadow:0 0 0 0 rgba(184,35,15,.45)}70%{box-shadow:0 0 0 16px rgba(184,35,15,0)}100%{box-shadow:0 0 0 0 rgba(184,35,15,0)}}
 @media (prefers-reduced-motion:reduce){.mx-pres-ic{animation:none}}
 @media print{.mx-pres{display:none}}
+
+/* Botones ovalados: contacto, «Ver más» y cerrar del visor */
+[data-cbtn]{border-radius:999px!important}
+[data-more]{border-radius:999px!important}
+[data-lb-close]{border-radius:999px!important}

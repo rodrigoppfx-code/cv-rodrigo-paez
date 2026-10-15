@@ -2,10 +2,11 @@
 
 _Última actualización: 15 de octubre de 2026_
 
-## Propuesta de diseño e interacciones — 15 de octubre de 2026 (rama `claude/elegant-brahmagupta-zb8d46`, pendiente de publicar)
-Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en pocas líneas de `index.html`. Se conserva la tipografía original y no se cambió ningún texto existente. Falta el visto bueno final de Rodrigo antes de pasar a `main`.
+## Diseño, interacciones y video de presentación — 15 de octubre de 2026 (publicado)
+Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en pocas líneas de `index.html`. Se conserva la tipografía original y no se cambió ningún texto existente. Aprobado y publicado por solicitud de Rodrigo.
 - Video de presentación en **«Quién soy»**, arriba del texto, con el título «Presentación profesional» (recupera el bloque «Presentación profesional — Próximamente» del diseño del 16 de septiembre de 2026). Se reproduce solo y sin sonido como vista previa cuando está a la vista; con un clic arranca desde el inicio con sonido y controles. No aparece en ninguna otra parte de la web. Se eliminó la página `/presentacion`.
-- Botón flotante pequeño «Conversemos», siempre visible y con movimiento suave; lleva a `contacto.html`.
+- Botón flotante pequeño «Conversemos», siempre visible y con movimiento suave; abre el mismo enlace de WhatsApp del botón de contacto.
+- Botones de contacto y «Ver más» con forma ovalada.
 - Video (~43 s, 1080p horizontal en la web; versión vertical entregada aparte para redes; voz generada grave; fuente en `video-fuente/`): problema → la persona correcta → quién soy (incluye el máster en curso) → «Te ayudo a medir, optimizar y crecer» → resultados reales (+240 %, de 241 a 994 clientes) → «Me sumo a tu equipo» → «Si buscas a alguien que sume a tu equipo, conversemos.» Se puede reemplazar la voz por la de Rodrigo.
 - Movimiento: nombre letra a letra, aparición suave al bajar, transición entre pestañas, barra de progreso, textura de papel.
 - Interacción: línea de tiempo en Experiencia, inclinación 3D en habilidades, foco en tarjetas, filtro de proyectos por tema, barra antes/ahora (~5 → ~1 min) en Propuestas, visor de capturas con anterior/siguiente, teclado y deslizar, cifras de Resultados que cuentan hacia arriba, año de fondo al pasar el mouse en Formación y Cursos, herramientas como etiquetas.
@@ -13,7 +14,7 @@ Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en
 - Sin modo oscuro y sin cambios de letra (decisiones de Rodrigo).
 - Correcciones: precarga de capturas en Chrome; menú en tablet que cortaba las primeras pestañas.
 - Todo el movimiento se apaga si el visitante tiene activado «reducir movimiento».
-- Pendiente: el botón WhatsApp apunta a `wa.me/RPP2026_` (número de marcador); falta el número real.
+- WhatsApp: `wa.me/RPP2026_` es el nombre de usuario privado de Rodrigo (cambio intencional del 29 de septiembre de 2026 para no exponer el número); no tocar.
 
 ## Diez habilidades de gestión — 8 de octubre de 2026
 Se retiró Autonomía de la CV de Drive y de la web por solicitud de Rodrigo. Se conservan las otras diez habilidades y su orden; en escritorio la web presenta dos filas de cinco, en tablet dos columnas y en móvil una columna. La CV conserva su formato. En LinkedIn se aprobó una lista de catorce aptitudes, incluida IA generativa y conservando Excel avanzado, con las cinco destacadas actuales. Después corresponde revisar preferencias y alertas de empleo en LinkedIn y Magneto.

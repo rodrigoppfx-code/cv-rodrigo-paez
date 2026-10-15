@@ -43,8 +43,10 @@
     }
 
     // ── Botón flotante ───────────────────────────────────────────────────
-    const fab = document.createElement('a'); fab.className = 'mx-fab'; fab.href = 'contacto.html';
-    fab.setAttribute('aria-label', 'Conversemos: ir al formulario de contacto');
+    const wa = $('footer[data-contact] a[href*="wa.me"]'); // mismo enlace de WhatsApp del botón de contacto
+    const fab = document.createElement('a'); fab.className = 'mx-fab'; fab.href = wa ? wa.href : 'contacto.html';
+    if (wa) { fab.target = '_blank'; fab.rel = 'noopener'; }
+    fab.setAttribute('aria-label', wa ? 'Conversemos por WhatsApp' : 'Conversemos: ir al formulario de contacto');
     fab.innerHTML = '<span class="mx-dot" aria-hidden="true"></span>Conversemos'; document.body.appendChild(fab);
     requestAnimationFrame(() => fab.classList.add('on')); // siempre disponible
 
