@@ -24,39 +24,11 @@
       });
     }
 
-    // ── Video de presentación ────────────────────────────────────────────
-    const dlg = document.createElement('dialog'); dlg.className = 'mx-vdlg'; dlg.setAttribute('aria-label', 'Video de presentación');
-    dlg.innerHTML = '<button class="mx-x" type="button" aria-label="Cerrar video">×</button><video controls playsinline preload="none"></video>';
-    document.body.appendChild(dlg);
-    const vid = $('video', dlg);
-    const openVideo = () => {
-      const vertical = matchMedia('(max-width:760px) and (orientation:portrait)').matches;
-      dlg.classList.toggle('v', vertical);
-      const src = vertical ? 'brand/video/presentacion-vertical.mp4' : 'brand/video/presentacion.mp4';
-      if (!vid.src.endsWith(src)) { vid.src = src; vid.poster = vertical ? '' : 'brand/video/presentacion-portada.webp'; }
-      dlg.showModal(); vid.currentTime = 0; const p = vid.play(); if (p && p.catch) p.catch(() => {});
-    };
-    const closeVideo = () => { vid.pause(); dlg.close(); };
-    $('.mx-x', dlg).addEventListener('click', closeVideo);
-    dlg.addEventListener('click', (e) => { if (e.target === dlg) closeVideo(); });
-    dlg.addEventListener('close', () => vid.pause());
-    $$('[data-video]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); openVideo(); }));
-
-    // Adelanto silencioso en la tarjeta: se carga y reproduce solo cuando está a la vista
-    const pv = $('[data-preview]');
-    if (pv && !reduce() && 'IntersectionObserver' in window) {
-      new IntersectionObserver((es) => es.forEach((e) => {
-        if (e.isIntersecting && !dlg.open) { if (!pv.src) pv.src = 'brand/video/presentacion-adelanto.mp4'; const p = pv.play(); if (p && p.catch) p.catch(() => {}); }
-        else pv.pause();
-      }), { threshold: 0.25 }).observe(pv);
-      dlg.addEventListener('close', () => { const p = pv.play(); if (p && p.catch) p.catch(() => {}); });
-      $$('[data-video]').forEach((b) => b.addEventListener('click', () => pv.pause()));
-    }
-
     // ── Botón flotante ───────────────────────────────────────────────────
     const fab = document.createElement('a'); fab.className = 'mx-fab'; fab.href = 'contacto.html';
-    fab.innerHTML = '<span class="mx-dot" aria-hidden="true">→</span>Conversemos'; document.body.appendChild(fab);
-    const hero = $('#hero'), foot = $('footer[data-contact]');
+    fab.setAttribute('aria-label', 'Conversemos: ir al formulario de contacto');
+    fab.innerHTML = '<span class="mx-dot" aria-hidden="true"></span>Conversemos'; document.body.appendChild(fab);
+    requestAnimationFrame(() => fab.classList.add('on')); // siempre disponible
 
     // ── Scroll: progreso, botón flotante, línea de tiempo ────────────────
     let ticking = false;
@@ -64,9 +36,6 @@
       ticking = false;
       const h = document.documentElement.scrollHeight - innerHeight;
       bar.style.setProperty('--p', h > 0 ? (scrollY / h).toFixed(4) : 0);
-      const past = hero ? hero.getBoundingClientRect().bottom < 0 : scrollY > 400;
-      const nearFoot = foot ? foot.getBoundingClientRect().top < innerHeight - 40 : false;
-      fab.classList.toggle('on', past && !nearFoot);
       const tl = $('.mx-tl');
       if (tl && tl.offsetParent) {
         const r = tl.getBoundingClientRect(), k = Math.min(1, Math.max(0, (innerHeight * 0.6 - r.top) / r.height));

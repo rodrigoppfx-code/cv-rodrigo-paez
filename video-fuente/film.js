@@ -54,7 +54,7 @@
 
   // ── Capa editorial común: cabecera, capítulo, progreso y subtítulos ────
   const CHAP = { p1: "El problema", p2: "El problema", p3: "El problema", p4: "El problema", g1: "La clave", g2: "La clave",
-    r1: "Quién soy", r2: "Cómo te ayudo", r3: "Resultados", c1: "Mi propuesta", c2: "Hablemos" };
+    r1: "Quién soy", r2: "Cómo te ayudo", r3: "Resultados", c1: "Mi propuesta", c2: "Conversemos" };
   let NOCHROME = false;
   const bufs = {};
   const buf = (k) => { const { W, H } = MC.L, key = k + W + "x" + H; if (!bufs[key]) { const c = document.createElement("canvas"); c.width = W; c.height = H; bufs[key] = c; } const c = bufs[key], g = c.getContext("2d"); g.setTransform(1, 0, 0, 1, 0, 0); g.clearRect(0, 0, W, H); return c; };
@@ -452,32 +452,22 @@
     ctx.restore(); chrome(ctx, t, "c1");
   };
   S.c2 = (ctx, lt, dur, L, t) => {
-    bg(ctx, t); const { W, H, u, portrait, m } = Lx(), t0 = LN("c2").start - 0.15;
-    const cx = W / 2, k = pop(t, t0, 0.8, 1.2);
-    ctx.save(); ctx.translate(cx, portrait ? H * 0.4 : H * 0.42); ctx.scale(0.9 + 0.1 * k, 0.9 + 0.1 * k); ctx.globalAlpha = clamp(k);
-    font(ctx, SERIF, (portrait ? 230 : 230) * u); ctx.fillStyle = C.ink; ctx.textBaseline = "alphabetic"; ctx.textAlign = "left";
-    const word = "Hablemos", w = ctx.measureText(word).width; let xx = -w / 2 - 20 * u;
-    [...word].forEach((ch, i) => { const cw = ctx.measureText(ch).width, a = pop(t, t0 + i * 0.05, 0.7, 1.6);
-      if (a > 0) { ctx.save(); ctx.translate(xx + cw / 2, -60 * u); ctx.transform(1, 0, (1 - Math.min(1, a)) * 0.5, Math.max(0.001, a), 0, 0); ctx.globalAlpha = clamp(a * 1.5); ctx.fillText(ch, -cw / 2, 60 * u); ctx.restore(); }
-      xx += cw; });
-    const dk = pop(t, t0 + 0.45, 0.6, 2.2), dx = w / 2 - 6 * u;
-    ctx.save(); ctx.shadowColor = rgba(C.red, 0.6); ctx.shadowBlur = 30 * u; ctx.fillStyle = C.red; ctx.beginPath(); ctx.arc(dx, -8 * u, 16 * u * dk, 0, Math.PI * 2); ctx.fill(); ctx.restore();
-    [0, 0.18, 0.36].forEach((d) => { const k = clamp((t - t0 - 0.5 - d) / 1.3); if (k <= 0 || k >= 1) return;
-      ctx.strokeStyle = rgba(C.red, 0.55 * (1 - k)); ctx.lineWidth = 2 * u; ctx.beginPath(); ctx.arc(dx, -8 * u, 16 * u + E.outCubic(k) * 260 * u, 0, Math.PI * 2); ctx.stroke(); });
-    ctx.restore();
-    const a2 = seg(t, t0 + 0.6, t0 + 1.2, E.outCubic), y2 = portrait ? H * 0.52 : H * 0.58;
+    bg(ctx, t); const { W, H, u, portrait, m } = Lx(), t0 = LN("c2").start - 0.1, cx = W / 2;
+    const cv = at("c2", "conversemos"), maxW = portrait ? W - 2 * m : W * 0.78;
+    const hl = headline(ctx, [{ t: "Si" }, { t: "buscas" }, { t: "a" }, { t: "alguien" }, { t: "que" }, { t: "sume" }, { t: "a" }, { t: "tu" }, { t: "equipo," },
+      { t: "conversemos.", it: true, red: true, under: true, at: cv }], cx, portrait ? H * 0.34 : H * 0.36, { size: portrait ? 104 : 104, maxW, t, t0, align: "center", stagger: 0.07 });
+    // punto rojo con anillos que se expanden al decir «conversemos»
+    const last = hl.items[hl.items.length - 1];
+    if (last && last.x !== undefined) { const dx = last.x + last.w + 22 * u, dy = last.y - 22 * u, dk = pop(t, cv + 0.35, 0.6, 2.2);
+      ctx.save(); ctx.shadowColor = rgba(C.red, 0.6); ctx.shadowBlur = 30 * u; ctx.fillStyle = C.red; ctx.beginPath(); ctx.arc(dx, dy, 12 * u * dk, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+      [0, 0.18, 0.36].forEach((d) => { const k = clamp((t - cv - 0.4 - d) / 1.3); if (k <= 0 || k >= 1) return;
+        ctx.strokeStyle = rgba(C.red, 0.5 * (1 - k)); ctx.lineWidth = 2 * u; ctx.beginPath(); ctx.arc(dx, dy, 12 * u + E.outCubic(k) * 220 * u, 0, Math.PI * 2); ctx.stroke(); }); }
+    const a2 = seg(t, cv + 0.5, cv + 1.1, E.outCubic), y2 = (portrait ? H * 0.34 : H * 0.36) + hl.h + 40 * u;
     hair(ctx, cx - 280 * u, y2, 560 * u, a2, C.ink);
     ctx.save(); ctx.globalAlpha = a2; ctx.textAlign = "center"; ctx.textBaseline = "middle";
     font(ctx, SERIF, 64 * u); ctx.fillStyle = C.ink; ctx.fillText("Rodrigo Páez Parra", cx, y2 + 70 * u);
     font(ctx, SANS, 26 * u, 500); ctx.fillStyle = C.ink2; ctx.fillText("Ingeniero Industrial · Magíster en Administración Internacional", cx, y2 + 130 * u, W - 2 * m);
     ctx.restore();
-    const a3 = pop(t, at("c2", "escríbeme") - 0.05, 0.6, 1.6);
-    if (a3 > 0) {
-      ctx.save(); ctx.globalAlpha = a3; font(ctx, SANS, 30 * u, 700); ctx.letterSpacing = `${0.02 * 30 * u}px`;
-      const url = "Escríbeme  →", tw = ctx.measureText(url).width, bh = 84 * u, bw = tw + 90 * u, by = y2 + 230 * u + (1 - a3) * 16 * u;
-      MC.rrect(ctx, cx - bw / 2, by - bh / 2, bw, bh, bh / 2); ctx.fillStyle = C.ink; ctx.fill();
-      ctx.fillStyle = "#fff"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(url, cx, by + 2 * u); ctx.restore();
-    }
     chrome(ctx, t, "c2");
   };
 
