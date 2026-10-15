@@ -2,7 +2,7 @@
 
 _Última actualización: 15 de octubre de 2026_
 
-**Pendientes abiertos:** ver `PENDIENTES.md` (diploma de EUDE, cierre del máster y fecha de finalización en Avovite).
+**Pendientes abiertos:** ver `PENDIENTES.md` (diploma de EUDE de la doble titulación del Magíster, cierre del máster y fecha de finalización en Avovite).
 
 - 15 oct 2026: se retiró el filtro de proyectos por tema (todos los proyectos son de IA y automatización; era redundante).
 

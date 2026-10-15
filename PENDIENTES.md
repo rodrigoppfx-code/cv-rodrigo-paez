@@ -2,9 +2,10 @@
 
 _Creado: 15 de octubre de 2026._ Al completar un punto, márcalo con `[x]`, anota la fecha y actualiza `ESTADO.md`.
 
-## 1. Diploma de EUDE Business School (máster)
-- [ ] Agregar el diploma de EUDE que hace falta del Máster en Marketing, Dirección Comercial e IA Generativa.
-- Dónde: pestaña **Formación** de `index.html` (fila «Máster en Marketing, Dirección Comercial e IA Generativa · EUDE Business School»).
+## 1. Diploma de EUDE — doble titulación del Magíster
+- [ ] Agregar el diploma de EUDE Business School de la **doble titulación del Magíster en Administración Internacional** (Politécnico Grancolombiano, 2026).
+- Dónde: pestaña **Formación** de `index.html` (fila «Magíster en Administración Internacional · Politécnico Grancolombiano · 2026»), y en la hoja de vida en Word (Drive) y LinkedIn.
+- No confundir con el Máster en Marketing, Dirección Comercial e IA Generativa (también de EUDE, aún en curso; ver punto 2).
 - Si se publica el archivo del diploma, guardarlo en `brand/` sin datos personales sensibles (número de documento, códigos de verificación privados).
 
 ## 2. Cuando termine el máster actual
