@@ -1,6 +1,17 @@
 # Estado del sitio — Hoja de vida web de Rodrigo Páez Parra
 
-_Última actualización: 8 de octubre de 2026_
+_Última actualización: 15 de octubre de 2026_
+
+## Propuesta de diseño premium e interacciones — 15 de octubre de 2026 (rama `claude/elegant-brahmagupta-zb8d46`, pendiente de aprobación)
+Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en pocas líneas de `index.html`; no se cambió ningún texto existente.
+- Encabezado: frase de valor nueva, botones «Hablemos» y «Ver video», tarjeta con el video de presentación (escritorio).
+- Video de presentación (~57 s, 1080p, horizontal y vertical, voz generada): problema → la persona correcta → quién soy → cómo ayudo → resultados reales (+240 %, de 241 a 994 clientes) → «Hablemos». Se puede reemplazar la voz por la de Rodrigo.
+- Movimiento: nombre letra a letra, aparición suave al bajar, transición entre pestañas, barra de progreso, botón flotante «Hablemos».
+- Interacción: línea de tiempo en Experiencia, inclinación 3D en habilidades, foco en tarjetas, filtro de proyectos por tema, barra antes/ahora (~5 → ~1 min) en Propuestas, visor de capturas con anterior/siguiente, teclado y deslizar.
+- Modo oscuro con botón en el menú (se recuerda en el navegador).
+- Todo el movimiento se apaga si el visitante tiene activado «reducir movimiento».
+- Corrección: la precarga de capturas fallaba en Chrome (`requestIdleCallback`).
+- Pendiente detectado: el botón WhatsApp apunta a `wa.me/RPP2026_` (número de marcador); falta el número real.
 
 ## Diez habilidades de gestión — 8 de octubre de 2026
 Se retiró Autonomía de la CV de Drive y de la web por solicitud de Rodrigo. Se conservan las otras diez habilidades y su orden; en escritorio la web presenta dos filas de cinco, en tablet dos columnas y en móvil una columna. La CV conserva su formato. En LinkedIn se aprobó una lista de catorce aptitudes, incluida IA generativa y conservando Excel avanzado, con las cinco destacadas actuales. Después corresponde revisar preferencias y alertas de empleo en LinkedIn y Magneto.

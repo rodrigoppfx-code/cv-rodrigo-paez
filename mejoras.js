@@ -1,0 +1,174 @@
+/* mejoras.js — interacciones y movimiento (aditivo; no cambia textos existentes). */
+(function () {
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
+
+  // ── Tema claro / oscuro (recordado en este navegador) ──────────────────
+  const getTheme = () => { try { return localStorage.getItem('rpp-theme'); } catch (e) { return null; } };
+  const setTheme = (t) => { root.setAttribute('data-theme', t); try { localStorage.setItem('rpp-theme', t); } catch (e) {} paintThemeBtn(); };
+  const saved = getTheme(); if (saved) root.setAttribute('data-theme', saved);
+  const SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>';
+  const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>';
+  let themeBtn;
+  function paintThemeBtn() { if (!themeBtn) return; const dark = root.getAttribute('data-theme') === 'dark'; themeBtn.innerHTML = dark ? SUN : MOON; themeBtn.setAttribute('aria-label', dark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'); }
+
+  function init() {
+    const nav = $('.navwrap');
+    if (nav) {
+      themeBtn = document.createElement('button'); themeBtn.className = 'mx-theme'; themeBtn.type = 'button';
+      themeBtn.addEventListener('click', (e) => { e.stopPropagation(); setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+      nav.appendChild(themeBtn); paintThemeBtn();
+    }
+
+    // ── Barra de progreso ────────────────────────────────────────────────
+    const bar = document.createElement('div'); bar.className = 'mx-progress'; bar.setAttribute('aria-hidden', 'true'); document.body.appendChild(bar);
+
+    // ── Nombre letra a letra ─────────────────────────────────────────────
+    const h1 = $('[data-heroname]');
+    if (h1 && !reduce()) {
+      const txt = h1.textContent; h1.setAttribute('aria-label', txt); h1.textContent = '';
+      let i = 0; // cada palabra en un bloque que no se parte; cada letra entra por separado
+      txt.split(' ').forEach((wd, wi) => {
+        if (wi) h1.appendChild(document.createTextNode(' '));
+        const w = document.createElement('span'); w.className = 'mx-w'; w.setAttribute('aria-hidden', 'true');
+        [...wd].forEach((c) => { const s = document.createElement('span'); s.className = 'mx-ch'; s.textContent = c; s.style.setProperty('--i', i++); w.appendChild(s); });
+        h1.appendChild(w); i++;
+      });
+    }
+
+    // ── Video de presentación ────────────────────────────────────────────
+    const dlg = document.createElement('dialog'); dlg.className = 'mx-vdlg'; dlg.setAttribute('aria-label', 'Video de presentación');
+    dlg.innerHTML = '<button class="mx-x" type="button" aria-label="Cerrar video">×</button><video controls playsinline preload="none"></video>';
+    document.body.appendChild(dlg);
+    const vid = $('video', dlg);
+    const openVideo = () => {
+      const vertical = matchMedia('(max-width:760px) and (orientation:portrait)').matches;
+      dlg.classList.toggle('v', vertical);
+      const src = vertical ? 'brand/video/presentacion-vertical.mp4' : 'brand/video/presentacion.mp4';
+      if (!vid.src.endsWith(src)) { vid.src = src; vid.poster = vertical ? '' : 'brand/video/presentacion-portada.webp'; }
+      dlg.showModal(); vid.currentTime = 0; const p = vid.play(); if (p && p.catch) p.catch(() => {});
+    };
+    const closeVideo = () => { vid.pause(); dlg.close(); };
+    $('.mx-x', dlg).addEventListener('click', closeVideo);
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) closeVideo(); });
+    dlg.addEventListener('close', () => vid.pause());
+    $$('[data-video]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); openVideo(); }));
+
+    // ── Botón flotante ───────────────────────────────────────────────────
+    const fab = document.createElement('a'); fab.className = 'mx-fab'; fab.href = 'contacto.html';
+    fab.innerHTML = '<span class="mx-dot" aria-hidden="true">→</span>Hablemos'; document.body.appendChild(fab);
+    const hero = $('#hero'), foot = $('footer[data-contact]');
+
+    // ── Scroll: progreso, botón flotante, línea de tiempo ────────────────
+    let ticking = false;
+    const onScroll = () => {
+      ticking = false;
+      const h = document.documentElement.scrollHeight - innerHeight;
+      bar.style.setProperty('--p', h > 0 ? (scrollY / h).toFixed(4) : 0);
+      const past = hero ? hero.getBoundingClientRect().bottom < 0 : scrollY > 400;
+      const nearFoot = foot ? foot.getBoundingClientRect().top < innerHeight - 40 : false;
+      fab.classList.toggle('on', past && !nearFoot);
+      const tl = $('.mx-tl');
+      if (tl && tl.offsetParent) {
+        const r = tl.getBoundingClientRect(), k = Math.min(1, Math.max(0, (innerHeight * 0.6 - r.top) / r.height));
+        tl.style.setProperty('--tl', k.toFixed(3));
+        $$(':scope > article', tl).forEach((a) => a.classList.toggle('on', a.getBoundingClientRect().top + 38 < innerHeight * 0.6));
+      }
+    };
+    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    addEventListener('resize', onScroll); onScroll();
+
+    // ── Aparición al bajar ───────────────────────────────────────────────
+    const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }) : null;
+    const reveal = (els, step = 60) => els.forEach((el, i) => {
+      if (!io || reduce() || el.classList.contains('mx-rv')) return;
+      el.classList.add('mx-rv'); el.style.setProperty('--d', Math.min(i, 8) * step + 'ms'); io.observe(el);
+    });
+    $$('[data-panel]').forEach((p) => {
+      reveal($$(':scope > div:not(:first-child) > *, :scope > p', p).filter((el) => !el.matches('.pjwrap, .mx-filter')));
+    });
+    $$('.g3p, .g3, .g4, .g5, .skills-grid').forEach((g) => reveal([...g.children], 70));
+    $$('[data-panel] [data-secnum] + span').forEach((l) => { if (io && !reduce()) { l.classList.add('mx-line'); io.observe(l); } });
+
+    // ── Tarjetas: foco y 3D ──────────────────────────────────────────────
+    $$('.g3, .g4, .g5, .skills-grid').forEach((g) => g.classList.add('mx-spot'));
+    if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
+      $$('.skills-grid > .hv1, .g3 > .hv1, .g4 > .hv1').forEach((c) => {
+        c.classList.add('mx-tilt');
+        c.addEventListener('pointermove', (e) => { if (reduce()) return; const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+          c.style.transform = `rotateX(${(-y * 7).toFixed(2)}deg) rotateY(${(x * 9).toFixed(2)}deg) translateZ(6px)`; });
+        c.addEventListener('pointerleave', () => { c.style.transform = ''; });
+      });
+    }
+
+    // ── Experiencia: línea de tiempo ─────────────────────────────────────
+    const exp = $('[data-panel="experiencia"] [data-exp]');
+    if (exp) exp.parentElement.classList.add('mx-tl');
+
+    // ── Proyectos: filtro por tema ───────────────────────────────────────
+    const TAGS = { propuestas: ['ventas', 'automatizacion'], simulador: ['ventas'], campus: ['procesos', 'ia'], analizador: ['ia', 'procesos'], agenda: ['ia', 'automatizacion'], web: ['ia'] };
+    const NAMES = [['todos', 'Todos'], ['ventas', 'Ventas'], ['procesos', 'Procesos'], ['automatizacion', 'Automatización'], ['ia', 'IA']];
+    const wrap = $('.pjwrap');
+    if (wrap) {
+      const f = document.createElement('div'); f.className = 'mx-filter'; f.setAttribute('role', 'group'); f.setAttribute('aria-label', 'Filtrar proyectos por tema');
+      f.innerHTML = NAMES.map(([k, n], i) => `<button type="button" class="mx-chip" data-f="${k}" aria-pressed="${i ? 'false' : 'true'}">${n}</button>`).join('');
+      wrap.parentElement.insertBefore(f, wrap); wrap.style.marginTop = '0';
+      f.addEventListener('click', (e) => {
+        const b = e.target.closest('[data-f]'); if (!b) return; e.stopPropagation();
+        const k = b.getAttribute('data-f');
+        $$('[data-f]', f).forEach((x) => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+        const btns = $$('.pjlist [data-pjgo]'); let first = null;
+        btns.forEach((x) => { const ok = k === 'todos' || (TAGS[x.getAttribute('data-pjgo')] || []).includes(k); x.classList.toggle('mx-dim', !ok); if (ok && !first) first = x; });
+        const cur = $('.pjlist [data-pjgo][aria-current="true"]');
+        if (first && cur && cur.classList.contains('mx-dim')) first.click();
+      });
+    }
+
+    // ── Propuestas: antes / ahora ────────────────────────────────────────
+    const imp = $$('[data-pj="propuestas"] .g3p > div').pop();
+    if (imp) {
+      const ba = document.createElement('div'); ba.className = 'mx-ba'; ba.setAttribute('aria-hidden', 'true');
+      ba.innerHTML = '<div class="mx-ba-row"><span>Antes</span><span class="mx-ba-bar"><i style="--w:1"></i></span><b>~5 min</b></div>' +
+        '<div class="mx-ba-row now"><span>Ahora</span><span class="mx-ba-bar"><i style="--w:.2"></i></span><b>~1 min</b></div>';
+      imp.appendChild(ba);
+      if (io && !reduce()) io.observe(ba); else ba.classList.add('in');
+    }
+
+    // ── Visor de capturas: anterior / siguiente, teclado y deslizar ──────
+    const lb = $('[data-lightbox]');
+    if (lb) {
+      let list = [], idx = 0;
+      const prev = document.createElement('button'), next = document.createElement('button'), cnt = document.createElement('span');
+      prev.className = 'mx-lbnav prev'; next.className = 'mx-lbnav next'; prev.type = next.type = 'button';
+      prev.innerHTML = '←'; next.innerHTML = '→'; prev.setAttribute('aria-label', 'Captura anterior'); next.setAttribute('aria-label', 'Captura siguiente'); cnt.className = 'mx-lbcount';
+      lb.append(prev, next, cnt);
+      const show = (i) => {
+        if (!list.length) return; idx = (i + list.length) % list.length; const t = list[idx], img = $('[data-lb-img]', lb);
+        img.style.opacity = '0'; setTimeout(() => { img.src = t.getAttribute('data-src'); img.alt = t.getAttribute('data-alt') || ''; img.style.opacity = '1'; }, 160);
+        $('[data-lb-cap]', lb).textContent = t.getAttribute('data-cap') || ''; cnt.textContent = `${idx + 1} / ${list.length}`;
+        t.click(); // sincroniza la miniatura activa en la página
+      };
+      new MutationObserver(() => {
+        if (!lb.open) return;
+        const art = $('[data-pj]:not([style*="none"])'); list = art ? $$('[data-thumb]', art) : [];
+        const cur = $('[data-mainimg]', art || document); const src = cur ? cur.getAttribute('src') : '';
+        idx = Math.max(0, list.findIndex((t) => src && src.endsWith(t.getAttribute('data-src'))));
+        const many = list.length > 1; prev.hidden = next.hidden = cnt.hidden = !many; cnt.textContent = `${idx + 1} / ${list.length}`;
+      }).observe(lb, { attributes: true, attributeFilter: ['open'] });
+      prev.addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });
+      next.addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
+      lb.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') show(idx - 1); if (e.key === 'ArrowRight') show(idx + 1); });
+      let x0 = null;
+      lb.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+      lb.addEventListener('touchend', (e) => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1)); x0 = null; });
+    }
+
+    // Recalcular al cambiar de pestaña (la línea de tiempo y el botón dependen del panel visible)
+    document.getElementById('app')?.addEventListener('click', () => setTimeout(onScroll, 80));
+    addEventListener('hashchange', () => setTimeout(onScroll, 120));
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();

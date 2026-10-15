@@ -85,6 +85,7 @@ details[open]>.vdet .vdet-ic{transform:rotate(45deg)}
 details[open]>.vdet .vdet-btn{background:var(--bg)}
 .vdet-off{display:none}details[open]>.vdet .vdet-on{display:none}details[open]>.vdet .vdet-off{display:inline}
 </style>
+<link rel="stylesheet" href="mejoras.css">
 </head>
 <body>
 <div id="app" style="position:relative;min-height:100vh;background:var(--bg)">
@@ -120,7 +121,19 @@ details[open]>.vdet .vdet-btn{background:var(--bg)}
       <span style="padding:11px 0;border-bottom:1px solid var(--bd)">Magíster en Administración Internacional</span>
       <span style="padding:11px 0">Ingeniero Industrial</span>
     </div>
+    <div class="mx-hero-cta">
+      <p class="mx-value">Te ayudo a optimizar procesos, medir metas, crecer en ventas y mejorar tu operación: <em>la persona correcta en tu equipo.</em></p>
+      <div class="mx-btns">
+        <a class="mx-btn" href="contacto.html">Hablemos <span class="mx-arrow" aria-hidden="true">→</span></a>
+        <a class="mx-btn ghost" href="#video" data-video=""><span class="mx-play" aria-hidden="true">▶</span>Ver video · 1 min</a>
+      </div>
+    </div>
   </div>
+  <button type="button" class="mx-vcard" data-video="" aria-label="Ver video de presentación">
+    <img src="brand/video/presentacion-portada.webp" alt="" width="1280" height="720" decoding="async">
+    <span class="mx-vtime">1 MIN</span>
+    <span class="mx-vplay"><i aria-hidden="true">▶</i>Ver presentación</span>
+  </button>
 </section>
 
 <main data-stage="" style="position:relative;z-index:5;max-width:1340px;margin:0 auto;padding:clamp(44px,6vh,72px) clamp(18px,4vw,60px) clamp(80px,11vh,130px)">
@@ -650,6 +663,7 @@ class CVApp {
   app.componentDidMount();
 })();
 </script>
-<script>window.addEventListener('load',function(){var go=function(){var seen={};document.querySelectorAll('[data-thumb]').forEach(function(t){var u=t.getAttribute('data-src');if(u&&!seen[u]){seen[u]=1;var i=new Image();i.decoding='async';i.src=u;}});};(window.requestIdleCallback||setTimeout)(go,300);});</script>
+<script>window.addEventListener('load',function(){var go=function(){var seen={};document.querySelectorAll('[data-thumb]').forEach(function(t){var u=t.getAttribute('data-src');if(u&&!seen[u]){seen[u]=1;var i=new Image();i.decoding='async';i.src=u;}});};window.requestIdleCallback?requestIdleCallback(go,{timeout:1500}):setTimeout(go,300);});</script>
+<script src="mejoras.js" defer></script>
 </body>
 </html>
