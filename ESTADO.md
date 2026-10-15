@@ -6,6 +6,21 @@ _Última actualización: 15 de octubre de 2026_
 
 - 15 oct 2026: se retiró el filtro de proyectos por tema (todos los proyectos son de IA y automatización; era redundante).
 
+## Actualización de experiencias — 15 de octubre de 2026
+
+### Ajustes posteriores de organización y formato — 15 de octubre de 2026
+
+- LinkedIn: consultoría ordenada por la actividad más reciente de cada proyecto: Smart Contracts (consultoría 2023), Avovite (2021–2022), RPP Capital Profits (2021), LEMI (2020–2021) y emprendimientos propios (2017–2020). Se conservaron todas las palabras, cifras, responsabilidades y logros.
+- LinkedIn: separación con una línea vacía antes de Responsabilidades y Logros en las seis experiencias con ese formato; consultoría conserva espacios entre proyectos y antes de cada logro. Los espacios que Rodrigo añadió en Avovite se mantuvieron. Descripciones verificadas, todas dentro de 2.000 caracteres; sin notificar a la red ni cambiar otros campos.
+- CV Word: ajuste únicamente de espacios vacíos e interlineado de las secciones finales para conservar seis páginas, sin recortar contenido ni cambiar tamaño de letra, márgenes o enlaces. Se respetaron los últimos cambios de Rodrigo en el encabezado y en «Competencias» del título técnico.
+- Web: retiro de «Toma de decisiones» de Estrategia y Habilidades de gestión registrado en el punto 6 de `PENDIENTES.md`; implementación pendiente con Rodrigo y Claudia. La presentación se conserva.
+
+- Word de Drive: seis experiencias actualizadas con las versiones ejecutivas aprobadas, responsabilidades y logros separados, 45 responsabilidades y 21 logros; seis páginas revisadas visualmente. Se conservaron el resto de las secciones y los cinco hipervínculos.
+- LinkedIn: seis descripciones guardadas y verificadas contra los textos aprobados; Avovite finaliza en octubre de 2026 y dejó de figurar como empleo actual. Reconocimiento de conTACTO añadido en Reconocimientos y premios, julio de 2013, emisor Prevenmédica E.U. IPS, asociado al cargo de SoulMedical (Grupo Soul en LinkedIn). Se conservaron el titular, Acerca de, aptitudes, formación y Open to Work solo para reclutadores, sin notificar a la red.
+- Web: **implementación pendiente con Rodrigo y Claudia**. Se entregaron [instrucciones y textos completos](PENDIENTES-ACTUALIZACION-EXPERIENCIAS.md), enlazados desde `PENDIENTES.md`. Abrir «+» mostrará responsabilidades y logros en el mismo panel. La selección y el diseño de logros destacados están por definir.
+- Este cambio de repositorio contiene únicamente documentación. No modifica HTML, CSS, JavaScript, imágenes, video, animaciones ni interacciones existentes.
+- Sigue pendiente reemplazar la CV adjunta en Magneto y LinkedIn. El diploma adicional de EUDE y la finalización del máster permanecen pendientes.
+
 ## Diseño, interacciones y video de presentación — 15 de octubre de 2026 (publicado)
 Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en pocas líneas de `index.html`. Se conserva la tipografía original y no se cambió ningún texto existente. Aprobado y publicado por solicitud de Rodrigo.
 - Video de presentación en **«Quién soy»**, arriba del texto, con el título «Presentación profesional» (recupera el bloque «Presentación profesional — Próximamente» del diseño del 16 de septiembre de 2026). Se reproduce solo y sin sonido como vista previa cuando está a la vista; con un clic se abre en pantalla completa, desde el inicio y con sonido, con controles propios (pausa, avance, sonido, cerrar); al salir vuelve a la vista previa. El script original ponía opacidad .6 a todos los videos (oscurecía la pantalla completa); se fuerza 100 % en este video. No aparece en ninguna otra parte de la web. Se eliminó la página `/presentacion`.

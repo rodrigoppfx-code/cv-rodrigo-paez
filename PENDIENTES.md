@@ -20,7 +20,8 @@ _Creado: 15 de octubre de 2026._ Al completar un punto, márcalo con `[x]`, anot
 - Hoja de vida en Word (Drive) y LinkedIn.
 
 ## 3. Fecha de finalización en Avovite (último trabajo)
-- [ ] Reemplazar «Actualidad» por la fecha real de finalización.
+- [ ] Web: reemplazar «Actualidad» por **octubre de 2026**.
+- [x] Word de Drive y LinkedIn: finalización en octubre de 2026 actualizada y verificada el 15 de octubre de 2026.
 - Dónde:
   - `index.html` → pestaña **Experiencia**, primera fila: «Octubre de 2022 – Actualidad · Avovite S.A.S. · Director Comercial · Remoto».
   - Hoja de vida en Word (Drive) y LinkedIn.
@@ -33,7 +34,22 @@ _Creado: 15 de octubre de 2026._ Al completar un punto, márcalo con `[x]`, anot
   3. Volver a exportar (1080p, ~10 min) y cambiar el `?v=` de `presentacion.mp4` en `mejoras.js`.
 - [ ] **Gráfica de resultados** (escena 9 del video): +240 %, $1.580 → $5.373 MM y 241 → 994 clientes (2023–2025). Si hay cifras nuevas, actualizar en `video-fuente/film.js` (escena `S.r3`, funciones `stat` y `bars`) y en `video-fuente/guion.json` (línea `r3`), y en la web (pestaña Valor → Resultados). No inventar cifras.
 
-## 5. Pendientes anteriores (traídos de `ESTADO.md`)
+## 5. Experiencias completas y posibles logros destacados
+- [x] Instrucciones y textos aprobados entregados el 15 de octubre de 2026: [Pendientes de actualización de experiencias](PENDIENTES-ACTUALIZACION-EXPERIENCIAS.md).
+- [ ] Implementar en la web las seis experiencias completas, con responsabilidades y logros en un mismo desplegable por cargo.
+- [ ] Definir con Rodrigo la selección y el diseño de logros destacados. Las opciones del documento son ideas, no decisiones aprobadas.
+- La fecha de Avovite en la web continúa pendiente del punto 3; debe quedar **octubre de 2026**.
+- El reconocimiento de conTACTO permanece entre los logros de SoulMedical y se propone como opción destacada, sin publicar la carta original.
+
+## 6. Retirar «Toma de decisiones» de competencias y habilidades
+- [ ] En **Valor → Áreas donde genero valor → Estrategia**, retirar « · Toma de decisiones»; debe quedar «Estrategia comercial y de mercadeo · Propuesta de valor · Estructuración de negocios.».
+- [ ] En **Habilidades de gestión**, retirar la tarjeta «Toma de Decisiones». Quedan nueve habilidades; conservar las demás y revisar con Rodrigo y Claudia la distribución para evitar huecos, manteniendo el diseño y las interacciones.
+- [x] Word de Drive: retirada de Competencias Clave y Habilidades de Gestión, verificado el 15 de octubre de 2026.
+- [x] LinkedIn: revisadas las catorce aptitudes; «Toma de decisiones» no figura como aptitud.
+- Este retiro se limita a la competencia y la habilidad. La frase sobre el respaldo analítico para la toma de decisiones dentro de la presentación permanece igual.
+- La implementación web continúa pendiente con Rodrigo y Claudia; este registro no modifica HTML, estilos ni scripts.
+
+## 7. Pendientes anteriores (traídos de `ESTADO.md`)
 - [ ] CV en Word: agregar la línea «Proyectos» con el enlace de Vercel (manual).
 - [ ] LinkedIn Destacado: enlace a Proyectos y corregir la imagen del enlace al perfil (manual).
 - [ ] Aptitudes de LinkedIn: revisión pendiente de aprobación.
