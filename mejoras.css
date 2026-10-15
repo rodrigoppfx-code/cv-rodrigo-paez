@@ -166,3 +166,7 @@ footer[data-contact]{padding-bottom:72px}
 @media (max-width:560px){.mx-pc{gap:6px;padding:6px 10px 6px 6px}.mx-pc-t{min-width:0;font-size:11px}}
 /* El script original pone opacidad .6 a todos los videos (pensado para el fondo del encabezado); el de presentación va al 100 % */
 .mx-pres video{opacity:1!important}
+
+/* Habilidades de gestión: 9 tarjetas sin huecos (5 arriba y 4 abajo en escritorio; la última a todo el ancho en tablet) */
+@media (min-width:1041px){.skills-grid{grid-template-columns:repeat(20,minmax(0,1fr))!important}.skills-grid>*{grid-column:span 4}.skills-grid>:nth-child(n+6){grid-column:span 5}}
+@media (min-width:561px) and (max-width:1040px){.skills-grid>:last-child:nth-child(odd){grid-column:1/-1}}

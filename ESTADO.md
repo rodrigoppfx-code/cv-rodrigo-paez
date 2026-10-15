@@ -8,6 +8,8 @@ _Última actualización: 15 de octubre de 2026_
 
 ## Actualización de experiencias — 15 de octubre de 2026
 
+- **Web publicada (15 oct 2026):** seis experiencias completas (45 responsabilidades y 21 logros) con responsabilidades y logros en el mismo desplegable; Avovite «Octubre de 2022 – Octubre de 2026»; «Toma de decisiones» retirada de Estrategia y de Habilidades (nueve habilidades, sin huecos). La frase de la presentación sobre la toma de decisiones se conserva. Pendiente: definir los logros destacados.
+
 ### Ajustes posteriores de organización y formato — 15 de octubre de 2026
 
 - LinkedIn: consultoría ordenada por la actividad más reciente de cada proyecto: Smart Contracts (consultoría 2023), Avovite (2021–2022), RPP Capital Profits (2021), LEMI (2020–2021) y emprendimientos propios (2017–2020). Se conservaron todas las palabras, cifras, responsabilidades y logros.

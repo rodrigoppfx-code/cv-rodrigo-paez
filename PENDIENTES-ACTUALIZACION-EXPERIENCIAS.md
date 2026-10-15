@@ -1,6 +1,6 @@
 # Pendientes de actualización de experiencias y logros
 
-_Instrucciones aprobadas por Rodrigo el 15 de octubre de 2026. Implementación web pendiente con Rodrigo y Claudia._
+_Instrucciones aprobadas por Rodrigo el 15 de octubre de 2026. Implementación web publicada el 15 de octubre de 2026; queda por decidir la sección de logros destacados._
 
 ## Estado y alcance
 
@@ -156,11 +156,11 @@ Logros
 
 ## Comprobación al implementar la web
 
-- [ ] Las seis experiencias muestran todos los textos anteriores, sin duplicar descripciones antiguas.
-- [ ] El cargo de Avovite termina en octubre de 2026.
-- [ ] Abrir «+» muestra responsabilidades y logros en el mismo panel.
-- [ ] Los cinco proyectos de consultoría conservan periodos, modalidades y resultados.
+- [x] Las seis experiencias muestran todos los textos anteriores, sin duplicar descripciones antiguas.
+- [x] El cargo de Avovite termina en octubre de 2026.
+- [x] Abrir «+» muestra responsabilidades y logros en el mismo panel.
+- [x] Los cinco proyectos de consultoría conservan periodos, modalidades y resultados.
 - [ ] Las ideas de logros destacados se revisaron con Rodrigo antes de implementarlas.
-- [ ] Escritorio y móvil conservan interacciones, animaciones, legibilidad y navegación por teclado.
-- [ ] La presentación, competencias, formación, enlaces, video y proyectos existentes no cambian por esta actualización.
-- [ ] Actualizar `ESTADO.md` y marcar los pendientes de web únicamente después de implementar y verificar la publicación.
+- [x] Escritorio y móvil conservan interacciones, animaciones, legibilidad y navegación por teclado.
+- [x] La presentación, competencias, formación, enlaces, video y proyectos existentes no cambian por esta actualización.
+- [x] Actualizar `ESTADO.md` y marcar los pendientes de web únicamente después de implementar y verificar la publicación.
