@@ -31,13 +31,22 @@
       const preview = () => { if (pres.classList.contains('on') || reduce()) return; if (!v.src) v.src = SRC; v.muted = true; v.loop = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
       if ('IntersectionObserver' in window) new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) preview(); else if (!pres.classList.contains('on')) v.pause(); }), { threshold: 0.3 }).observe(pres);
       else preview();
+      // Clic: pantalla completa, desde el inicio y con sonido (los controles del navegador se esconden solos)
+      const fsEl = () => document.fullscreenElement || document.webkitFullscreenElement;
+      const backToPreview = () => { pres.classList.remove('on'); v.controls = false; v.pause(); preview(); };
       b.addEventListener('click', (e) => {
         e.stopPropagation();
         if (!v.src) v.src = SRC;
-        pres.classList.add('on'); v.loop = false; v.muted = false; v.controls = true; v.currentTime = 0;
+        pres.classList.add('on'); v.loop = false; v.muted = false; v.currentTime = 0; v.controls = true;
         const p = v.play(); if (p && p.catch) p.catch(() => {});
+        const go = v.requestFullscreen || v.webkitRequestFullscreen;
+        if (go) { const r = go.call(v); if (r && r.catch) r.catch(() => {}); }
+        else if (v.webkitEnterFullscreen) { try { v.webkitEnterFullscreen(); } catch (err) {} } // iPhone
       });
-      v.addEventListener('ended', () => { pres.classList.remove('on'); v.controls = false; preview(); });
+      const onFs = () => { if (!fsEl() && pres.classList.contains('on')) backToPreview(); };
+      document.addEventListener('fullscreenchange', onFs); document.addEventListener('webkitfullscreenchange', onFs);
+      v.addEventListener('webkitendfullscreen', backToPreview); // iPhone
+      v.addEventListener('ended', () => { if (fsEl()) (document.exitFullscreen || document.webkitExitFullscreen).call(document); backToPreview(); });
       // pausa si se cambia de pestaña
       document.getElementById('app')?.addEventListener('click', (e) => { if (e.target.closest('[data-go]') && !v.paused) v.pause(); });
     }

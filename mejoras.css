@@ -145,3 +145,6 @@ footer[data-contact]{padding-bottom:72px}
 [data-cbtn]{border-radius:999px!important}
 [data-more]{border-radius:999px!important}
 [data-lb-close]{border-radius:999px!important}
+/* Video en pantalla completa: fondo negro y sin recortes */
+.mx-pres video:fullscreen{object-fit:contain;background:#000}
+.mx-pres video:-webkit-full-screen{object-fit:contain;background:#000}
