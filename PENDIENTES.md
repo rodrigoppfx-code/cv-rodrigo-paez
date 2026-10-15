@@ -8,13 +8,16 @@ _Creado: 15 de octubre de 2026._ Al completar un punto, márcalo con `[x]`, anot
 - No confundir con el Máster en Marketing, Dirección Comercial e IA Generativa (también de EUDE, aún en curso; ver punto 2).
 - Si se publica el archivo del diploma, guardarlo en `brand/` sin datos personales sensibles (número de documento, códigos de verificación privados).
 
-## 2. Cuando termine el máster actual
-- [ ] Cambiar «En curso» por el año de grado y actualizar el diploma.
-- Lugares que dicen «En curso» o «cursando» el máster:
-  - `index.html` → encabezado (lista de títulos debajo del nombre).
-  - `index.html` → pestaña **Formación** (primera fila, etiqueta «EN CURSO»).
-  - Video de presentación (`brand/video/presentacion.mp4`): la voz dice «cursando un Máster…» y la escena 7 muestra la etiqueta «En curso». Para cambiarlo: editar `video-fuente/guion.json` (línea `r1`) y `video-fuente/film.js` (lista `creds` de la escena `r1`), regenerar la voz y exportar de nuevo (ver `video-fuente/LEEME.md`).
-  - Hoja de vida en Word (Drive) y LinkedIn.
+## 2. Cuando termine el Máster en Marketing, Dirección Comercial e IA Generativa (EUDE)
+- [ ] Cambiar «En curso» por el año de grado, agregar el diploma y **actualizar también el video de presentación**.
+- Web (`index.html`):
+  - Encabezado: lista de títulos debajo del nombre (etiqueta «En curso»).
+  - Pestaña **Formación**: primera fila (etiqueta «EN CURSO»).
+- **Video de presentación** (`brand/video/presentacion.mp4`):
+  - La voz dice «…y cursando un Máster en Marketing, Dirección Comercial e IA Generativa». Cambiar el texto en `video-fuente/guion.json` (línea `r1`) por la versión de egresado (por ejemplo «…y Máster en Marketing, Dirección Comercial e IA Generativa») y regenerar la voz.
+  - La escena «Quién soy» muestra la etiqueta «En curso» junto al máster: quitarla en `video-fuente/film.js` (lista `creds` de la escena `S.r1`).
+  - Exportar de nuevo (1080p, horizontal y vertical, ~10 min), acelerar 8 % como la versión actual y cambiar el `?v=` de `presentacion.mp4` en `mejoras.js` (ver `video-fuente/LEEME.md`).
+- Hoja de vida en Word (Drive) y LinkedIn.
 
 ## 3. Fecha de finalización en Avovite (último trabajo)
 - [ ] Reemplazar «Actualidad» por la fecha real de finalización.
@@ -29,3 +32,9 @@ _Creado: 15 de octubre de 2026._ Al completar un punto, márcalo con `[x]`, anot
   2. En `video-fuente/film.js`, escena `S.r1`, cambiar el bloque «Emblema de crecimiento» por el dibujo de la foto (`MC.IMG.foto`). La versión con foto está en el historial de Git (commit anterior a «sin foto»).
   3. Volver a exportar (1080p, ~10 min) y cambiar el `?v=` de `presentacion.mp4` en `mejoras.js`.
 - [ ] **Gráfica de resultados** (escena 9 del video): +240 %, $1.580 → $5.373 MM y 241 → 994 clientes (2023–2025). Si hay cifras nuevas, actualizar en `video-fuente/film.js` (escena `S.r3`, funciones `stat` y `bars`) y en `video-fuente/guion.json` (línea `r3`), y en la web (pestaña Valor → Resultados). No inventar cifras.
+
+## 5. Pendientes anteriores (traídos de `ESTADO.md`)
+- [ ] CV en Word: agregar la línea «Proyectos» con el enlace de Vercel (manual).
+- [ ] LinkedIn Destacado: enlace a Proyectos y corregir la imagen del enlace al perfil (manual).
+- [ ] Aptitudes de LinkedIn: revisión pendiente de aprobación.
+- [ ] Respaldo del Simulador en GitHub: el código está solo en Vercel; subirlo desde el equipo de Rodrigo a un repo privado `simulador-avovite`.
