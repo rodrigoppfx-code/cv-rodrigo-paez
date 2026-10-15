@@ -7,7 +7,7 @@ Sitio diseñado y construido por él con apoyo de IA (Claude Design, Codex, Clau
 1. Lee este archivo completo, `ESTADO.md` y `PENDIENTES.md`.
 2. No cambies textos, diseño ni enlaces sin que Rodrigo lo pida.
 3. Haz los cambios en `main`; Vercel publica solo. Revisa en computador y celular.
-4. Al terminar, actualiza `ESTADO.md` (fecha, qué cambió, pendientes).
+4. Al terminar, actualiza `ESTADO.md` (fecha y qué cambió) y **borra de `PENDIENTES.md`** lo que quedó hecho; ese archivo solo lista lo que falta.
 
 Este archivo resume el estado de la hoja de vida web y de todos los proyectos de Rodrigo Páez Parra.
 Estado detallado y pendientes: ver `ESTADO.md`.

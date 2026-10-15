@@ -2,7 +2,7 @@
 
 _Última actualización: 15 de octubre de 2026_
 
-**Pendientes abiertos:** ver `PENDIENTES.md` (diploma de EUDE de la doble titulación del Magíster, cierre del máster y fecha de finalización en Avovite).
+**Pendientes abiertos:** ver `PENDIENTES.md` (solo lo que falta).
 
 - 15 oct 2026: se retiró el filtro de proyectos por tema (todos los proyectos son de IA y automatización; era redundante).
 
@@ -19,7 +19,7 @@ _Última actualización: 15 de octubre de 2026_
 
 - Word de Drive: seis experiencias actualizadas con las versiones ejecutivas aprobadas, responsabilidades y logros separados, 45 responsabilidades y 21 logros; seis páginas revisadas visualmente. Se conservaron el resto de las secciones y los cinco hipervínculos.
 - LinkedIn: seis descripciones guardadas y verificadas contra los textos aprobados; Avovite finaliza en octubre de 2026 y dejó de figurar como empleo actual. Reconocimiento de conTACTO añadido en Reconocimientos y premios, julio de 2013, emisor Prevenmédica E.U. IPS, asociado al cargo de SoulMedical (Grupo Soul en LinkedIn). Se conservaron el titular, Acerca de, aptitudes, formación y Open to Work solo para reclutadores, sin notificar a la red.
-- Web: **implementación pendiente con Rodrigo y Claudia**. Se entregaron [instrucciones y textos completos](PENDIENTES-ACTUALIZACION-EXPERIENCIAS.md), enlazados desde `PENDIENTES.md`. Abrir «+» mostrará responsabilidades y logros en el mismo panel. La selección y el diseño de logros destacados están por definir.
+- Web: **implementada y publicada el 15 de octubre de 2026**. Se entregaron instrucciones y textos completos (archivo `PENDIENTES-ACTUALIZACION-EXPERIENCIAS.md`, ya implementado y retirado; consultar el historial de GitHub). Abrir «+» mostrará responsabilidades y logros en el mismo panel. La selección y el diseño de logros destacados están por definir.
 - Este cambio de repositorio contiene únicamente documentación. No modifica HTML, CSS, JavaScript, imágenes, video, animaciones ni interacciones existentes.
 - Sigue pendiente reemplazar la CV adjunta en Magneto y LinkedIn. El diploma adicional de EUDE y la finalización del máster permanecen pendientes.
 
@@ -78,8 +78,7 @@ Usar siempre los enlaces de Vercel en el CV, en LinkedIn y al compartir.
 - [x] Vercel conectado a este repositorio (proyecto `rodrigo-paez-parra`, despliegue automático desde `main`).
 
 ## Pendiente
-- [ ] CV en Word: agregar línea "Proyectos" con el enlace de Vercel (manual).
-- [ ] LinkedIn Destacado: enlace a Proyectos + corregir imagen del enlace al perfil (manual).
+- Los pendientes abiertos están en `PENDIENTES.md`.
 
 ## Reglas de contenido
 Actualización puntual solicitada por Rodrigo: la introducción de Proyectos queda «Herramientas que he diseñado y construido usando Claude Design, Codex y ChatGPT, con ayuda del feedback del equipo». Este cambio sustituye la mención al rol de Director Comercial únicamente en esa frase; el resto del sitio permanece igual. Publicación verificada el 1 de octubre de 2026 en Vercel, commit c4236d6, con comprobación de escritorio y móvil sin desbordamiento horizontal.
@@ -94,11 +93,11 @@ Instructivos entregados: Web (con imágenes), Word y LinkedIn.
 Contexto general y reglas: `LEEME-PRIMERO.md`.
 
 ## Otros pendientes
-- [ ] Respaldo del Simulador en GitHub: el código está solo en Vercel; subirlo desde el equipo de Rodrigo a un repo privado `simulador-avovite`.
+- Movido a `PENDIENTES.md`.
 
 ## 8 oct 2026 — distribución de habilidades
 - [x] Las once habilidades conservan su texto y orden. En escritorio se distribuyen en tres columnas y cuatro filas; las dos tarjetas finales ocupan media fila cada una, sin celdas vacías. En tablet se usan dos columnas y la última tarjeta ocupa todo el ancho; en móvil se usa una columna.
-- [ ] Aptitudes de LinkedIn: revisión pendiente de aprobación; este ajuste solo modifica la distribución visual de habilidades en la web.
+- Aptitudes de LinkedIn: aprobadas (lista de catorce, 8 de octubre de 2026).
 
 ## 2 oct 2026
 - [x] Proyecto 06 «Hoja de vida web ejecutiva» agregado a la pestaña Proyectos (`/#web`), con 2 capturas en `brand/proyectos/capturas/06-web-ejecutiva/`. Numeración pasa a «/ 06»; Agenda → Web → Propuestas.
