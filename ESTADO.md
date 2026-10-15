@@ -4,6 +4,15 @@ _Última actualización: 15 de octubre de 2026_
 
 **Pendientes abiertos:** ver `PENDIENTES.md` (solo lo que falta).
 
+## Cierre de sincronización — 15 de octubre de 2026
+
+- Rodrigo confirma terminados con **Claude** los cambios de experiencias, fecha de Avovite, retiro de «Toma de decisiones» y selección/diseño de logros destacados de la web.
+- CV vigente de Drive cargada y verificada en **LinkedIn y Magneto**. En cada plataforma queda **un solo adjunto**, `CV_Rodrigo_Paez_Parra_20261015.docx`: el anterior del 9 de octubre se retiró de LinkedIn con autorización expresa de Rodrigo; en Magneto el adjunto anterior ya se había reemplazado.
+- Magneto: seis experiencias actualizadas con responsabilidades y logros, consultoría en orden descendente y sin MAM; Avovite finalizado en octubre de 2026. Presentación, competencias, estudios e inglés básico revisados. Completada la clasificación de Ingeniería Industrial como nivel profesional; reconocimiento conTACTO añadido sin publicar la carta original. Preferencias y privacidad conservadas.
+- Diplomado en BPM (Business Process Management), **120 horas**, **Politécnico de Suramérica**, **octubre de 2025**, añadido y verificado en las certificaciones de LinkedIn y Magneto. Las participaciones breves en IA permanecen como soportes en Drive, por decisión de Rodrigo.
+- Únicos pendientes abiertos del proyecto: diploma adicional de EUDE de la doble titulación y finalización futura del Máster en Marketing, Dirección Comercial e IA Generativa. `PENDIENTES.md` incluye también Magneto para ambas actualizaciones.
+- Las menciones a tareas pendientes en las entradas históricas de abajo quedan superadas por este cierre. Esta actualización solo modifica documentación.
+
 - 15 oct 2026: se retiró el filtro de proyectos por tema (todos los proyectos son de IA y automatización; era redundante).
 
 ## Página más compacta — 15 de octubre de 2026

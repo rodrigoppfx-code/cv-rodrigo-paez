@@ -5,19 +5,21 @@ _Solo lo que falta en **este proyecto** (cv-rodrigo-paez). Al terminar un punto,
 _Última revisión: 15 de octubre de 2026._
 
 ## 1. Diploma de EUDE — doble titulación del Magíster
-Agregar el diploma de EUDE Business School de la **doble titulación del Magíster en Administración Internacional** (Politécnico Grancolombiano, 2026). Cambiarlo exactamente igual en los cuatro lugares:
+Agregar el diploma de EUDE Business School de la **doble titulación del Magíster en Administración Internacional** (Politécnico Grancolombiano, 2026). Mantener la misma información en los lugares que correspondan:
 - **Web**: pestaña **Formación** de `index.html`, fila «Magíster en Administración Internacional · Politécnico Grancolombiano · 2026».
 - **Word** (hoja de vida en Drive).
 - **LinkedIn** (Formación).
+- **Magneto** (Estudios).
 - **Video**: no aplica hoy (el video nombra el Magíster sin mencionar la doble titulación). Si se quiere mencionar, ver la guía al final.
 - No confundir con el Máster en Marketing, Dirección Comercial e IA Generativa (también de EUDE, en curso; punto 2).
 - Si se publica el archivo del diploma, guardarlo en `brand/` sin datos personales sensibles (número de documento, códigos de verificación privados).
 
 ## 2. Cuando termine el Máster en Marketing, Dirección Comercial e IA Generativa (EUDE)
-Cambiar «En curso» por el año de grado y agregar el diploma, exactamente igual en los cuatro lugares:
+Cambiar «En curso» por el año de grado y agregar el diploma, con la misma información en todos los lugares:
 - **Web** (`index.html`): encabezado (lista de títulos debajo del nombre, etiqueta «En curso») y pestaña **Formación** (primera fila, etiqueta «EN CURSO»).
 - **Word** (hoja de vida en Drive).
 - **LinkedIn** (Formación).
+- **Magneto** (Estudios).
 - **Video** (`brand/video/presentacion.mp4`):
   - La voz dice «…y cursando un Máster en Marketing, Dirección Comercial e IA Generativa»: cambiar en `video-fuente/guion.json` (línea `r1`) por la versión de egresado y regenerar la voz.
   - La escena «Quién soy» muestra «En curso» junto al máster: quitarlo en `video-fuente/film.js` (lista `creds` de la escena `S.r1`).
