@@ -27,7 +27,7 @@
     // ── Presentación profesional (Quién soy): vista previa sin sonido; con un clic arranca desde el inicio con sonido ──
     const pres = $('[data-pres]');
     if (pres) {
-      const v = $('video', pres), b = $('.mx-pres-play', pres), SRC = 'brand/video/presentacion.mp4';
+      const v = $('video', pres), b = $('.mx-pres-play', pres), SRC = 'brand/video/presentacion.mp4?v=40s';
       const preview = () => { if (pres.classList.contains('on') || reduce()) return; if (!v.src) v.src = SRC; v.muted = true; v.loop = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
       if ('IntersectionObserver' in window) new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) preview(); else if (!pres.classList.contains('on')) v.pause(); }), { threshold: 0.3 }).observe(pres);
       else preview();
