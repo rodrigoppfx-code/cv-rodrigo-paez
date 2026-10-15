@@ -8,6 +8,9 @@ _Última actualización: 15 de octubre de 2026_
 
 ## Actualización de experiencias — 15 de octubre de 2026
 
+- **Logros destacados publicados (15 oct 2026):** seis tarjetas en Experiencia (Crecimiento comercial, Tres soluciones tecnológicas con IA, Recuperación de cartera, Renovación del CRM, Farmacovigilancia administrativa, Reconocimiento conTACTO) con el texto exacto de cada logro aprobado; se despliegan con «+». Formación: misma sangría en todas las filas.
+- Retirados de pendientes por decisión de Rodrigo (no pertenecen a este proyecto o ya no aplican): CV adjunta en Magneto/LinkedIn, línea «Proyectos» en el Word, Destacado de LinkedIn y respaldo del Simulador en GitHub.
+
 - **Web publicada (15 oct 2026):** seis experiencias completas (45 responsabilidades y 21 logros) con responsabilidades y logros en el mismo desplegable; Avovite «Octubre de 2022 – Octubre de 2026»; «Toma de decisiones» retirada de Estrategia y de Habilidades (nueve habilidades, sin huecos). La frase de la presentación sobre la toma de decisiones se conserva. Pendiente: definir los logros destacados.
 
 ### Ajustes posteriores de organización y formato — 15 de octubre de 2026

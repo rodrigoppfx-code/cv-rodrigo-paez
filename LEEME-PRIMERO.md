@@ -51,7 +51,6 @@ Hoja de vida web de Rodrigo Páez Parra (Director Comercial, Ingeniero Industria
 | Agenda con video IA (HeyGen, Apps Script, Gmail) | `confirmacion-reuniones` (público) | GitHub Pages |
 | Otros personales | `bomba-timer`, `calculadora-interes-compuesto`, `propuestas-comerciales`, `FINAL-BOT` (privado, MQL5) | — |
 
-Pendiente conocido: el Simulador no tiene copia en GitHub. Su código fuente está en el equipo de Rodrigo; subirlo a un repo privado `simulador-avovite` y conectarlo en Vercel (Settings → Git).
 
 ## Herramientas usadas para construir
 Claude Design, Codex, ChatGPT, Claude Code. Integraciones: HeyGen, API de DeepSeek, Google Sheets/Apps Script, Gmail, Vercel, GitHub Pages.
