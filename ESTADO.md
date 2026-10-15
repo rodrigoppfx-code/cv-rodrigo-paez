@@ -4,6 +4,17 @@ _Última actualización: 15 de octubre de 2026_
 
 **Pendientes abiertos:** ver `PENDIENTES.md` (solo lo que falta).
 
+## Auditoría completa contra el Word original — 15 de octubre de 2026
+
+- Fuente principal: CV Word vigente de Drive descargada nuevamente; SHA-256 `2cf1967be053a70cfab1d3db72a7c9eba2041e0ee80905afa1fc7383d76619c9`, idéntica a la copia auditada. Lectura OOXML completa: 145 párrafos y cinco enlaces.
+- Revisados: introducción, empresas, cargos, fechas, 45 responsabilidades, 21 logros, seis bloques de competencias, nueve habilidades de gestión, cinco estudios, cinco cursos, once herramientas, idiomas, reconocimiento conTACTO, resultados, seis proyectos, metadatos y textos auxiliares. Contraste de contenido con LinkedIn y Magneto.
+- Correcciones publicadas: empresa 2009–2013 **Grupo Empresarial S.A.I.**, retirando METLIFE; tarjeta Smart Contracts con el logro textual del Word de $160 millones COP y USD 33.000 mediante corretaje comercial; rango general de Resultados **2013–2026** (las métricas de crecimiento siguen en 2023–2025); metadatos de Proyectos con la introducción aprobada del portafolio.
+- Los seis encabezados de experiencias web y todas sus responsabilidades y logros coinciden con el Word. LinkedIn/Magneto conservan las 45 responsabilidades y 21 logros, con nombres corporativos del catálogo y formato acordados. No se cambió el Word ni los perfiles de LinkedIn/Magneto en esta auditoría.
+- Se distinguen expresamente las distribuciones previamente aprobadas: cinco cursos en Word/web y solo BPM como certificación formal en LinkedIn/Magneto; nueve habilidades de gestión en Word/web y catorce aptitudes en LinkedIn/Magneto; herramientas completas en Word/web y CV adjunta. No se afirma identidad literal de secciones que las plataformas presentan de forma diferente.
+- Revisión del índice sin cambios estructurales: mismas 883 etiquetas y atributos, sin modificar CSS, JavaScript, imágenes, video ni interacciones. Publicación revisada en computador y celular.
+- La revisión anterior que confirmó contenido común no había corregido el nombre de empresa que contenía METLIFE; este cierre registra su corrección y la auditoría ampliada, incluyendo encabezados.
+- Únicos pendientes futuros: los tres de `PENDIENTES.md` (diploma doble titulación EUDE, finalización máster EUDE y nueva foto). Las entradas históricas no reabren tareas.
+
 ## Unificación del título de experiencia — 15 de octubre de 2026
 
 - Cargo de marzo de 2009 a enero de 2013: título actualizado en LinkedIn y web a **Mensajero / Auxiliar de Archivo y Soporte Técnico**, igual que en la CV Word y Magneto.
