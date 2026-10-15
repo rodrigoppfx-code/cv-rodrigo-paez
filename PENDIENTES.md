@@ -16,7 +16,7 @@ Agregar el diploma de EUDE Business School de la **doble titulación del Magíst
 
 ## 2. Cuando termine el Máster en Marketing, Dirección Comercial e IA Generativa (EUDE)
 Cambiar «En curso» por el año de grado y agregar el diploma, con la misma información en todos los lugares:
-- **Web** (`index.html`): encabezado (lista de títulos debajo del nombre, etiqueta «En curso») y pestaña **Formación** (primera fila, etiqueta «EN CURSO»).
+- **Web** (`index.html`): encabezado (lista de títulos debajo del nombre, etiqueta «En curso») y pestaña **Formación** (primera fila, etiqueta «EN CURSO»). Actualizar también «En curso» en `brand/og-perfil-fuente.html`, regenerar `brand/og-perfil.png` y renovar el `?v=` de `og:image`.
 - **Word** (hoja de vida en Drive).
 - **LinkedIn** (Formación).
 - **Magneto** (Estudios).
@@ -27,7 +27,7 @@ Cambiar «En curso» por el año de grado y agregar el diploma, con la misma inf
 
 ## 3. Cambiar tu foto (web y video) — cuando la actualices
 - **Web — encabezado**: reemplazar `brand/foto-rodrigo.webp` y `brand/foto-rodrigo.png` (mismo nombre, formato vertical, fondo limpio).
-- **Web — vista previa al compartir el enlace (LinkedIn, WhatsApp)**: regenerar `brand/og-perfil.png` en **1200 × 627** con la foto nueva.
+- **Web — vista previa al compartir el enlace (LinkedIn, WhatsApp)**: regenerar `brand/og-perfil.png` en **1200 × 627** con la foto nueva, usando la plantilla `brand/og-perfil-fuente.html` y renovando el `?v=` de `og:image`.
 - **Caché**: `brand/` se guarda 30 días en el navegador; después de cambiar la foto, agregar o cambiar `?v=` en las rutas de la foto dentro de `index.html`.
 - **Video**: hoy no lleva foto (usa un emblema de crecimiento), así que no hay que cambiar nada. Si se quiere poner la foto, ver «Foto» en la guía de abajo.
 
