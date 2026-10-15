@@ -26,6 +26,7 @@ Hoja de vida web de Rodrigo Páez Parra (Director Comercial, Ingeniero Industria
 - `contacto.html` + `contacto.js`: formulario de contacto (Web3Forms).
 - `brand/video/`: video de presentación (pestaña «Quién soy»); fuente del video en `video-fuente/`.
 - `mejoras.css` + `mejoras.js`: animaciones e interacciones (capa aparte; quitarlas devuelve el sitio a su versión anterior).
+- Caché: `brand/` se guarda 30 días en el navegador. Al cambiar el video, cambia el `?v=` de `presentacion.mp4` en `mejoras.js`; al cambiar `mejoras.css`/`mejoras.js`, cambia su `?v=` en `index.html`.
 - `brand/`: foto, video del encabezado, `og-perfil.png` y `og-proyectos.png` (1200×627, vista previa en LinkedIn).
 - `brand/proyectos/capturas/`: 13 capturas reales de los 6 proyectos (WebP), con datos sensibles difuminados.
 - `brand/proyectos/_archivo/`: maquetas SVG antiguas (respaldo, no se usan).
