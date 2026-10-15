@@ -23,11 +23,6 @@ Cambiar «En curso» por el año de grado y agregar el diploma, exactamente igua
   - La escena «Quién soy» muestra «En curso» junto al máster: quitarlo en `video-fuente/film.js` (lista `creds` de la escena `S.r1`).
   - Exportar de nuevo según la guía de abajo.
 
-## 3. (Opcional) Poner tu propia voz en el video
-Hoy la voz del video es generada. Si grabas el guion con tu voz:
-- Grabar las frases de `video-fuente/guion.json` (mismo orden y texto).
-- Sincronizar con `tools/transcribir.py` de la skill de motion graphics y exportar de nuevo según la guía de abajo.
-
 ---
 
 ## Guía: cambiar tu foto (web y video)

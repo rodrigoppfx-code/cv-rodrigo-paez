@@ -6,9 +6,14 @@ _Última actualización: 15 de octubre de 2026_
 
 - 15 oct 2026: se retiró el filtro de proyectos por tema (todos los proyectos son de IA y automatización; era redundante).
 
+## Página más compacta — 15 de octubre de 2026
+- [x] Mismo diseño, tipografía e interacciones; menos desplazamiento (entre 20 % y 38 % menos alto en computador). Encabezado con el video de fondo más bajo (máx. 440 px en vez de 660 px) y foto algo menor; menos espacio entre secciones, filas, cuadros de Resultados y cierre «Conversemos».
+- [x] «Quién soy»: en pantallas anchas el video y el texto quedan lado a lado (en celular siguen uno debajo del otro).
+- [x] `PENDIENTES.md`: se retiró el punto opcional de voz propia (decisión de Rodrigo).
+
 ## Tamaños de texto más contenidos — 15 de octubre de 2026
 - [x] Misma tipografía; se redujeron los tamaños de títulos (nombre, títulos de sección, cargos) y textos (párrafos, listas, tarjetas, cierre) entre 8 % y 25 %, para un aspecto más sobrio. Bloque «Escala tipográfica» en `mejoras.css` (`?v=20261015l`). Revisado en computador y celular.
-- [x] `PENDIENTES.md`: agregadas la guía para cambiar la foto (web y video) y el punto opcional de voz propia en el video.
+- [x] `PENDIENTES.md`: agregadas la guía para cambiar la foto (web y video).
 
 ## Actualización de experiencias — 15 de octubre de 2026
 
