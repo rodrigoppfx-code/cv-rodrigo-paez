@@ -4,6 +4,15 @@ _Última actualización: 15 de octubre de 2026_
 
 **Pendientes abiertos:** ver `PENDIENTES.md` (solo lo que falta).
 
+## Fechas y orden de Resultados — 15 de octubre de 2026
+
+- Por aclaración de Rodrigo, la tarjeta **3 soluciones con IA** pasa del periodo del cargo 2022–2026 al año de construcción **2026**. No se cambian las fechas del cargo Director Comercial (octubre 2022–octubre 2026).
+- Las nueve fichas se ordenan de reciente a antiguo: IA 2026; tres indicadores 2023–2025; corretaje Avovite 2021–2022; corretaje Smart Contracts 2020–2021; dos logros Prevenmédica 2014–2015; reconocimiento conTACTO 2013. Los periodos están dentro de las experiencias correspondientes.
+- Cambio limitado a la fecha y movimiento de los mismos bloques HTML. CSS, JavaScript, atributos, cifras, textos de logros y enlaces de origen conservados. Animaciones/clases de aparición, inclinación y contadores comprobadas; enlace de IA abre Avovite. Publicación revisada en escritorio y móvil, sin desbordamiento horizontal.
+- Reconfirmación de LinkedIn y Magneto frente al Word original: los 66 enunciados (45 responsabilidades + 21 logros) completos, sin faltantes; los seis periodos coinciden. No requieren correcciones de contenido o fechas por esta revisión.
+- Máster EUDE en curso: comprobado en Word, encabezado/Formación web, LinkedIn («En curso.») y Magneto («Julio 2026 – Actual»). No se representa como finalizado.
+- Se mantienen exactamente los tres pendientes futuros de PENDIENTES.md: diploma EUDE doble titulación, finalización del máster EUDE y nueva fotografía. No hay un cuarto pendiente definido.
+
 ## Auditoría completa contra el Word original — 15 de octubre de 2026
 
 - Fuente principal: CV Word vigente de Drive descargada nuevamente; SHA-256 `2cf1967be053a70cfab1d3db72a7c9eba2041e0ee80905afa1fc7383d76619c9`, idéntica a la copia auditada. Lectura OOXML completa: 145 párrafos y cinco enlaces.
