@@ -211,6 +211,24 @@
       if (io && !reduce()) io.observe(cta); else cta.classList.add('in');
     }
 
+    // ── Resultados → Experiencia: abre el cargo de origen y resalta el logro ──
+    document.addEventListener('click', (e) => {
+      const lk = e.target.closest('[data-goexp]'); if (!lk) return;
+      e.preventDefault(); e.stopPropagation();
+      const tab = $('[data-go="experiencia"]'); if (tab) tab.click();
+      setTimeout(() => {
+        const arts = $$('[data-panel="experiencia"] [data-exp]'), art = arts[+lk.getAttribute('data-goexp')]; if (!art) return;
+        const body = $('[data-exp-b]', art), btn = $('[data-exp-t]', art);
+        if (body && body.style.display === 'none' && btn) btn.click();
+        let target = art; const proj = lk.getAttribute('data-proj');
+        if (proj) target = [...art.querySelectorAll('[data-exp-b] > div > div')].find((d) => d.textContent.trim().startsWith(proj)) || art;
+        const dest = $$('.mx-dest', target === art ? body || art : target);
+        const y = target.getBoundingClientRect().top + scrollY - 90;
+        scrollTo({ top: y, behavior: reduce() ? 'auto' : 'smooth' });
+        dest.forEach((d) => { const li = d.closest('li,p'); if (li) { li.classList.remove('mx-flash'); void li.offsetWidth; li.classList.add('mx-flash'); } });
+      }, 380);
+    });
+
     // Recalcular al cambiar de pestaña (la línea de tiempo y el botón dependen del panel visible)
     document.getElementById('app')?.addEventListener('click', () => setTimeout(onScroll, 80));
     addEventListener('hashchange', () => setTimeout(onScroll, 120));
