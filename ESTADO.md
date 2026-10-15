@@ -3,11 +3,10 @@
 _Última actualización: 15 de octubre de 2026_
 
 ## Propuesta de diseño e interacciones — 15 de octubre de 2026 (rama `claude/elegant-brahmagupta-zb8d46`, pendiente de publicar)
-Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `presentacion.html`, `brand/video/`) y en dos líneas de `index.html`. Se conserva la tipografía original y no se cambió ningún texto existente. Falta el visto bueno final de Rodrigo antes de pasar a `main`.
-- Página oculta **`/presentacion`** (no está en el menú, `noindex`): abre directamente el video de presentación (vertical en celular), con «Ver hoja de vida» y «Conversemos». Es el enlace para compartir el video (LinkedIn).
-- La hoja de vida ya no carga el video: queda más liviana.
+Todo está en archivos aparte (`mejoras.css`, `mejoras.js`, `brand/video/`) y en pocas líneas de `index.html`. Se conserva la tipografía original y no se cambió ningún texto existente. Falta el visto bueno final de Rodrigo antes de pasar a `main`.
+- Video de presentación en **«Quién soy»**, arriba del texto, con el título «Presentación profesional» (recupera el bloque «Presentación profesional — Próximamente» del diseño del 16 de septiembre de 2026). Se reproduce en el mismo lugar con un clic; solo se precarga la información básica. No aparece en ninguna otra parte de la web. Se eliminó la página `/presentacion`.
 - Botón flotante pequeño «Conversemos», siempre visible y con movimiento suave; lleva a `contacto.html`.
-- Video (~43 s, 1080p, horizontal y vertical, voz generada grave; fuente en `video-fuente/`): problema → la persona correcta → quién soy (incluye el máster en curso) → «Te ayudo a medir, optimizar y crecer» → resultados reales (+240 %, de 241 a 994 clientes) → «Me sumo a tu equipo» → «Si buscas a alguien que sume a tu equipo, conversemos.» Se puede reemplazar la voz por la de Rodrigo.
+- Video (~43 s, 1080p horizontal en la web; versión vertical entregada aparte para redes; voz generada grave; fuente en `video-fuente/`): problema → la persona correcta → quién soy (incluye el máster en curso) → «Te ayudo a medir, optimizar y crecer» → resultados reales (+240 %, de 241 a 994 clientes) → «Me sumo a tu equipo» → «Si buscas a alguien que sume a tu equipo, conversemos.» Se puede reemplazar la voz por la de Rodrigo.
 - Movimiento: nombre letra a letra, aparición suave al bajar, transición entre pestañas, barra de progreso, textura de papel.
 - Interacción: línea de tiempo en Experiencia, inclinación 3D en habilidades, foco en tarjetas, filtro de proyectos por tema, barra antes/ahora (~5 → ~1 min) en Propuestas, visor de capturas con anterior/siguiente, teclado y deslizar, cifras de Resultados que cuentan hacia arriba, año de fondo al pasar el mouse en Formación y Cursos, herramientas como etiquetas.
 - Cierre antes del contacto: «Conversemos» y «Si buscas a alguien que sume a tu equipo, conversemos.»

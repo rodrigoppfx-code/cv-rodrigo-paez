@@ -24,6 +24,21 @@
       });
     }
 
+    // ── Presentación profesional (Quién soy): el video se descarga solo al hacer clic ──
+    const pres = $('[data-pres]');
+    if (pres) {
+      const v = $('video', pres), b = $('.mx-pres-play', pres);
+      b.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (!v.src) v.src = 'brand/video/presentacion.mp4';
+        v.controls = true; pres.classList.add('on');
+        const p = v.play(); if (p && p.catch) p.catch(() => {});
+      });
+      v.addEventListener('ended', () => { pres.classList.remove('on'); v.controls = false; v.load(); });
+      // pausa si se cambia de pestaña
+      document.getElementById('app')?.addEventListener('click', (e) => { if (e.target.closest('[data-go]') && !v.paused) v.pause(); });
+    }
+
     // ── Botón flotante ───────────────────────────────────────────────────
     const fab = document.createElement('a'); fab.className = 'mx-fab'; fab.href = 'contacto.html';
     fab.setAttribute('aria-label', 'Conversemos: ir al formulario de contacto');

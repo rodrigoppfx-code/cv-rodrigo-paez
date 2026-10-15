@@ -113,6 +113,7 @@
     out.forEach((g, i) => { g.end = Math.min(out[i + 1]?.start ?? g.end + 0.5, g.end + 0.5); }); return out; });
   let G = null;
   function subtitles(ctx, t) {
+    if (/[?&]nosub/.test(location.search)) return; // portadas sin subtítulos
     G = G || groups(); const g = G.find((g) => t >= g.start && t < g.end); if (!g) return;
     const { W, H, u, portrait } = MC.L, size = (portrait ? 40 : 34) * u, y = portrait ? H * 0.9 : H * 0.92;
     ctx.save(); font(ctx, SANS, size, 500); ctx.textBaseline = "middle";

@@ -17,7 +17,6 @@ Hoja de vida web de Rodrigo Páez Parra (Director Comercial, Ingeniero Industria
 - Publicado en **Vercel**, proyecto `rodrigo-paez-parra` → https://rodrigo-paez-parra.vercel.app
   - Proyectos: https://rodrigo-paez-parra.vercel.app/proyectos (o `/#proyectos`)
   - Proyecto puntual: `/#propuestas`, `/#simulador`, `/#campus`, `/#analizador`, `/#agenda`, `/#web`
-  - Video de presentación (página oculta, fuera del menú): https://rodrigo-paez-parra.vercel.app/presentacion
 - **GitHub Pages** (enlace antiguo) sigue activo y redirige solo a Vercel.
 - Cada push a `main` publica automáticamente en Vercel (1–2 min). No hay build.
 
@@ -25,7 +24,7 @@ Hoja de vida web de Rodrigo Páez Parra (Director Comercial, Ingeniero Industria
 - `index.html`: sitio completo (8 pestañas; la 08 es "Proyectos con IA"). HTML/CSS/JS estático, sin dependencias. Convertido desde un diseño de Claude Design (no reescribir textos sin pedirlo).
 - `proyectos.html`: solo redirige a `index.html#proyectos` y tiene la vista previa (Open Graph) para LinkedIn.
 - `contacto.html` + `contacto.js`: formulario de contacto (Web3Forms).
-- `presentacion.html`: página oculta con el video de presentación (`brand/video/`); fuente del video en `video-fuente/`.
+- `brand/video/`: video de presentación (pestaña «Quién soy»); fuente del video en `video-fuente/`.
 - `mejoras.css` + `mejoras.js`: animaciones e interacciones (capa aparte; quitarlas devuelve el sitio a su versión anterior).
 - `brand/`: foto, video del encabezado, `og-perfil.png` y `og-proyectos.png` (1200×627, vista previa en LinkedIn).
 - `brand/proyectos/capturas/`: 13 capturas reales de los 6 proyectos (WebP), con datos sensibles difuminados.
